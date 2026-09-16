@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #202124;
+  --surface: #ffffff;
+  --muted-surface: #f7f7f7;
+  --muted: #5f6368;
+  --red: #e52b2b;
+  --yellow: #f5c518;
+  --charcoal: #202124;
+  --border: #e5e7eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--foreground);
+}
+
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+@keyframes trust-slider {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+.animate-trust-slider {
+  animation: trust-slider 18s linear infinite;
+}
+
+/* Keep older dark utility classes readable during the theme transition. */
+[class*="bg-[#111318]"] {
+  background-color: #ffffff !important;
+}
+
+[class*="bg-[#1a1c22]"] {
+  background-color: #f7f7f7 !important;
+}
+
+[class*="bg-[#202124]"] {
+  background-color: #eeeeee !important;
+}
+
+[class~="border-white"],
+[class*="border-white/"] {
+  border-color: rgba(32, 33, 36, 0.14) !important;
+}
