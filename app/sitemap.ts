@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 import connectDB from "@/lib/mongodb";
 import BlogPost from "@/lib/models/BlogPost";
 
+export const dynamic = "force-dynamic";
+
 const BASE_URL = "https://www.applotie.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
