@@ -82,5 +82,7 @@ export const blogPostSchema = z.object({
         .string()
         .optional(),
     })
-    .default({}),
+    .default({
+      keywords: [],
+    }),
 });
