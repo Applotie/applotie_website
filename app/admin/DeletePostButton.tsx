@@ -37,7 +37,6 @@ export default function DeletePostButton({
 
       router.refresh();
     } catch (error) {
-      console.error("Delete post error:", error);
       alert("Something went wrong");
     } finally {
       setLoading(false);

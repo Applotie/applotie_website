@@ -29,7 +29,6 @@ export async function GET(
       post,
     });
   } catch (error) {
-    console.error("GET /api/posts/[id] error:", error);
 
     return NextResponse.json(
       {
@@ -92,7 +91,6 @@ export async function PUT(
       post,
     });
   } catch (error) {
-    console.error("PUT /api/posts/[id] error:", error);
 
     return NextResponse.json(
       {
@@ -153,7 +151,6 @@ export async function PATCH(
       post,
     });
   } catch (error) {
-    console.error("PATCH /api/posts/[id] error:", error);
 
     return NextResponse.json(
       {
@@ -204,7 +201,6 @@ export async function DELETE(
       message: "Post deleted successfully",
     });
   } catch (error) {
-    console.error("DELETE /api/posts/[id] error:", error);
 
     return NextResponse.json(
       {

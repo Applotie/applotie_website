@@ -1,15 +1,18 @@
 import Link from "next/link";
+import FinalCTA from "@/components/cta";
+import ProjectsAnimation from "@/components/animations/ProjectsAnimation";
 
 const projects = [
   {
     number: "01",
     category: "Web Development",
     client: "Northstar Finance",
-    title: "Turning a complex service into a simple digital experience.",
-    description:
-      "Redesigned and rebuilt a finance company's website to simplify its services, improve trust and create a clearer path from visitor to enquiry.",
-    result: "42%",
-    resultLabel: "increase in enquiries",
+    title: "Making a complex financial service easier to understand.",
+    problem:
+      "Visitors were struggling to understand the company's services quickly, creating friction between discovery and enquiry.",
+    work: "We restructured the information architecture, simplified the service journey and rebuilt the website around clarity, trust and conversion.",
+    impact: "42%",
+    impactLabel: "more enquiries",
     stack: "Next.js · Tailwind · CMS",
     accent: "#E52B2B",
     background: "#FFF5F3",
@@ -18,11 +21,12 @@ const projects = [
     number: "02",
     category: "Software Development",
     client: "Flowdesk",
-    title: "A custom platform built around the way the team actually works.",
-    description:
-      "Designed and developed a centralized business platform that replaced fragmented workflows with a faster, more connected system.",
-    result: "60%",
-    resultLabel: "less manual work",
+    title: "Replacing fragmented workflows with one connected system.",
+    problem:
+      "The team was relying on disconnected tools and repetitive manual processes to manage everyday operations.",
+    work: "We designed and developed a centralized business platform that brought core workflows, information and team activity into one system.",
+    impact: "60%",
+    impactLabel: "less manual work",
     stack: "React · Node.js · MongoDB",
     accent: "#F0B900",
     background: "#FFF9E8",
@@ -31,11 +35,12 @@ const projects = [
     number: "03",
     category: "SEO & Growth",
     client: "UrbanNest",
-    title: "Taking a competitive property brand from overlooked to discoverable.",
-    description:
-      "Built a technical SEO and content strategy around high-intent searches, improving organic visibility and bringing more qualified visitors to the business.",
-    result: "3.4×",
-    resultLabel: "organic traffic growth",
+    title: "Turning an overlooked property brand into a discoverable one.",
+    problem:
+      "The business operated in a competitive search market but was missing valuable high-intent organic searches.",
+    work: "We rebuilt the technical SEO foundation, mapped search intent and created a content strategy focused on commercially relevant queries.",
+    impact: "3.4×",
+    impactLabel: "organic traffic",
     stack: "Technical SEO · Content · Analytics",
     accent: "#E52B2B",
     background: "#F7F7F5",
@@ -44,11 +49,12 @@ const projects = [
     number: "04",
     category: "Performance Marketing",
     client: "PeakFit",
-    title: "Turning paid traffic into a measurable growth engine.",
-    description:
-      "Connected campaign strategy, landing pages and conversion tracking to create a performance system focused on qualified leads rather than vanity metrics.",
-    result: "2.8×",
-    resultLabel: "return on ad spend",
+    title: "Turning paid traffic into a measurable acquisition system.",
+    problem:
+      "Campaign traffic was reaching the business, but inconsistent landing experiences and tracking made it difficult to understand what was actually converting.",
+    work: "We connected campaign strategy, landing pages, conversion tracking and optimisation into one performance system.",
+    impact: "2.8×",
+    impactLabel: "return on ad spend",
     stack: "Meta Ads · Google Ads · CRO",
     accent: "#202124",
     background: "#F1F1EF",
@@ -58,19 +64,21 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-white text-[#202124]">
+      <ProjectsAnimation />
 
       {/* =====================================================
           HERO
       ====================================================== */}
 
-      <section className="px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:px-12 lg:pb-28 lg:pt-44">
+      <section className="projects-hero px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:px-12 lg:pb-28 lg:pt-44">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[#E52B2B]">
+          <p className="projects-reveal mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[#E52B2B]">
             Selected work
           </p>
 
           <h1
             className="
+              projects-reveal
               max-w-5xl
               text-5xl
               font-semibold
@@ -86,22 +94,29 @@ export default function ProjectsPage() {
             <span className="text-[#E52B2B]">business forward.</span>
           </h1>
 
-          <p
-            className="
-              mt-7
-              max-w-2xl
-              text-sm
-              leading-6
-              text-[#202124]/80
-              sm:text-base
-              sm:leading-7
-              lg:text-lg
-              lg:leading-8
-            "
-          >
-            A selection of digital products, websites and growth systems
-            designed to solve real problems and create measurable outcomes.
-          </p>
+          <div className="mt-7 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
+            <p
+              className="
+                projects-reveal
+                max-w-2xl
+                text-sm
+                leading-6
+                text-[#202124]/80
+                sm:text-base
+                sm:leading-7
+                lg:text-lg
+                lg:leading-8
+              "
+            >
+              We don't measure digital work by how polished it looks alone.
+              We look at the problem it solves, what changes after launch and
+              whether the work creates a meaningful business outcome.
+            </p>
+
+            <p className="projects-reveal text-xs font-semibold uppercase tracking-[0.18em] text-[#202124]/40">
+              Strategy · Build · Growth
+            </p>
+          </div>
         </div>
       </section>
 
@@ -123,8 +138,6 @@ export default function ProjectsPage() {
           lg:py-28
         "
       >
-        {/* Grid background */}
-
         <div
           aria-hidden="true"
           className="
@@ -138,201 +151,181 @@ export default function ProjectsPage() {
         />
 
         <div className="relative mx-auto max-w-7xl">
-
           {/* Section intro */}
 
-          <div className="mb-12 flex flex-col gap-5 sm:mb-16 md:flex-row md:items-end md:justify-between">
+          <div className="projects-section-intro mb-12 flex flex-col gap-5 sm:mb-16 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#F0B900]">
                 Case studies
               </p>
 
               <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-[-0.04em] sm:text-4xl lg:text-5xl">
-                Ideas are easy.
+                The problem comes first.
                 <br />
                 <span className="text-[#E52B2B]">
-                  Execution is the difference.
+                  Then the work. Then the impact.
                 </span>
               </h2>
             </div>
 
-            <p className="max-w-sm text-sm leading-6 text-[#202124]/95 font-semibold">
-              Every project starts with a business challenge and ends with
-              something we can measure.
+            <p className="max-w-sm text-sm font-semibold leading-6 text-[#202124]/70">
+              A closer look at how strategy, technology and growth come
+              together across different business challenges.
             </p>
           </div>
 
-          {/* Project grid */}
+          {/* Project dossiers */}
 
-          <div className="grid gap-5 md:grid-cols-2 lg:gap-6">
+          <div className="grid gap-6">
             {projects.map((project) => (
               <article
                 key={project.number}
                 className="
+                  project-card
                   group
                   relative
                   overflow-hidden
-                  rounded-[24px]
                   border
                   border-[#202124]/10
-                  p-5
-                  shadow-[0_15px_50px_rgba(32,33,36,0.06)]
-                  transition-all
-                  duration-500
-                  hover:-translate-y-1
-                  hover:shadow-[0_25px_70px_rgba(32,33,36,0.10)]
-                  sm:p-7
-                  lg:p-9
+                  shadow-[0_15px_50px_rgba(32,33,36,0.05)]
                 "
                 style={{
                   backgroundColor: project.background,
                 }}
               >
-                {/* Decorative circle */}
+                {/* Vertical accent */}
 
                 <div
-                  aria-hidden="true"
-                  className="
-                    pointer-events-none
-                    absolute
-                    -right-20
-                    -top-20
-                    h-48
-                    w-48
-                    rounded-full
-                    border
-                    border-[#202124]/10
-                    transition-transform
-                    duration-700
-                    group-hover:scale-125
-                  "
-                />
-
-                {/* Header */}
-
-                <div className="relative flex items-center justify-between border-b border-[#202124]/10 pb-5">
-                  <div>
-                    <span
-                      className="
-                        text-[10px]
-                        font-semibold
-                        uppercase
-                        tracking-[0.2em]
-                        text-[#E52B2B]
-                        sm:text-xs
-                      "
-                    >
-                      {project.category}
-                    </span>
-
-                    <p className="mt-1 text-xs text-[#202124]/45">
-                      {project.client}
-                    </p>
-                  </div>
-
-                  <span className="text-sm font-semibold text-[#202124]/35">
-                    {project.number}
-                  </span>
-                </div>
-
-                {/* Main content */}
-
-                <div className="relative mt-10 sm:mt-14">
-                  <h2
-                    className="
-                      max-w-xl
-                      text-2xl
-                      font-semibold
-                      leading-[1.08]
-                      tracking-[-0.04em]
-                      sm:text-3xl
-                      lg:text-4xl
-                    "
-                  >
-                    {project.title}
-                  </h2>
-
-                  <p
-                    className="
-                      mt-4
-                      max-w-xl
-                      text-sm
-                      leading-6
-                      text-[#202124]/60
-                      sm:text-base
-                      sm:leading-7
-                    "
-                  >
-                    {project.description}
-                  </p>
-                </div>
-
-                {/* Result */}
-
-                <div
-                  className="
-                    relative
-                    mt-10
-                    grid
-                    grid-cols-[auto_1fr]
-                    items-end
-                    gap-4
-                    border-t
-                    border-[#202124]/10
-                    pt-6
-                    sm:mt-14
-                    sm:pt-7
-                  "
-                >
-                  <div>
-                    <p
-                      className="
-                        text-4xl
-                        font-semibold
-                        leading-none
-                        tracking-[-0.05em]
-                        sm:text-5xl
-                      "
-                      style={{
-                        color: project.accent,
-                      }}
-                    >
-                      {project.result}
-                    </p>
-
-                    <p className="mt-2 text-[11px] font-medium text-[#202124]/50 sm:text-xs">
-                      {project.resultLabel}
-                    </p>
-                  </div>
-
-                  <div className="pb-1 text-right">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[#202124]/35">
-                      Built with
-                    </p>
-
-                    <p className="mt-1 text-xs text-[#202124]/55">
-                      {project.stack}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Bottom accent */}
-
-                <div
-                  className="
-                    relative
-                    mt-6
-                    h-1
-                    w-10
-                    rounded-full
-                    transition-all
-                    duration-500
-                    group-hover:w-24
-                  "
+                  className="project-accent absolute bottom-0 left-0 top-0 w-[3px]"
                   style={{
                     backgroundColor: project.accent,
                   }}
                 />
+
+                <div className="relative p-6 sm:p-8 lg:p-10">
+                  {/* Top metadata */}
+
+                  <div className="flex items-start justify-between gap-6 border-b border-[#202124]/10 pb-5">
+                    <div>
+                      <span
+                        className="text-[10px] font-semibold uppercase tracking-[0.22em] sm:text-xs"
+                        style={{
+                          color: project.accent,
+                        }}
+                      >
+                        {project.category}
+                      </span>
+
+                      <p className="mt-1 text-xs text-[#202124]/45">
+                        {project.client}
+                      </p>
+                    </div>
+
+                    <span className="text-3xl font-semibold leading-none tracking-[-0.05em] text-[#202124]/15 sm:text-4xl">
+                      {project.number}
+                    </span>
+                  </div>
+
+                  {/* Main title */}
+
+                  <div className="project-title-block mt-8 max-w-4xl sm:mt-10">
+                    <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#202124]/35">
+                      Case study
+                    </p>
+
+                    <h3
+                      className="
+                        text-3xl
+                        font-semibold
+                        leading-[1.03]
+                        tracking-[-0.05em]
+                        sm:text-4xl
+                        lg:text-5xl
+                      "
+                    >
+                      {project.title}
+                    </h3>
+                  </div>
+
+                  {/* Problem / Work / Impact */}
+
+                  <div className="mt-10 grid border-t border-[#202124]/10 lg:grid-cols-[0.85fr_1fr_0.65fr]">
+                    {/* Problem */}
+
+                    <div className="project-column border-b border-[#202124]/10 py-7 lg:border-b-0 lg:border-r lg:pr-8">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E52B2B]">
+                        The problem
+                      </p>
+
+                      <p className="mt-4 max-w-md text-sm leading-6 text-[#202124]/65 sm:text-base sm:leading-7">
+                        {project.problem}
+                      </p>
+                    </div>
+
+                    {/* Work */}
+
+                    <div className="project-column border-b border-[#202124]/10 py-7 lg:border-b-0 lg:px-8 lg:border-r">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#F0B900]">
+                        What we did
+                      </p>
+
+                      <p className="mt-4 max-w-lg text-sm leading-6 text-[#202124]/65 sm:text-base sm:leading-7">
+                        {project.work}
+                      </p>
+                    </div>
+
+                    {/* Impact */}
+
+                    <div className="project-impact py-7 lg:pl-8">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#202124]/35">
+                        Impact
+                      </p>
+
+                      <p
+                        className="
+                          mt-4
+                          text-5xl
+                          font-semibold
+                          leading-none
+                          tracking-[-0.06em]
+                          sm:text-6xl
+                        "
+                        style={{
+                          color: project.accent,
+                        }}
+                      >
+                        {project.impact}
+                      </p>
+
+                      <p className="mt-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#202124]/45">
+                        {project.impactLabel}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Bottom system information */}
+
+                  <div className="mt-2 flex flex-col gap-4 border-t border-[#202124]/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#202124]/30">
+                        Built with
+                      </span>
+
+                      <span className="text-xs text-[#202124]/55">
+                        {project.stack}
+                      </span>
+                    </div>
+
+                    <span
+                      className="text-xs font-semibold transition-transform duration-300 group-hover:translate-x-1"
+                      style={{
+                        color: project.accent,
+                      }}
+                    >
+                      View case study ↗
+                    </span>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
@@ -343,20 +336,20 @@ export default function ProjectsPage() {
           APPROACH
       ====================================================== */}
 
-      <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+      <section className="projects-animate-section px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#E52B2B]">
+            <p className="projects-reveal text-xs font-semibold uppercase tracking-[0.24em] text-[#E52B2B]">
               Our approach
             </p>
 
-            <h2 className="mt-5 max-w-md text-4xl font-semibold leading-tight tracking-[-0.05em] sm:text-5xl">
+            <h2 className="projects-reveal mt-5 max-w-md text-4xl font-semibold leading-tight tracking-[-0.05em] sm:text-5xl">
               Every project starts with a problem.
             </h2>
           </div>
 
           <div className="grid gap-8 sm:grid-cols-3">
-            <div>
+            <div className="projects-approach-item">
               <span className="text-sm font-semibold text-[#F0B900]">
                 01
               </span>
@@ -371,7 +364,7 @@ export default function ProjectsPage() {
               </p>
             </div>
 
-            <div>
+            <div className="projects-approach-item">
               <span className="text-sm font-semibold text-[#E52B2B]">
                 02
               </span>
@@ -386,7 +379,7 @@ export default function ProjectsPage() {
               </p>
             </div>
 
-            <div>
+            <div className="projects-approach-item">
               <span className="text-sm font-semibold text-[#202124]">
                 03
               </span>
@@ -403,91 +396,8 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-```tsx
-{/* =====================================================
-    CTA
-====================================================== */}
 
-<section className="px-5 pb-20 sm:px-8 lg:px-12 lg:pb-28">
-  <div
-    className="
-      mx-auto
-      max-w-7xl
-      overflow-hidden
-      rounded-[28px]
-      bg-[#202124]
-      px-6
-      py-14
-      text-center
-      text-black/85
-      sm:px-10
-      sm:py-16
-      lg:px-16
-      lg:py-20
-    "
-  >
-    <div className="mx-auto max-w-3xl">
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#F0B900]">
-        Your project could be next
-      </p>
-
-      <h2
-        className="
-          mt-5
-          text-4xl
-          font-semibold
-          leading-tight
-          tracking-[-0.05em]
-          sm:text-5xl
-          lg:text-6xl
-        "
-      >
-        Have a problem worth solving?
-      </h2>
-
-      <p
-        className="
-          mx-auto
-          mt-5
-          max-w-xl
-          text-sm
-          leading-6
-          text-black/85
-          sm:text-base
-          sm:leading-7
-        "
-      >
-        Tell us what you&apos;re building, improving or trying to grow.
-        We&apos;ll help you figure out the right digital approach.
-      </p>
-
-      <Link
-        href="/contact"
-        className="
-          mt-8
-          inline-flex
-          items-center
-          gap-2
-          rounded-full
-          bg-[#E52B2B]
-          px-6
-          py-3.5
-          text-sm
-          font-semibold
-          text-white
-          transition-all
-          hover:bg-[#F5C518]
-          hover:text-[#202124]
-        "
-      >
-        Start a project
-        <span>↗</span>
-      </Link>
-    </div>
-  </div>
-</section>
-```
-
+      <FinalCTA />
     </main>
   );
 }

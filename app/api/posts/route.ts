@@ -18,8 +18,6 @@ export async function GET() {
       posts,
     });
   } catch (error) {
-    console.error("GET /api/posts error:", error);
-
     return NextResponse.json(
       {
         success: false,
@@ -63,7 +61,6 @@ export async function POST(request: Request) {
       { status: 201 }
     );
   } catch (error) {
-    console.error("POST /api/posts error:", error);
 
     if (error instanceof z.ZodError) {
       return NextResponse.json(

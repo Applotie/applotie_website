@@ -8,343 +8,361 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ServicesAnimation() {
     useEffect(() => {
-        const section = document.querySelector(".services-section");
+        const reduceMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        const isDesktop = window.matchMedia(
+            "(min-width: 1024px)"
+        ).matches;
+
+        if (reduceMotion) return;
+
+        const section = document.querySelector(
+            ".services-section"
+        ) as HTMLElement | null;
 
         if (!section) return;
 
         const ctx = gsap.context(() => {
-            const cards =
-                gsap.utils.toArray<HTMLElement>("[data-service-card]");
+            const header = section.querySelector(".services-header");
+            const eyebrow = section.querySelector(".services-eyebrow");
+            const title = section.querySelector(".services-title");
+            const description = section.querySelector(
+                ".services-description"
+            );
 
-            const cardGrids = cards
-                .map((card) =>
-                    card.querySelector<HTMLElement>(
-                        ':scope > div[aria-hidden="true"]',
-                    ),
-                )
-                .filter(Boolean) as HTMLElement[];
+            const cards = section.querySelectorAll(
+                "[data-service-card]"
+            );
 
-            cardGrids.forEach((grid) => {
-                grid.style.backgroundImage =
-                    "linear-gradient(to right, rgba(32,33,36,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(32,33,36,0.08) 1px, transparent 1px)";
-            });
+            const numbers = section.querySelectorAll(
+                ".service-number"
+            );
 
-            /*
-             * =====================================
-             * INITIAL STATES
-             * =====================================
-             */
+            const arrows = section.querySelectorAll(
+                ".service-arrow"
+            );
 
-            gsap.set(".services-eyebrow", {
+            const ambient = section.querySelectorAll(
+                ".services-ambient"
+            );
+
+            /* =====================================================
+               INITIAL STATES
+            ====================================================== */
+
+            gsap.set(header, {
                 opacity: 0,
-                y: 20,
+                y: 35,
             });
 
-            gsap.set(".services-eyebrow-dot", {
-                scale: 0,
-            });
-
-            gsap.set(".services-title", {
+            gsap.set(eyebrow, {
                 opacity: 0,
-                y: 70,
+                y: 15,
             });
 
-            gsap.set(".services-description", {
+            gsap.set(title, {
                 opacity: 0,
-                y: 30,
+                y: 45,
+            });
+
+            gsap.set(description, {
+                opacity: 0,
+                y: 25,
             });
 
             gsap.set(cards, {
                 opacity: 0,
-                y: 90,
-                rotateX: 10,
-                scale: 0.94,
+                y: 55,
+                scale: 0.97,
             });
 
-            gsap.set(cardGrids, {
+            gsap.set(numbers, {
+                scale: 0.7,
                 opacity: 0,
             });
 
-            /*
-             * =====================================
-             * SCROLL ENTRANCE
-             * =====================================
-             */
+            /* =====================================================
+               HEADER REVEAL
+            ====================================================== */
 
-            const timeline = gsap.timeline({
+            const headerTimeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
-                    start: "top 70%",
+                    start: "top 78%",
                     once: true,
                 },
             });
 
-            timeline
-                .to(".services-eyebrow", {
+            headerTimeline
+                .to(header, {
                     opacity: 1,
                     y: 0,
-                    duration: 0.7,
+                    duration: 0.8,
                     ease: "power3.out",
                 })
                 .to(
-                    ".services-eyebrow-dot",
+                    eyebrow,
                     {
-                        scale: 1,
+                        opacity: 1,
+                        y: 0,
                         duration: 0.5,
-                        ease: "back.out(3)",
-                    },
-                    "-=0.4"
-                )
-                .to(
-                    ".services-title",
-                    {
-                        opacity: 1,
-                        y: 0,
-                        duration: 1,
-                        ease: "power4.out",
-                    },
-                    "-=0.25"
-                )
-                .to(
-                    ".services-description",
-                    {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.7,
-                        ease: "power3.out",
+                        ease: "power2.out",
                     },
                     "-=0.55"
                 )
                 .to(
-                    cards,
+                    title,
                     {
                         opacity: 1,
                         y: 0,
-                        rotateX: 0,
-                        scale: 1,
-                        duration: 0.9,
-                        stagger: 0.12,
-                        ease: "power4.out",
+                        duration: 0.8,
+                        ease: "power3.out",
                     },
                     "-=0.35"
                 )
                 .to(
-                    cardGrids,
+                    description,
                     {
-                        opacity: 0.8,
-                        duration: 0.7,
-                        stagger: 0.08,
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.6,
                         ease: "power2.out",
                     },
-                    "-=0.65"
+                    "-=0.45"
                 );
 
-            /*
-             * =====================================
-             * ALWAYS MOVING ROUTE
-             * =====================================
-             */
+            /* =====================================================
+               CARD REVEAL
+            ====================================================== */
 
-            gsap.utils
-                .toArray<HTMLElement>(".services-route-dot")
-                .forEach((dot, index) => {
-                    gsap.to(dot, {
-                        x: "100vw",
-                        duration: 4 + index * 0.8,
-                        repeat: -1,
-                        ease: "none",
-                        delay: index * 0.7,
-                        scrollTrigger: {
-                            trigger: section,
-                            start: "top bottom",
-                            end: "bottom top",
-                            toggleActions: "play pause resume pause",
-                        },
-                    });
-                });
-
-            /*
-             * =====================================
-             * FLOATING AMBIENT LIGHT
-             * =====================================
-             */
-
-            gsap.to(".services-ambient", {
-                x: 40,
-                y: -30,
-                duration: 5,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut",
-                stagger: 1.5,
+            gsap.to(cards, {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.75,
+                stagger: 0.12,
+                ease: "power3.out",
                 scrollTrigger: {
-                    trigger: section,
-                    start: "top bottom",
-                    end: "bottom top",
-                    toggleActions: "play pause resume pause",
+                    trigger: section.querySelector(".services-grid"),
+                    start: "top 82%",
+                    once: true,
                 },
             });
 
-            /*
-             * =====================================
-             * CARD INTERACTION
-             * =====================================
-             */
+            /* =====================================================
+               NUMBER REVEAL
+            ====================================================== */
 
-            cards.forEach((card) => {
-                const glow =
-                    card.querySelector<HTMLElement>(
-                        ".service-cursor-glow"
+            gsap.to(numbers, {
+                scale: 1,
+                opacity: 1,
+                duration: 0.55,
+                stagger: 0.1,
+                ease: "back.out(1.7)",
+                scrollTrigger: {
+                    trigger: section.querySelector(".services-grid"),
+                    start: "top 78%",
+                    once: true,
+                },
+            });
+
+            /* =====================================================
+               AMBIENT MOTION
+            ====================================================== */
+
+            ambient.forEach((element, index) => {
+                gsap.to(element, {
+                    x: index === 0 ? 80 : -70,
+                    y: index === 0 ? -35 : 40,
+                    duration: 8 + index * 2,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                });
+            });
+
+            /* =====================================================
+               DESKTOP HOVER INTERACTION
+            ====================================================== */
+
+            if (isDesktop) {
+                cards.forEach((card) => {
+                    const title = card.querySelector(
+                        ".service-title"
                     );
 
-                const arrow =
-                    card.querySelector<HTMLElement>(
+                    const copy = card.querySelector(
+                        ".service-copy"
+                    );
+
+                    const arrow = card.querySelector(
                         ".service-arrow"
                     );
 
-                const arrowIcon =
-                    card.querySelector<HTMLElement>(
-                        ".service-arrow-icon"
+                    const number = card.querySelector(
+                        ".service-number"
                     );
 
-                const accent =
-                    card.querySelector<HTMLElement>(
-                        ".service-accent"
+                    const glow = card.querySelector(
+                        ".service-glow"
                     );
 
-                if (!glow || !arrow || !arrowIcon || !accent) {
-                    return;
-                }
+                    const backgroundNumber = card.querySelector(
+                        ".service-background-number"
+                    );
 
-                const handleMove = (event: MouseEvent) => {
-                    const rect = card.getBoundingClientRect();
+                    const onEnter = () => {
+                        gsap.to(card, {
+                            y: -6,
+                            duration: 0.4,
+                            ease: "power3.out",
+                        });
 
-                    const x = event.clientX - rect.left;
-                    const y = event.clientY - rect.top;
+                        gsap.to(title, {
+                            x: 4,
+                            duration: 0.35,
+                            ease: "power2.out",
+                        });
 
-                    const rotateY =
-                        ((x / rect.width) - 0.5) * 7;
+                        gsap.to(copy, {
+                            x: 3,
+                            duration: 0.35,
+                            ease: "power2.out",
+                        });
 
-                    const rotateX =
-                        ((y / rect.height) - 0.5) * -7;
+                        gsap.to(number, {
+                            scale: 1.08,
+                            duration: 0.35,
+                            ease: "power2.out",
+                        });
 
-                    /*
-                     * 3D tilt
-                     */
+                        gsap.to(arrow, {
+                            scale: 1.08,
+                            rotation: 4,
+                            duration: 0.35,
+                            ease: "power2.out",
+                        });
 
-                    gsap.to(card, {
-                        rotateX,
-                        rotateY,
-                        scale: 1.015,
-                        duration: 0.35,
-                        ease: "power2.out",
-                        overwrite: true,
-                    });
+                        gsap.to(glow, {
+                            opacity: 1,
+                            duration: 0.45,
+                            ease: "power2.out",
+                        });
 
-                    /*
-                     * Cursor glow
-                     */
+                        gsap.to(backgroundNumber, {
+                            x: 5,
+                            y: -5,
+                            duration: 0.5,
+                            ease: "power3.out",
+                        });
+                    };
 
-                    gsap.to(glow, {
-                        x,
-                        y,
-                        opacity: 1,
-                        duration: 0.25,
-                        overwrite: true,
-                    });
+                    const onLeave = () => {
+                        gsap.to(card, {
+                            y: 0,
+                            duration: 0.5,
+                            ease: "power3.out",
+                        });
 
-                    /*
-                     * Arrow movement
-                     */
+                        gsap.to(title, {
+                            x: 0,
+                            duration: 0.4,
+                            ease: "power2.out",
+                        });
 
-                    gsap.to(arrow, {
-                        scale: 1.1,
-                        duration: 0.3,
-                        ease: "back.out(2)",
-                    });
+                        gsap.to(copy, {
+                            x: 0,
+                            duration: 0.4,
+                            ease: "power2.out",
+                        });
 
-                    gsap.to(arrowIcon, {
-                        x: 2,
-                        y: -2,
-                        rotate: 45,
-                        duration: 0.3,
-                    });
+                        gsap.to(number, {
+                            scale: 1,
+                            duration: 0.4,
+                            ease: "power2.out",
+                        });
 
-                    /*
-                     * Bottom line
-                     */
+                        gsap.to(arrow, {
+                            scale: 1,
+                            rotation: 0,
+                            duration: 0.4,
+                            ease: "power2.out",
+                        });
 
-                    gsap.to(accent, {
-                        width: "80px",
-                        duration: 0.4,
-                        ease: "power3.out",
-                    });
-                };
+                        gsap.to(glow, {
+                            opacity: 0,
+                            duration: 0.4,
+                            ease: "power2.out",
+                        });
 
-                const handleLeave = () => {
-                    gsap.to(card, {
-                        rotateX: 0,
-                        rotateY: 0,
-                        scale: 1,
-                        duration: 0.7,
-                        ease: "elastic.out(1, 0.5)",
-                    });
+                        gsap.to(backgroundNumber, {
+                            x: 0,
+                            y: 0,
+                            duration: 0.5,
+                            ease: "power3.out",
+                        });
+                    };
 
-                    gsap.to(glow, {
-                        opacity: 0,
-                        duration: 0.3,
-                    });
+                    card.addEventListener("mouseenter", onEnter);
+                    card.addEventListener("mouseleave", onLeave);
 
-                    gsap.to(arrow, {
-                        scale: 1,
-                        duration: 0.4,
-                    });
+                    (
+                        card as HTMLElement & {
+                            __servicesEnter?: () => void;
+                            __servicesLeave?: () => void;
+                        }
+                    ).__servicesEnter = onEnter;
 
-                    gsap.to(arrowIcon, {
-                        x: 0,
-                        y: 0,
-                        rotate: 0,
-                        duration: 0.4,
-                    });
-
-                    gsap.to(accent, {
-                        width: 0,
-                        duration: 0.35,
-                    });
-                };
-
-                card.addEventListener(
-                    "mousemove",
-                    handleMove
-                );
-
-                card.addEventListener(
-                    "mouseleave",
-                    handleLeave
-                );
-            });
-
-            /*
-             * =====================================
-             * CARD PARALLAX ON SCROLL
-             * =====================================
-             */
-
-            cards.forEach((card, index) => {
-                gsap.to(card, {
-                    y: index % 2 === 0 ? -12 : 12,
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top bottom",
-                        end: "bottom top",
-                        scrub: 1.5,
-                    },
+                    (
+                        card as HTMLElement & {
+                            __servicesEnter?: () => void;
+                            __servicesLeave?: () => void;
+                        }
+                    ).__servicesLeave = onLeave;
                 });
+            }
+
+            /* =====================================================
+               REFRESH SCROLLTRIGGER
+            ====================================================== */
+
+            requestAnimationFrame(() => {
+                ScrollTrigger.refresh();
             });
         }, section);
 
+        /* =========================================================
+           CLEANUP
+        ========================================================== */
+
         return () => {
+            const cards = section.querySelectorAll(
+                "[data-service-card]"
+            );
+
+            cards.forEach((card) => {
+                const typedCard = card as HTMLElement & {
+                    __servicesEnter?: () => void;
+                    __servicesLeave?: () => void;
+                };
+
+                if (typedCard.__servicesEnter) {
+                    card.removeEventListener(
+                        "mouseenter",
+                        typedCard.__servicesEnter
+                    );
+                }
+
+                if (typedCard.__servicesLeave) {
+                    card.removeEventListener(
+                        "mouseleave",
+                        typedCard.__servicesLeave
+                    );
+                }
+            });
+
             ctx.revert();
         };
     }, []);

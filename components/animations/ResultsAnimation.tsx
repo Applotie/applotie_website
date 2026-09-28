@@ -8,310 +8,263 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ResultsAnimation() {
   useEffect(() => {
-    const section = document.querySelector("#results");
-
-    if (!section) return;
-
     const ctx = gsap.context(() => {
-      const cards = gsap.utils.toArray<HTMLElement>("[data-card]");
-      const titleLines =
-        gsap.utils.toArray<HTMLElement>(".results-title-line");
+      const cards = gsap.utils.toArray<HTMLElement>(".data-card");
+
+      if (!cards.length) return;
 
       /*
-       * ==========================================
+       * -----------------------------------------
        * INITIAL STATES
-       * ==========================================
+       * -----------------------------------------
        */
 
-      gsap.set(".results-eyebrow", {
+      gsap.set(
+        [
+          ".results-eyebrow",
+          ".results-title-line",
+          ".results-description",
+          ".results-support",
+          ".results-footer",
+        ],
+        {
+          opacity: 0,
+          y: 20,
+        }
+      );
+
+      gsap.set(".data-icon", {
         opacity: 0,
-        y: 20,
+        y: 10,
       });
 
-      gsap.set(".results-eyebrow-dot", {
-        scale: 0,
+      gsap.set(".data-number", {
+        opacity: 0,
+        y: 12,
       });
 
-      gsap.set(titleLines, {
+      gsap.set(".data-label", {
         opacity: 0,
-        y: 80,
-        rotateX: -35,
-        transformOrigin: "50% 100%",
+        y: 10,
       });
 
-      gsap.set(".results-title-accent", {
+      gsap.set(".data-index", {
         opacity: 0,
-        x: -30,
-      });
-
-      gsap.set(".results-description", {
-        opacity: 0,
-        y: 30,
-      });
-
-      gsap.set(cards, {
-        opacity: 0,
-        y: 80,
-        scale: 0.92,
-        rotateX: 8,
       });
 
       /*
-       * ==========================================
-       * MAIN ENTRANCE TIMELINE
-       * ==========================================
+       * -----------------------------------------
+       * HEADER FADE IN
+       * -----------------------------------------
        */
 
-      const intro = gsap.timeline({
+      const headerTimeline = gsap.timeline({
         scrollTrigger: {
-          trigger: section,
-          start: "top 70%",
-          once: true,
+          trigger: ".results-header",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
         },
       });
 
-      intro
+      headerTimeline
         .to(".results-eyebrow", {
           opacity: 1,
           y: 0,
-          duration: 0.7,
-          ease: "power3.out",
+          duration: 0.4,
+          ease: "power2.out",
         })
         .to(
-          ".results-eyebrow-dot",
-          {
-            scale: 1,
-            duration: 0.5,
-            ease: "back.out(3)",
-          },
-          "-=0.45"
-        )
-        .to(
-          titleLines,
+          ".results-title-line",
           {
             opacity: 1,
             y: 0,
-            rotateX: 0,
-            duration: 1,
-            stagger: 0.12,
-            ease: "power4.out",
+            duration: 0.5,
+            stagger: 0.08,
+            ease: "power2.out",
           },
-          "-=0.3"
-        )
-        .to(
-          ".results-title-accent",
-          {
-            opacity: 1,
-            x: 0,
-            duration: 0.7,
-            ease: "power3.out",
-          },
-          "-=0.55"
+          "-=0.2"
         )
         .to(
           ".results-description",
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
-            ease: "power3.out",
+            duration: 0.4,
+            ease: "power2.out",
           },
-          "-=0.5"
+          "-=0.2"
         )
         .to(
-          cards,
+          ".results-support",
           {
             opacity: 1,
             y: 0,
-            scale: 1,
-            rotateX: 0,
-            duration: 0.9,
-            stagger: 0.12,
-            ease: "power4.out",
+            duration: 0.35,
+            ease: "power2.out",
           },
-          "-=0.35"
+          "-=0.15"
         );
 
       /*
-       * ==========================================
-       * NUMBER COUNT-UP
-       * ==========================================
+       * -----------------------------------------
+       * CARD CONTENT FADE IN
+       *
+       * Cards themselves NEVER MOVE.
+       * -----------------------------------------
+       */
+
+      cards.forEach((card, index) => {
+        const icon = card.querySelector(".data-icon");
+        const number = card.querySelector(".data-number");
+        const label = card.querySelector(".data-label");
+        const cardIndex = card.querySelector(".data-index");
+
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: card,
+            start: "top 88%",
+            toggleActions: "play none none reverse",
+          },
+        });
+
+        timeline
+          .to(icon, {
+            opacity: 1,
+            y: 0,
+            duration: 0.3,
+            ease: "power2.out",
+          })
+          .to(
+            number,
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.35,
+              ease: "power2.out",
+            },
+            "-=0.15"
+          )
+          .to(
+            label,
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.3,
+              ease: "power2.out",
+            },
+            "-=0.15"
+          )
+          .to(
+            cardIndex,
+            {
+              opacity: 1,
+              duration: 0.25,
+              ease: "power2.out",
+            },
+            "-=0.1"
+          );
+      });
+
+      /*
+       * -----------------------------------------
+       * NUMBER COUNTERS
+       * -----------------------------------------
        */
 
       cards.forEach((card) => {
         const numberElement =
-          card.querySelector<HTMLElement>("[data-number]");
+          card.querySelector<HTMLElement>(".number-value");
 
         if (!numberElement) return;
 
-        const value = Number(numberElement.dataset.value);
-        const suffix = numberElement.dataset.suffix ?? "";
+        const finalValue = Number(card.dataset.value);
 
         const counter = {
           value: 0,
         };
 
-        gsap.to(counter, {
-          value,
-          duration: 1.8,
-          ease: "power2.out",
-          delay: 0.4,
-          scrollTrigger: {
-            trigger: card,
-            start: "top 80%",
-            once: true,
+        ScrollTrigger.create({
+          trigger: card,
+          start: "top 88%",
+
+          onEnter: () => {
+            gsap.killTweensOf(counter);
+
+            counter.value = 0;
+            numberElement.textContent = "0";
+
+            gsap.to(counter, {
+              value: finalValue,
+              duration: 0.8,
+              ease: "power2.out",
+
+              onUpdate: () => {
+                numberElement.textContent = Math.floor(
+                  counter.value
+                ).toString();
+              },
+
+              onComplete: () => {
+                numberElement.textContent = finalValue.toString();
+              },
+            });
           },
-          onUpdate: () => {
-            numberElement.textContent =
-              `${Math.round(counter.value)}${suffix}`;
+
+          onLeaveBack: () => {
+            gsap.killTweensOf(counter);
+
+            gsap.to(counter, {
+              value: 0,
+              duration: 0.2,
+              ease: "power2.out",
+
+              onUpdate: () => {
+                numberElement.textContent = Math.floor(
+                  counter.value
+                ).toString();
+              },
+
+              onComplete: () => {
+                numberElement.textContent = "0";
+              },
+            });
           },
         });
       });
 
       /*
-       * ==========================================
-       * CARD INTERACTION
-       * ==========================================
+       * -----------------------------------------
+       * FOOTER FADE IN
+       * -----------------------------------------
        */
 
-      cards.forEach((card) => {
-        const glow =
-          card.querySelector<HTMLElement>(".card-glow");
-
-        const icon =
-          card.querySelector<HTMLElement>("[data-icon]");
-
-        const accent =
-          card.querySelector<HTMLElement>(".card-accent");
-
-        if (!glow || !icon || !accent) return;
-
-        const handleMove = (event: MouseEvent) => {
-          const rect = card.getBoundingClientRect();
-
-          const x = event.clientX - rect.left;
-          const y = event.clientY - rect.top;
-
-          const rotateY =
-            ((x / rect.width) - 0.5) * 10;
-
-          const rotateX =
-            ((y / rect.height) - 0.5) * -10;
-
-          gsap.to(card, {
-            rotateX,
-            rotateY,
-            scale: 1.025,
-            duration: 0.35,
-            ease: "power2.out",
-            overwrite: true,
-          });
-
-          gsap.to(glow, {
-            x: x,
-            y: y,
-            opacity: 1,
-            duration: 0.25,
-            ease: "power2.out",
-            overwrite: true,
-          });
-
-          gsap.to(icon, {
-            scale: 1.15,
-            rotate: 8,
-            duration: 0.35,
-            ease: "power2.out",
-            overwrite: true,
-          });
-
-          gsap.to(accent, {
-            width: "64px",
-            duration: 0.35,
-            ease: "power3.out",
-            overwrite: true,
-          });
-        };
-
-        const handleLeave = () => {
-          gsap.to(card, {
-            rotateX: 0,
-            rotateY: 0,
-            scale: 1,
-            duration: 0.6,
-            ease: "elastic.out(1, 0.5)",
-          });
-
-          gsap.to(glow, {
-            opacity: 0,
-            duration: 0.35,
-          });
-
-          gsap.to(icon, {
-            scale: 1,
-            rotate: 0,
-            duration: 0.5,
-            ease: "back.out(2)",
-          });
-
-          gsap.to(accent, {
-            width: 0,
-            duration: 0.35,
-            ease: "power3.out",
-          });
-        };
-
-        card.addEventListener("mousemove", handleMove);
-        card.addEventListener("mouseleave", handleLeave);
-
-        return () => {
-          card.removeEventListener("mousemove", handleMove);
-          card.removeEventListener("mouseleave", handleLeave);
-        };
-      });
+      gsap.fromTo(
+        ".results-footer",
+        {
+          opacity: 0,
+          y: 15,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".results-footer",
+            start: "top 92%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
 
       /*
-       * ==========================================
-       * BACKGROUND FLOATING EFFECT
-       * ==========================================
+       * Refresh after all elements are registered.
        */
 
-      gsap.to(".results-orb", {
-        y: 50,
-        x: 20,
-        duration: 4,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-        stagger: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: "top bottom",
-          end: "bottom top",
-          toggleActions: "play pause resume pause",
-        },
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
       });
-
-      /*
-       * ==========================================
-       * EYEBROW PULSE
-       * ==========================================
-       */
-
-      gsap.to(".results-eyebrow-dot", {
-        scale: 1.5,
-        opacity: 0.5,
-        duration: 1.2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-        scrollTrigger: {
-          trigger: section,
-          start: "top bottom",
-          end: "bottom top",
-          toggleActions: "play pause resume pause",
-        },
-      });
-    }, section);
+    });
 
     return () => {
       ctx.revert();

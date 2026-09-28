@@ -22,7 +22,6 @@ export default function LogoutButton() {
       router.push("/admin/login");
       router.refresh();
     } catch (error) {
-      console.error("Logout error:", error);
       setLoading(false);
     }
   }

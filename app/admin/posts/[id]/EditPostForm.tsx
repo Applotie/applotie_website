@@ -88,7 +88,7 @@ export default function EditPostForm() {
           },
         });
       } catch (error) {
-        console.error("Fetch post error:", error);
+     
         setError("Something went wrong");
       } finally {
         setLoading(false);
@@ -178,7 +178,7 @@ export default function EditPostForm() {
       router.push("/admin");
       router.refresh();
     } catch (error) {
-      console.error("Update post error:", error);
+
       setError("Something went wrong");
     } finally {
       setSaving(false);

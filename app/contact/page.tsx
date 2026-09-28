@@ -1,12 +1,145 @@
-import Link from "next/link";
+"use client";
+
+import { FormEvent } from "react";
 
 const inputClass =
   "w-full border border-[#202124]/25 bg-white px-4 py-4 text-sm font-normal text-[#202124] outline-none transition-all placeholder:text-[#202124]/35 focus:border-[#E52B2B] focus:ring-1 focus:ring-[#E52B2B]/10";
 
-const labelClass =
-  "grid gap-2 text-sm font-semibold text-[#202124]";
+const labelClass = "grid gap-2 text-sm font-semibold text-[#202124]";
+
+const WHATSAPP_NUMBER = process.env.Number;
 
 export default function ContactPage() {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const name = String(formData.get("name") || "").trim();
+    const company = String(formData.get("company") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const phone = String(formData.get("phone") || "").trim();
+    const service = String(formData.get("service") || "").trim();
+    const projectType = String(formData.get("projectType") || "").trim();
+    const budget = String(formData.get("budget") || "").trim();
+    const timeline = String(formData.get("timeline") || "").trim();
+    const website = String(formData.get("website") || "").trim();
+    const requirements = String(formData.get("requirements") || "").trim();
+    const description = String(formData.get("description") || "").trim();
+
+    const getServiceName = (value: string) => {
+      const services: Record<string, string> = {
+        "web-development": "Web Development",
+        "app-development": "App Development",
+        seo: "SEO",
+        "performance-marketing": "Performance Marketing",
+        multiple: "Multiple Services",
+        other: "Something else",
+      };
+
+      return services[value] || value;
+    };
+
+    const getProjectTypeName = (value: string) => {
+      const types: Record<string, string> = {
+        "new-project": "New project",
+        redesign: "Redesign / rebuild",
+        improvement: "Improve an existing product",
+        marketing: "Marketing / growth",
+        maintenance: "Maintenance / support",
+      };
+
+      return types[value] || value;
+    };
+
+    const getBudgetName = (value: string) => {
+      const budgets: Record<string, string> = {
+        "under-50k": "Under ₹50,000",
+        "50k-1l": "₹50,000 – ₹1 Lakh",
+        "1l-3l": "₹1 Lakh – ₹3 Lakhs",
+        "3l-5l": "₹3 Lakhs – ₹5 Lakhs",
+        "5l-plus": "₹5 Lakhs+",
+        "not-sure": "Not sure yet",
+      };
+
+      return budgets[value] || value;
+    };
+
+    const getTimelineName = (value: string) => {
+      const timelines: Record<string, string> = {
+        asap: "As soon as possible",
+        "1-month": "Within 1 month",
+        "1-3-months": "1–3 months",
+        "3-6-months": "3–6 months",
+        exploring: "Just exploring",
+      };
+
+      return timelines[value] || value;
+    };
+
+    const message = `
+━━━━━━━━━━━━━━━━━━━━
+APPlotie Technologies
+NEW PROJECT ENQUIRY
+━━━━━━━━━━━━━━━━━━━━
+
+CONTACT DETAILS
+
+Name:
+${name}
+
+Company / Organization:
+${company || "Not provided"}
+
+Email:
+${email}
+
+Phone:
+${phone}
+
+
+PROJECT DETAILS
+
+Service:
+${getServiceName(service)}
+
+Project Type:
+${getProjectTypeName(projectType)}
+
+Approximate Budget:
+${budget ? getBudgetName(budget) : "Not provided"}
+
+Expected Timeline:
+${timeline ? getTimelineName(timeline) : "Not provided"}
+
+
+CURRENT WEBSITE / APP
+
+${website || "Not provided"}
+
+
+PROJECT REQUIREMENTS
+
+${requirements}
+
+
+ADDITIONAL INFORMATION
+
+${description || "Not provided"}
+
+━━━━━━━━━━━━━━━━━━━━
+Submitted through the Applotie website
+━━━━━━━━━━━━━━━━━━━━
+`.trim();
+
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.location.href = whatsappUrl;
+  };
+
   return (
     <main className="min-h-screen bg-white text-[#202124]">
       {/* HERO */}
@@ -62,6 +195,7 @@ export default function ContactPage() {
                 <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#202124]/35">
                   Email
                 </p>
+
                 <a
                   href="mailto:hello@applotie.com"
                   className="mt-1 inline-block text-sm font-medium transition-colors hover:text-[#E52B2B]"
@@ -74,6 +208,7 @@ export default function ContactPage() {
                 <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#202124]/35">
                   Phone
                 </p>
+
                 <a
                   href="tel:+919999999999"
                   className="mt-1 inline-block text-sm font-medium transition-colors hover:text-[#E52B2B]"
@@ -86,6 +221,7 @@ export default function ContactPage() {
                 <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#202124]/35">
                   Based in
                 </p>
+
                 <p className="mt-1 text-sm font-medium">
                   Patna, Bihar, India
                 </p>
@@ -104,7 +240,10 @@ export default function ContactPage() {
           </div>
 
           {/* FORM */}
-          <form className="border border-[#202124]/20 bg-white p-6 shadow-[0_18px_50px_rgba(32,33,36,0.07)] sm:p-9 lg:p-12">
+          <form
+            onSubmit={handleSubmit}
+            className="border border-[#202124]/20 bg-white p-6 shadow-[0_18px_50px_rgba(32,33,36,0.07)] sm:p-9 lg:p-12"
+          >
             {/* FORM HEADER */}
             <div className="mb-9 border-b border-[#202124]/20 pb-8">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#E52B2B]">
@@ -181,14 +320,28 @@ export default function ContactPage() {
                   <option value="" disabled>
                     Select a service
                   </option>
-                  <option value="web-development">Web Development</option>
-                  <option value="app-development">App Development</option>
+
+                  <option value="web-development">
+                    Web Development
+                  </option>
+
+                  <option value="app-development">
+                    App Development
+                  </option>
+
                   <option value="seo">SEO</option>
+
                   <option value="performance-marketing">
                     Performance Marketing
                   </option>
-                  <option value="multiple">Multiple Services</option>
-                  <option value="other">Something else</option>
+
+                  <option value="multiple">
+                    Multiple Services
+                  </option>
+
+                  <option value="other">
+                    Something else
+                  </option>
                 </select>
               </label>
 
@@ -204,12 +357,23 @@ export default function ContactPage() {
                   <option value="" disabled>
                     Select project type
                   </option>
-                  <option value="new-project">New project</option>
-                  <option value="redesign">Redesign / rebuild</option>
+
+                  <option value="new-project">
+                    New project
+                  </option>
+
+                  <option value="redesign">
+                    Redesign / rebuild
+                  </option>
+
                   <option value="improvement">
                     Improve an existing product
                   </option>
-                  <option value="marketing">Marketing / growth</option>
+
+                  <option value="marketing">
+                    Marketing / growth
+                  </option>
+
                   <option value="maintenance">
                     Maintenance / support
                   </option>
@@ -227,12 +391,30 @@ export default function ContactPage() {
                   <option value="" disabled>
                     Select a range
                   </option>
-                  <option value="under-50k">Under ₹50,000</option>
-                  <option value="50k-1l">₹50,000 – ₹1 Lakh</option>
-                  <option value="1l-3l">₹1 Lakh – ₹3 Lakhs</option>
-                  <option value="3l-5l">₹3 Lakhs – ₹5 Lakhs</option>
-                  <option value="5l-plus">₹5 Lakhs+</option>
-                  <option value="not-sure">Not sure yet</option>
+
+                  <option value="under-50k">
+                    Under ₹50,000
+                  </option>
+
+                  <option value="50k-1l">
+                    ₹50,000 – ₹1 Lakh
+                  </option>
+
+                  <option value="1l-3l">
+                    ₹1 Lakh – ₹3 Lakhs
+                  </option>
+
+                  <option value="3l-5l">
+                    ₹3 Lakhs – ₹5 Lakhs
+                  </option>
+
+                  <option value="5l-plus">
+                    ₹5 Lakhs+
+                  </option>
+
+                  <option value="not-sure">
+                    Not sure yet
+                  </option>
                 </select>
               </label>
 
@@ -247,11 +429,26 @@ export default function ContactPage() {
                   <option value="" disabled>
                     When do you want to start?
                   </option>
-                  <option value="asap">As soon as possible</option>
-                  <option value="1-month">Within 1 month</option>
-                  <option value="1-3-months">1–3 months</option>
-                  <option value="3-6-months">3–6 months</option>
-                  <option value="exploring">Just exploring</option>
+
+                  <option value="asap">
+                    As soon as possible
+                  </option>
+
+                  <option value="1-month">
+                    Within 1 month
+                  </option>
+
+                  <option value="1-3-months">
+                    1–3 months
+                  </option>
+
+                  <option value="3-6-months">
+                    3–6 months
+                  </option>
+
+                  <option value="exploring">
+                    Just exploring
+                  </option>
                 </select>
               </label>
 

@@ -118,7 +118,6 @@ export default function CreatePostForm() {
       router.push("/admin");
       router.refresh();
     } catch (error) {
-      console.error("Create post error:", error);
       setError("Something went wrong");
     } finally {
       setLoading(false);

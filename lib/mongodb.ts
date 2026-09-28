@@ -7,8 +7,6 @@ if (!MONGODB_URI) {
   throw new Error("Please define MONGODB_URI in .env.local");
 }
 
-console.log("MONGODB_URI exists:", !!process.env.MONGODB_URI);
-
 type MongooseConnection = {
   conn: typeof mongoose | null;
   promise: Promise<typeof mongoose> | null;

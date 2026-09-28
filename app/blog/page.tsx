@@ -1,6 +1,8 @@
 import connectDB from "@/lib/mongodb";
 import BlogPost from "@/lib/models/BlogPost";
 import Link from "next/link";
+import FinalCTA from "@/components/cta";
+
 
 export default async function BlogPage() {
   await connectDB();
@@ -307,46 +309,7 @@ export default async function BlogPage() {
         )}
       </section>
 
-      {/* CTA */}
-      <section className="px-6 pb-20 lg:px-8 lg:pb-28">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#111318] px-8 py-16 text-black/80 sm:px-12 lg:px-16 lg:py-20">
-          <div
-            className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, #ffffff12 1px, transparent 1px), linear-gradient(to bottom, #ffffff12 1px, transparent 1px)",
-              backgroundSize: "42px 42px",
-            }}
-          />
-
-          <div className="absolute right-10 top-10 h-20 w-20 rounded-full border border-white/10" />
-
-          <div className="absolute bottom-8 right-24 h-3 w-3 rounded-full bg-[#F5C518]" />
-
-          <div className="relative max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#F5C518]">
-              Have an idea?
-            </p>
-
-            <h2 className="mt-5 text-4xl font-black leading-tight tracking-[-0.04em] sm:text-5xl lg:text-6xl">
-              Let's turn it into something that works.
-            </h2>
-
-            <p className="mt-6 max-w-xl text-base leading-7 text-white/60 sm:text-lg">
-              From websites and software to SEO and digital
-              growth, we're here to build what your business needs.
-            </p>
-
-            <Link
-              href="/contact"
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#F5C518] px-6 py-3.5 text-sm font-bold text-[#111318] transition hover:bg-white"
-            >
-              Start a conversation
-              <span>→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <FinalCTA />
     </main>
   );
 }

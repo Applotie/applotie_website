@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import GlobalBackgroundAnimation from "@/components/animations/GlobalBackgroundAnimation";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import FooterTransition from "@/components/FooterTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,18 +21,32 @@ export const metadata: Metadata = {
     "Applotie Technologies builds high-performing websites, apps and growth systems for ambitious businesses.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="relative min-h-full flex flex-col">
-        <div className="relative z-2">
+      <body
+        className="
+          relative
+          min-h-screen
+          overflow-x-hidden
+          bg-[#111318]
+          text-white
+        "
+      >
+                {/* WEBSITE */}
+        <div className="relative z-[1]">
           <Navbar />
-          <div className="relative z-2">{children}</div>
+
+          <main>{children}</main>
+          <FooterTransition />
           <Footer />
-          <GlobalBackgroundAnimation />
         </div>
       </body>
     </html>

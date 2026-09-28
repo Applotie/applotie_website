@@ -4,6 +4,8 @@ import Link from "next/link";
 import connectDB from "@/lib/mongodb";
 import BlogPost from "@/lib/models/BlogPost";
 import MarkdownContent from "./MarkdownContent";
+import FinalCTA from "@/components/cta";
+
 
 type Props = {
   params: Promise<{
@@ -297,38 +299,7 @@ export default async function BlogPostPage({
       </section>
 
       {/* ARTICLE FOOTER CTA */}
-      <section className="px-6 pb-20 lg:px-8 lg:pb-28">
-        <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-[#111318] px-8 py-14 text-black sm:px-12 lg:px-16 lg:py-16">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#F5C518]">
-            Keep building
-          </p>
-
-          <h2 className="mt-5 max-w-3xl text-3xl font-black tracking-[-0.04em] sm:text-4xl lg:text-5xl">
-            Have a digital problem worth solving?
-          </h2>
-
-          <p className="mt-5 max-w-2xl leading-7 text-red-900">
-            Let's talk about your website, software, SEO or
-            digital growth goals.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href="/contact"
-              className="rounded-full bg-[#F5C518] px-6 py-3.5 text-sm font-bold text-[#111318] transition hover:bg-white"
-            >
-              Start a conversation →
-            </Link>
-
-            <Link
-              href="/blog"
-              className="rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-black transition hover:border-white hover:bg-white hover:text-[#111318]"
-            >
-              More articles
-            </Link>
-          </div>
-        </div>
-      </section>
+      <FinalCTA />
     </main>
   );
 }

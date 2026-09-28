@@ -419,32 +419,6 @@ export default function PrivacyPolicyPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-[#202124] px-5 py-16 text-white sm:px-8 sm:py-20 lg:px-12 lg:py-24">
-        <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#F5C518]">
-            Questions?
-          </p>
-
-          <h2 className="mt-5 text-3xl font-semibold tracking-[-0.05em] sm:text-4xl md:text-5xl">
-            Want to know more about how we handle your data?
-          </h2>
-
-          <p className="mt-4 max-w-xl text-sm leading-6 text-white/50 sm:text-base">
-            If something in this policy isn&apos;t clear, reach out and
-            we&apos;ll be happy to explain.
-          </p>
-
-          <a
-            href="mailto:hello@applotie.com"
-            className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#F5C518] px-6 py-3.5 text-sm font-semibold text-[#202124] transition-all duration-300 hover:bg-[#E52B2B] hover:text-white"
-          >
-            Contact us
-            <span>↗</span>
-          </a>
-        </div>
-      </section>
-
       {/* FOOTER NAVIGATION */}
       <section className="border-t border-[#202124]/10 px-5 py-8 sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
