@@ -4,23 +4,22 @@ import Link from "next/link";
 const footerLinks = {
   company: [
     { name: "About", href: "/about" },
-    { name: "Careers", href: "/careers" },
+    { name: "Careers", href: "/services" },
     { name: "Contact", href: "/contact" },
     { name: "Blog", href: "/blog" },
   ],
 
   services: [
-    { name: "Web Development", href: "/services/web-development" },
-    { name: "App Development", href: "/services/app-development" },
-    { name: "SEO", href: "/services/seo" },
+    { name: "Web Development", href: "/services" },
+    { name: "App Development", href: "/services" },
+    { name: "SEO", href: "/services" },
     {
       name: "Performance Marketing",
-      href: "/services/performance-marketing",
+      href: "/services",
     },
   ],
 
   resources: [
-    { name: "Case Studies", href: "/case-studies" },
     { name: "Insights", href: "/blog" },
     { name: "FAQ", href: "/#faq" },
   ],
@@ -159,7 +158,7 @@ export default function Footer() {
 
               {/* Phone */}
               <a
-                href="tel:+919999999999"
+                href="tel:+917250204488"
                 className="
                   block
                   text-black/65
@@ -167,7 +166,7 @@ export default function Footer() {
                   hover:text-[#E52B2B]
                 "
               >
-                +91 99999 99999
+                +91 7250 20 4488
               </a>
 
               {/* Location */}
@@ -181,19 +180,22 @@ export default function Footer() {
             {/* Social Links */}
             <div className="mt-7 flex flex-wrap gap-2">
               <SocialLink
-                href="#"
+                href="
+https://in.linkedin.com/company/applotie"
                 label="LinkedIn"
               />
 
               <SocialLink
-                href="#"
+                href="https://www.instagram.com/applotie"
                 label="Instagram"
               />
 
               <SocialLink
-                href="#"
-                label="GitHub"
+                href="https://www.facebook.com/share/1FyLNDctvY/"
+                label="Facebook"
               />
+
+
             </div>
           </div>
         </div>
@@ -213,7 +215,7 @@ export default function Footer() {
           "
         >
           <p className="text-xs text-black/50">
-            © 2026 APPlotie Technologies. All rights reserved.
+            © 2026 Applotie Technologies. All rights reserved.
           </p>
 
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs">

@@ -317,7 +317,7 @@ Use Markdown to structure your article.
 
 Write your content here...`}
                           required
-                          className="min-h-[500px] w-full resize-y rounded-xl border border-[#111318]/15 bg-[#111318] px-5 py-5 font-mono text-sm leading-7 text-white outline-none transition placeholder:text-white/30 focus:border-[#E52B2B] focus:ring-4 focus:ring-[#E52B2B]/10"
+                          className="min-h-[500px] w-full resize-y rounded-xl border border-[#111318]/15 bg-[#111318] px-5 py-5 font-mono text-sm leading-7 text-black outline-none transition placeholder:text-white/30 focus:border-[#E52B2B] focus:ring-4 focus:ring-[#E52B2B]/10"
                         />
 
                         {/* Preview */}
@@ -511,7 +511,7 @@ Write your content here...`}
                   <button
                     type="submit"
                     disabled={loading}
-                    className="mt-5 w-full rounded-xl bg-[#111318] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#E52B2B] disabled:cursor-not-allowed disabled:opacity-60"
+                    className="mt-5 w-full rounded-xl bg-[#d95b12] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#E52B2B] disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {loading ? "Creating..." : "Create Post"}
                   </button>

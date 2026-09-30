@@ -30,20 +30,20 @@ const services = [
             "We improve your search visibility, rankings and organic traffic with SEO strategies built for sustainable business growth in Patna.",
         color: "red",
     },
-    {
-        id: 5,
-        title: "SEO & Growth",
-        description:
-            "We improve your search visibility, rankings and organic traffic with SEO strategies built for sustainable business growth in Patna.",
-        color: "red",
-    },
-    {
-        id: 6,
-        title: "SEO & Growth",
-        description:
-            "We improve your search visibility, rankings and organic traffic with SEO strategies built for sustainable business growth in Patna.",
-        color: "red",
-    },
+ {
+    id: 5,
+    title: "Branding",
+    description:
+        "We build memorable brand identities with strategic positioning, distinctive visuals and consistent brand experiences that help businesses stand out.",
+    color: "red",
+},
+{
+    id: 6,
+    title: "Reputation Management",
+    description:
+        "We build and protect your online reputation by strengthening your digital presence, managing reviews and promoting a trustworthy brand image.",
+    color: "red",
+},
 ];
 
 export default function Services() {

@@ -590,7 +590,7 @@ export default function Difference() {
                   font-bold
                   uppercase
                   tracking-[0.2em]
-                  text-black/60
+                  text-white/60
                   sm:text-xs
                 "
               >
@@ -616,7 +616,7 @@ export default function Difference() {
             </div>
 
             <div className="flex items-center gap-3">
-              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-black" />
+              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-white" />
 
               <span
                 className="
@@ -625,7 +625,7 @@ export default function Difference() {
                   font-bold
                   uppercase
                   tracking-[0.18em]
-                  text-black/50
+                  text-white
                   sm:text-xs
                 "
               >

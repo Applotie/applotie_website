@@ -3,7 +3,7 @@ import TimelineAnimation from "./animations/TimelineAnimation";
 const timeline = [
   {
     number: "01",
-    year: "2021",
+    year: "2019",
     label: "THE BEGINNING",
     keyword: "START",
     title: "An idea built around affordability.",
@@ -15,7 +15,7 @@ const timeline = [
   },
   {
     number: "02",
-    year: "2022",
+    year: "2020",
     label: "BUILD",
     keyword: "CREATE",
     title: "From ideas to digital products.",
@@ -27,7 +27,7 @@ const timeline = [
   },
   {
     number: "03",
-    year: "2023",
+    year: "2022",
     label: "EXPAND",
     keyword: "GROW",
     title: "Technology became only part of the story.",
@@ -39,7 +39,7 @@ const timeline = [
   },
   {
     number: "04",
-    year: "2024",
+    year: "2023",
     label: "PERFORMANCE",
     keyword: "MOVE",
     title: "Digital presence became digital performance.",
@@ -51,7 +51,7 @@ const timeline = [
   },
   {
     number: "05",
-    year: "2025",
+    year: "2026",
     label: "TODAY",
     keyword: "FORWARD",
     title: "Building what comes next.",

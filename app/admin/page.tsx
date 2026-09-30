@@ -36,7 +36,7 @@ export default async function AdminPage() {
             href="/"
             className="text-xl font-black tracking-[-0.05em]"
           >
-            APPlotie
+            Applotie
             <span className="text-[#E52B2B]">.</span>
           </Link>
 
@@ -100,7 +100,7 @@ export default async function AdminPage() {
 
               <Link
                 href="/admin/posts/create"
-                className="inline-flex w-fit items-center gap-2 rounded-xl bg-[#111318] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#E52B2B]"
+                className="inline-flex w-fit items-center gap-2 rounded-xl bg-[#d1720c] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#E52B2B]"
               >
                 <span className="text-lg leading-none">+</span>
                 Create Post

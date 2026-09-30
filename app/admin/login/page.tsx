@@ -74,7 +74,7 @@ export default function AdminLoginPage() {
             href="/"
             className="inline-flex items-center text-2xl font-black tracking-[-0.05em]"
           >
-            APPlotie
+            Applotie
             <span className="ml-1 text-[#E52B2B]">.</span>
           </a>
 
@@ -154,7 +154,7 @@ export default function AdminLoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="group relative flex w-full items-center justify-center overflow-hidden rounded-xl bg-[#111318] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#E52B2B] disabled:cursor-not-allowed disabled:opacity-60"
+              className="group relative flex w-full items-center justify-center overflow-hidden rounded-xl bg-[#dc670e] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#E52B2B] disabled:cursor-not-allowed disabled:opacity-60"
             >
               <span className="relative z-10">
                 {loading ? "Logging in..." : "Login to dashboard"}

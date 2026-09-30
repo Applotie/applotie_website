@@ -418,10 +418,10 @@ export default function EditPostForm() {
                           rows={24}
                           placeholder="Write your blog post in Markdown..."
                           required
-                          className="min-h-[500px] w-full resize-y rounded-xl border border-[#111318]/15 bg-[#111318] px-5 py-5 font-mono text-sm leading-7 text-white outline-none transition placeholder:text-white/30 focus:border-[#E52B2B] focus:ring-4 focus:ring-[#E52B2B]/10"
+                          className="min-h-[500px] w-full resize-y rounded-xl border border-[#111318]/15 bg-[#111318] px-5 py-5 font-mono text-sm leading-7 text-black outline-none transition placeholder:text-white/30 focus:border-[#E52B2B] focus:ring-4 focus:ring-[#E52B2B]/10"
                         />
 
-                        <div className="min-h-[500px] overflow-hidden rounded-xl border border-[#111318]/10 bg-[#FAFAF8]">
+                        <div className="min-h-[500px] overflow-hidden rounded-xl border border-[#111318]/10 bg-[#f4f4ec]">
                           <div className="border-b border-[#111318]/10 px-5 py-3">
                             <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#888B91]">
                               Live Preview
@@ -604,7 +604,7 @@ export default function EditPostForm() {
                   <button
                     type="submit"
                     disabled={saving}
-                    className="mt-5 w-full rounded-xl bg-[#111318] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#E52B2B] disabled:cursor-not-allowed disabled:opacity-60"
+                    className="mt-5 w-full rounded-xl bg-[#da7216] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#E52B2B] disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {saving ? "Saving..." : "Update Post"}
                   </button>

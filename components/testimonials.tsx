@@ -11,7 +11,7 @@ const testimonials = [
   },
   {
     quote:
-      "APPlotie transformed our website into a much faster and more effective sales channel. We saw a 3× increase in qualified enquiries within the first six months.",
+      "Applotie transformed our website into a much faster and more effective sales channel. We saw a 3× increase in qualified enquiries within the first six months.",
     client: "Priya Mehta",
     company: "NovaBuild",
     role: "Marketing Director",
