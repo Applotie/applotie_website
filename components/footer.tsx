@@ -27,7 +27,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#111318] text-black">
+    <footer className="w-full bg-ink text-text-dark-primary">
       <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-16">
         {/* Main Footer */}
         <div
@@ -35,7 +35,7 @@ export default function Footer() {
             grid
             w-full
             gap-12
-            border-b border-[#111318]/10
+            border-b border-ink/10
             py-14
             sm:gap-14
             sm:py-16
@@ -55,13 +55,12 @@ export default function Footer() {
                 text-2xl
                 font-bold
                 tracking-[-0.05em]
-                text-black
+                text-text-dark-primary
                 sm:text-3xl
               "
             >
               App
-              <span className="text-[#E52B2B]">lotie</span>
-              <span className="ml-1.5 h-2 w-2 rounded-full bg-[#F5C518]" />
+              <span className="text-signal-red">lotie</span>
             </Link>
 
             <p
@@ -70,7 +69,7 @@ export default function Footer() {
                 max-w-xs
                 text-sm
                 leading-6
-                text-black/75
+                text-text-dark-secondary
                 sm:text-[15px]
                 sm:leading-7
               "
@@ -88,18 +87,18 @@ export default function Footer() {
                 items-center
                 gap-2
                 rounded-full
-                border border-[#111318]/10
-                bg-[#1a1c22]
+                border border-ink/10
+                bg-graphite
                 px-3.5
                 py-2
                 text-[10px]
                 font-semibold
                 uppercase
                 tracking-[0.16em]
-                text-black/70
+                text-text-dark-secondary
               "
             >
-              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#E52B2B]" />
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-signal-red" />
               Design · Development · Growth
             </div>
           </div>
@@ -131,7 +130,7 @@ export default function Footer() {
                 font-bold
                 uppercase
                 tracking-[0.2em]
-                text-black/75
+                text-text-dark-secondary
               "
             >
               Contact
@@ -147,12 +146,12 @@ export default function Footer() {
                   items-center
                   gap-2
                   break-all
-                  text-black/65
+                  text-text-dark-secondary
                   transition-colors
-                  hover:text-[#E52B2B]
+                  hover:text-signal-red
                 "
               >
-                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#E52B2B]" />
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-signal-red" />
                 info@applotie.com
               </a>
 
@@ -161,16 +160,16 @@ export default function Footer() {
                 href="tel:+917250204488"
                 className="
                   block
-                  text-black/65
+                  text-text-dark-secondary
                   transition-colors
-                  hover:text-[#E52B2B]
+                  hover:text-signal-red
                 "
               >
                 +91 7250 20 4488
               </a>
 
               {/* Location */}
-              <p className="pt-1 leading-6 text-black/75">
+              <p className="pt-1 leading-6 text-text-dark-secondary">
                 Patna, Bihar
                 <br />
                 India
@@ -214,7 +213,7 @@ https://in.linkedin.com/company/applotie"
             sm:py-7
           "
         >
-          <p className="text-xs text-black/50">
+          <p className="text-xs text-text-dark-secondary/70">
             © 2026 Applotie Technologies. All rights reserved.
           </p>
 
@@ -222,9 +221,9 @@ https://in.linkedin.com/company/applotie"
             <Link
               href="/privacy"
               className="
-                text-black/65
+                text-text-dark-secondary
                 transition-colors
-                hover:text-[#E52B2B]
+                hover:text-signal-red
               "
             >
               Privacy Policy
@@ -233,9 +232,9 @@ https://in.linkedin.com/company/applotie"
             <Link
               href="/terms"
               className="
-                text-black/50
+                text-text-dark-secondary/70
                 transition-colors
-                hover:text-[#E52B2B]
+                hover:text-signal-red
               "
             >
               Terms
@@ -264,7 +263,7 @@ function FooterColumn({
           font-bold
           uppercase
           tracking-[0.2em]
-          text-black/75
+          text-text-dark-secondary
         "
       >
         {title}
@@ -278,9 +277,9 @@ function FooterColumn({
               className="
                 inline-block
                 text-sm
-                text-black/80
+                text-text-dark-primary
                 transition-colors
-                hover:text-[#E52B2B]
+                hover:text-signal-red
               "
             >
               {link.name}
@@ -306,16 +305,16 @@ function SocialLink({
       aria-label={label}
       className="
         rounded-full
-        border border-[#111318]/10
-        bg-[#1a1c22]
+        border border-ink/10
+        bg-graphite
         px-3.5
         py-2
         text-[11px]
         font-medium
-        text-black/75
+        text-text-dark-secondary
         transition-colors
-        hover:border-[#E52B2B]/30
-        hover:text-[#E52B2B]
+        hover:border-signal-red/30
+        hover:text-signal-red
       "
     >
       {label}

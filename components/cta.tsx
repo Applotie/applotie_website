@@ -4,13 +4,13 @@ export default function FinalCTA() {
   return (
     <section
       id="contact"
-      className="bg-[#111318] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
+      className="bg-white px-5 py-16 text-text-dark-primary sm:px-8 sm:py-20 lg:px-12 lg:py-24"
     >
       <div className="mx-auto max-w-[1400px]">
         {/* CTA */}
         <div
           className="
-            bg-[#E52B2B]
+            bg-graphite
             px-6
             py-10
             sm:px-10
@@ -41,7 +41,7 @@ export default function FinalCTA() {
                   font-bold
                   uppercase
                   tracking-[0.22em]
-                  text-black/70
+                  text-text-dark-secondary
                   sm:text-xs
                 "
               >
@@ -59,9 +59,9 @@ export default function FinalCTA() {
                   md:text-6xl
                 "
               >
-                Have an idea?
+                Have an Idea?
                 <br />
-                <span className="text-black">Let&apos;s build it.</span>
+                <span className="text-text-dark-primary">Let&apos;s <span className="text-red-700">Build It.</span></span>
               </h2>
 
               <p
@@ -90,14 +90,16 @@ export default function FinalCTA() {
                   inline-flex
                   items-center
                   gap-4
-                  bg-white
+                  bg-signal-red
                   px-6
                   py-4
                   text-xs
                   font-bold
                   uppercase
                   tracking-[0.12em]
-                  text-black
+                  text-text-dark-primary
+                  transition-colors
+                  hover:bg-burgundy
                   sm:px-7
                   sm:py-4
                 "
@@ -140,7 +142,7 @@ export default function FinalCTA() {
               font-bold
               uppercase
               tracking-[0.2em]
-              text-black/60
+              text-text-dark-secondary
               sm:text-[10px]
             "
           >
@@ -153,7 +155,7 @@ export default function FinalCTA() {
               font-bold
               uppercase
               tracking-[0.2em]
-              text-black/60
+              text-text-dark-secondary
               sm:text-[10px]
             "
           >

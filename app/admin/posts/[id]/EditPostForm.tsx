@@ -187,11 +187,11 @@ export default function EditPostForm() {
 
   if (loading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#F7F7F5] px-6">
+      <main className="flex min-h-screen items-center justify-center bg-ivory px-6">
         <div className="text-center">
-          <div className="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-2 border-[#111318]/10 border-t-[#E52B2B]" />
+          <div className="mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-2 border-ink/10 border-t-signal-red" />
 
-          <p className="text-sm font-semibold text-[#666A72]">
+          <p className="text-sm font-semibold text-text-secondary">
             Loading post...
           </p>
         </div>
@@ -201,9 +201,9 @@ export default function EditPostForm() {
 
   if (error && !formData.title) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#F7F7F5] px-6">
-        <div className="w-full max-w-md rounded-2xl border border-[#E52B2B]/20 bg-white p-8 text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#E52B2B]/10 text-[#E52B2B]">
+      <main className="flex min-h-screen items-center justify-center bg-ivory px-6">
+        <div className="w-full max-w-md rounded-2xl border border-signal-red/20 bg-white p-8 text-center">
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-signal-red/10 text-signal-red">
             !
           </div>
 
@@ -211,13 +211,13 @@ export default function EditPostForm() {
             Unable to load post
           </h1>
 
-          <p className="mt-2 text-sm text-[#777A80]">
+          <p className="mt-2 text-sm text-text-secondary">
             {error}
           </p>
 
           <Link
             href="/admin"
-            className="mt-6 inline-flex rounded-xl bg-[#111318] px-5 py-3 text-sm font-bold text-white"
+            className="mt-6 inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-bold text-white"
           >
             Back to Dashboard
           </Link>
@@ -227,21 +227,21 @@ export default function EditPostForm() {
   }
 
   return (
-    <main className="min-h-screen bg-[#F7F7F5] text-[#111318]">
+    <main className="min-h-screen bg-ivory text-ink">
       {/* Header */}
-      <header className="border-b border-[#111318]/10 bg-white">
+      <header className="border-b border-ink/10 bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
           <Link
             href="/admin"
             className="text-xl font-black tracking-[-0.05em]"
           >
             APPlotie
-            <span className="text-[#E52B2B]">.</span>
+            <span className="text-signal-red">.</span>
           </Link>
 
           <Link
             href="/admin"
-            className="text-sm font-semibold text-[#666A72] transition hover:text-[#E52B2B]"
+            className="text-sm font-semibold text-text-secondary transition hover:text-signal-red"
           >
             ← Dashboard
           </Link>
@@ -250,35 +250,24 @@ export default function EditPostForm() {
 
       {/* Background */}
       <div className="relative overflow-hidden">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-50"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(17,19,24,0.035) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(17,19,24,0.035) 1px, transparent 1px)
-            `,
-            backgroundSize: "42px 42px",
-          }}
-        />
+        <div className="pointer-events-none absolute -right-20 top-20 h-64 w-64 rounded-full border border-signal-red/10" />
 
-        <div className="pointer-events-none absolute -right-20 top-20 h-64 w-64 rounded-full border border-[#E52B2B]/10" />
-
-        <div className="pointer-events-none absolute right-32 top-36 h-2 w-2 rounded-full bg-[#F5C518]" />
+        <div className="pointer-events-none absolute right-32 top-36 h-2 w-2 rounded-full bg-muted-gold" />
 
         <div className="relative mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
           {/* Heading */}
           <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
-              <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#E52B2B]">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-signal-red">
                 Content Management
               </p>
 
               <h1 className="text-4xl font-black tracking-[-0.05em] sm:text-5xl">
                 Edit Post
-                <span className="text-[#E52B2B]">.</span>
+                <span className="text-signal-red">.</span>
               </h1>
 
-              <p className="mt-3 max-w-xl text-sm leading-6 text-[#666A72] sm:text-base">
+              <p className="mt-3 max-w-xl text-sm leading-6 text-text-secondary sm:text-base">
                 Update your article, content, and search optimization
                 settings.
               </p>
@@ -287,8 +276,8 @@ export default function EditPostForm() {
             <div
               className={`w-fit rounded-full px-4 py-2 text-xs font-bold ${
                 formData.status === "published"
-                  ? "bg-[#E52B2B]/10 text-[#C92121]"
-                  : "bg-[#F5C518]/20 text-[#806500]"
+                  ? "bg-signal-red/10 text-burgundy"
+                  : "bg-muted-gold/20 text-burgundy"
               }`}
             >
               {formData.status === "published"
@@ -302,9 +291,9 @@ export default function EditPostForm() {
               {/* Main */}
               <div className="space-y-6">
                 {/* Basic */}
-                <section className="rounded-2xl border border-[#111318]/10 bg-white p-6 shadow-[0_10px_35px_rgba(17,19,24,0.04)] sm:p-8">
+                <section className="rounded-2xl border border-ink/10 bg-white p-6 shadow-[0_10px_35px_rgba(17,18,20,0.04)] sm:p-8">
                   <div className="mb-7">
-                    <p className="mb-2 text-xs font-bold uppercase tracking-[0.15em] text-[#E52B2B]">
+                    <p className="mb-2 text-xs font-bold uppercase tracking-[0.15em] text-signal-red">
                       01
                     </p>
 
@@ -312,7 +301,7 @@ export default function EditPostForm() {
                       Basic Information
                     </h2>
 
-                    <p className="mt-1 text-sm text-[#888B91]">
+                    <p className="mt-1 text-sm text-text-secondary">
                       Edit the main content and identity of your
                       article.
                     </p>
@@ -334,7 +323,7 @@ export default function EditPostForm() {
                         value={formData.title}
                         onChange={handleChange}
                         required
-                        className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3.5 text-sm outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                        className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3.5 text-sm outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                       />
                     </div>
 
@@ -347,8 +336,8 @@ export default function EditPostForm() {
                         Slug
                       </label>
 
-                      <div className="flex items-center overflow-hidden rounded-xl border border-[#111318]/15 bg-[#FAFAF8] focus-within:border-[#E52B2B] focus-within:bg-white focus-within:ring-4 focus-within:ring-[#E52B2B]/10">
-                        <span className="hidden border-r border-[#111318]/10 px-4 text-xs text-[#999CA2] sm:block">
+                      <div className="flex items-center overflow-hidden rounded-xl border border-ink/15 bg-ivory focus-within:border-signal-red focus-within:bg-white focus-within:ring-4 focus-within:ring-signal-red/10">
+                        <span className="hidden border-r border-ink/10 px-4 text-xs text-text-muted sm:block">
                           /blog/
                         </span>
 
@@ -362,7 +351,7 @@ export default function EditPostForm() {
                         />
                       </div>
 
-                      <p className="mt-2 text-xs text-[#999CA2]">
+                      <p className="mt-2 text-xs text-text-muted">
                         Changing the slug changes the public URL of
                         this article.
                       </p>
@@ -378,7 +367,7 @@ export default function EditPostForm() {
                           Excerpt
                         </label>
 
-                        <span className="text-xs text-[#999CA2]">
+                        <span className="text-xs text-text-muted">
                           {formData.excerpt.length}/300
                         </span>
                       </div>
@@ -390,7 +379,7 @@ export default function EditPostForm() {
                         onChange={handleChange}
                         rows={4}
                         required
-                        className="w-full resize-none rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3.5 text-sm leading-6 outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                        className="w-full resize-none rounded-xl border border-ink/15 bg-ivory px-4 py-3.5 text-sm leading-6 outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                       />
                     </div>
 
@@ -404,7 +393,7 @@ export default function EditPostForm() {
                           Content
                         </label>
 
-                        <span className="rounded-full bg-[#F7F7F5] px-3 py-1 text-xs font-semibold text-[#777A80]">
+                        <span className="rounded-full bg-ivory px-3 py-1 text-xs font-semibold text-text-secondary">
                           Markdown
                         </span>
                       </div>
@@ -418,12 +407,12 @@ export default function EditPostForm() {
                           rows={24}
                           placeholder="Write your blog post in Markdown..."
                           required
-                          className="min-h-[500px] w-full resize-y rounded-xl border border-[#111318]/15 bg-[#111318] px-5 py-5 font-mono text-sm leading-7 text-black outline-none transition placeholder:text-white/30 focus:border-[#E52B2B] focus:ring-4 focus:ring-[#E52B2B]/10"
+                          className="min-h-[500px] w-full resize-y rounded-xl border border-border-dark bg-ink px-5 py-5 font-mono text-sm leading-7 text-text-dark-primary outline-none transition placeholder:text-white/30 focus:border-signal-red focus:ring-4 focus:ring-signal-red/10"
                         />
 
-                        <div className="min-h-[500px] overflow-hidden rounded-xl border border-[#111318]/10 bg-[#f4f4ec]">
-                          <div className="border-b border-[#111318]/10 px-5 py-3">
-                            <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#888B91]">
+                        <div className="min-h-[500px] overflow-hidden rounded-xl border border-ink/10 bg-stone">
+                          <div className="border-b border-ink/10 px-5 py-3">
+                            <span className="text-xs font-bold uppercase tracking-[0.12em] text-text-secondary">
                               Live Preview
                             </span>
                           </div>
@@ -440,9 +429,9 @@ export default function EditPostForm() {
                 </section>
 
                 {/* SEO */}
-                <section className="rounded-2xl border border-[#111318]/10 bg-white p-6 shadow-[0_10px_35px_rgba(17,19,24,0.04)] sm:p-8">
+                <section className="rounded-2xl border border-ink/10 bg-white p-6 shadow-[0_10px_35px_rgba(17,18,20,0.04)] sm:p-8">
                   <div className="mb-7">
-                    <p className="mb-2 text-xs font-bold uppercase tracking-[0.15em] text-[#E52B2B]">
+                    <p className="mb-2 text-xs font-bold uppercase tracking-[0.15em] text-signal-red">
                       03
                     </p>
 
@@ -450,7 +439,7 @@ export default function EditPostForm() {
                       Search Optimization
                     </h2>
 
-                    <p className="mt-1 text-sm text-[#888B91]">
+                    <p className="mt-1 text-sm text-text-secondary">
                       Control how this article appears in search
                       engines and social sharing.
                     </p>
@@ -466,7 +455,7 @@ export default function EditPostForm() {
                           Meta Title
                         </label>
 
-                        <span className="text-xs text-[#999CA2]">
+                        <span className="text-xs text-text-muted">
                           {formData.seo.metaTitle.length}/60
                         </span>
                       </div>
@@ -477,7 +466,7 @@ export default function EditPostForm() {
                         value={formData.seo.metaTitle}
                         onChange={handleChange}
                         maxLength={60}
-                        className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3.5 text-sm outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                        className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3.5 text-sm outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                       />
                     </div>
 
@@ -490,7 +479,7 @@ export default function EditPostForm() {
                           Meta Description
                         </label>
 
-                        <span className="text-xs text-[#999CA2]">
+                        <span className="text-xs text-text-muted">
                           {formData.seo.metaDescription.length}/160
                         </span>
                       </div>
@@ -502,7 +491,7 @@ export default function EditPostForm() {
                         onChange={handleChange}
                         maxLength={160}
                         rows={4}
-                        className="w-full resize-none rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3.5 text-sm leading-6 outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                        className="w-full resize-none rounded-xl border border-ink/15 bg-ivory px-4 py-3.5 text-sm leading-6 outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                       />
                     </div>
 
@@ -520,10 +509,10 @@ export default function EditPostForm() {
                         value={formData.seo.keywords}
                         onChange={handleChange}
                         placeholder="nextjs, seo, web development"
-                        className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3.5 text-sm outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                        className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3.5 text-sm outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                       />
 
-                      <p className="mt-2 text-xs text-[#999CA2]">
+                      <p className="mt-2 text-xs text-text-muted">
                         Separate keywords with commas.
                       </p>
                     </div>
@@ -542,7 +531,7 @@ export default function EditPostForm() {
                         value={formData.seo.canonicalUrl}
                         onChange={handleChange}
                         placeholder="https://www.applotie.com/blog/example"
-                        className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3.5 text-sm outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                        className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3.5 text-sm outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                       />
                     </div>
 
@@ -560,7 +549,7 @@ export default function EditPostForm() {
                         value={formData.seo.ogImage}
                         onChange={handleChange}
                         placeholder="https://example.com/og-image.jpg"
-                        className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3.5 text-sm outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                        className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3.5 text-sm outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                       />
                     </div>
                   </div>
@@ -570,7 +559,7 @@ export default function EditPostForm() {
               {/* Sidebar */}
               <aside className="space-y-6">
                 {/* Save */}
-                <section className="rounded-2xl border border-[#111318]/10 bg-white p-6 shadow-[0_10px_35px_rgba(17,19,24,0.04)]">
+                <section className="rounded-2xl border border-ink/10 bg-white p-6 shadow-[0_10px_35px_rgba(17,18,20,0.04)]">
                   <h2 className="mb-5 text-lg font-black tracking-[-0.03em]">
                     Publish
                   </h2>
@@ -588,7 +577,7 @@ export default function EditPostForm() {
                       name="status"
                       value={formData.status}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3.5 text-sm font-medium outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                      className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3.5 text-sm font-medium outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                     >
                       <option value="draft">Draft</option>
                       <option value="published">Published</option>
@@ -596,7 +585,7 @@ export default function EditPostForm() {
                   </div>
 
                   {error && (
-                    <div className="mt-5 rounded-xl border border-[#E52B2B]/20 bg-[#E52B2B]/5 px-4 py-3 text-sm font-medium leading-5 text-[#C92121]">
+                    <div className="mt-5 rounded-xl border border-signal-red/20 bg-signal-red/5 px-4 py-3 text-sm font-medium leading-5 text-burgundy">
                       {error}
                     </div>
                   )}
@@ -604,23 +593,23 @@ export default function EditPostForm() {
                   <button
                     type="submit"
                     disabled={saving}
-                    className="mt-5 w-full rounded-xl bg-[#da7216] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#E52B2B] disabled:cursor-not-allowed disabled:opacity-60"
+                    className="mt-5 w-full rounded-xl bg-signal-red px-5 py-3.5 text-sm font-bold text-white transition hover:bg-signal-red disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {saving ? "Saving..." : "Update Post"}
                   </button>
 
                   <Link
                     href="/admin"
-                    className="mt-3 block w-full rounded-xl border border-[#111318]/10 px-5 py-3.5 text-center text-sm font-bold transition hover:bg-[#F7F7F5]"
+                    className="mt-3 block w-full rounded-xl border border-ink/10 px-5 py-3.5 text-center text-sm font-bold transition hover:bg-ivory"
                   >
                     Cancel
                   </Link>
                 </section>
 
                 {/* Post Information */}
-                <section className="rounded-2xl border border-[#111318]/10 bg-white p-6 shadow-[0_10px_35px_rgba(17,19,24,0.04)]">
+                <section className="rounded-2xl border border-ink/10 bg-white p-6 shadow-[0_10px_35px_rgba(17,18,20,0.04)]">
                   <div className="mb-6">
-                    <p className="mb-2 text-xs font-bold uppercase tracking-[0.15em] text-[#E52B2B]">
+                    <p className="mb-2 text-xs font-bold uppercase tracking-[0.15em] text-signal-red">
                       02
                     </p>
 
@@ -644,7 +633,7 @@ export default function EditPostForm() {
                         value={formData.featuredImage}
                         onChange={handleChange}
                         placeholder="https://..."
-                        className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3 text-sm outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                        className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3 text-sm outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                       />
                     </div>
 
@@ -662,7 +651,7 @@ export default function EditPostForm() {
                         value={formData.author}
                         onChange={handleChange}
                         required
-                        className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3 text-sm outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                        className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3 text-sm outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                       />
                     </div>
 
@@ -681,7 +670,7 @@ export default function EditPostForm() {
                         onChange={handleChange}
                         placeholder="Development"
                         required
-                        className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3 text-sm outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                        className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3 text-sm outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                       />
                     </div>
 
@@ -699,10 +688,10 @@ export default function EditPostForm() {
                         value={formData.tags}
                         onChange={handleChange}
                         placeholder="nextjs, seo, javascript"
-                        className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3 text-sm outline-none transition focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                        className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3 text-sm outline-none transition focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
                       />
 
-                      <p className="mt-2 text-xs text-[#999CA2]">
+                      <p className="mt-2 text-xs text-text-muted">
                         Separate tags with commas.
                       </p>
                     </div>

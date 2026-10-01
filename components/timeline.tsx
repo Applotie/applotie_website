@@ -71,7 +71,7 @@ export default function Timeline() {
         relative
         overflow-hidden
         bg-white
-        text-[#202124]
+        text-text-primary
       "
     >
       <TimelineAnimation />
@@ -114,13 +114,13 @@ export default function Timeline() {
                   font-bold
                   uppercase
                   tracking-[0.22em]
-                  text-[#E52B2B]
+                  text-signal-red
                 "
               >
                 Our Journey
               </p>
 
-              <div className="mt-4 h-px w-14 bg-[#202124]" />
+              <div className="mt-4 h-px w-14 bg-charcoal" />
 
               <p
                 className="
@@ -129,7 +129,7 @@ export default function Timeline() {
                   font-semibold
                   uppercase
                   tracking-[0.16em]
-                  text-[#202124]/50
+                  text-text-primary/50
                 "
               >
                 2021 — Now
@@ -156,7 +156,7 @@ export default function Timeline() {
               Built from an idea.
               <br />
 
-              <span className="text-[#E52B2B]">
+              <span className="text-signal-red">
                 Moving toward impact.
               </span>
             </p>
@@ -167,7 +167,7 @@ export default function Timeline() {
                 max-w-2xl
                 text-base
                 leading-7
-                text-[#202124]/65
+                text-text-primary/65
                 md:text-lg
               "
             >
@@ -209,7 +209,7 @@ export default function Timeline() {
             hidden
             w-px
             -translate-x-1/2
-            bg-[#202124]/15
+            bg-charcoal/15
             lg:block
           "
         />
@@ -229,7 +229,7 @@ export default function Timeline() {
             origin-top
             -translate-x-1/2
             scale-y-0
-            bg-[#E52B2B]
+            bg-signal-red
             lg:block
           "
         />
@@ -245,7 +245,7 @@ export default function Timeline() {
                 grid-cols-1
                 gap-8
                 border-t
-                border-[#202124]/15
+                border-ink/15
                 py-16
                 sm:py-20
                 lg:min-h-[430px]
@@ -287,8 +287,8 @@ export default function Timeline() {
                         w-2
                         ${
                           item.accent === "red"
-                            ? "bg-[#E52B2B]"
-                            : "bg-[#F5C518]"
+                            ? "bg-signal-red"
+                            : "bg-muted-gold"
                         }
                       `}
                     />
@@ -299,7 +299,7 @@ export default function Timeline() {
                         font-bold
                         uppercase
                         tracking-[0.2em]
-                        text-[#202124]/50
+                        text-text-primary/50
                       "
                     >
                       {item.label}
@@ -317,8 +317,8 @@ export default function Timeline() {
                       tracking-[0.22em]
                       ${
                         item.accent === "red"
-                          ? "text-[#E52B2B]"
-                          : "text-[#B89400]"
+                          ? "text-signal-red"
+                          : "text-burgundy"
                       }
                     `}
                   >
@@ -350,7 +350,7 @@ export default function Timeline() {
                       max-w-lg
                       text-sm
                       leading-7
-                      text-[#202124]/60
+                      text-text-primary/60
                       sm:text-base
                     "
                   >
@@ -372,14 +372,14 @@ export default function Timeline() {
                         key={tag}
                         className="
                           border
-                          border-[#202124]/15
+                          border-ink/15
                           px-3
                           py-1.5
                           text-[9px]
                           font-bold
                           uppercase
                           tracking-[0.14em]
-                          text-[#202124]/55
+                          text-text-primary/55
                         "
                       >
                         {tag}
@@ -413,7 +413,7 @@ export default function Timeline() {
                     font-bold
                     uppercase
                     tracking-[0.18em]
-                    text-[#202124]/35
+                    text-text-primary/35
                     lg:hidden
                   "
                 >
@@ -453,8 +453,8 @@ export default function Timeline() {
                     lg:block
                     ${
                       item.accent === "red"
-                        ? "bg-[#E52B2B]"
-                        : "bg-[#F5C518]"
+                        ? "bg-signal-red"
+                        : "bg-muted-gold"
                     }
                   `}
                 />
@@ -472,7 +472,7 @@ export default function Timeline() {
                   text-[11px]
                   font-bold
                   tracking-[0.2em]
-                  text-[#202124]/25
+                  text-text-primary/25
                   lg:block
                   ${
                     item.side === "left"
@@ -496,8 +496,8 @@ export default function Timeline() {
         data-timeline-end
         className="
           border-t
-          border-[#202124]/10
-          bg-[#202124]
+          border-ink/10
+          bg-charcoal
           text-white
         "
       >
@@ -528,7 +528,7 @@ export default function Timeline() {
                 font-bold
                 uppercase
                 tracking-[0.22em]
-                text-[#F5C518]
+                text-muted-gold
               "
             >
               Next Chapter
@@ -539,7 +539,7 @@ export default function Timeline() {
                 mt-4
                 max-w-4xl
                 text-4xl
-                text-black/80
+                text-text-dark-primary
                 font-semibold
                 leading-none
                 tracking-[-0.05em]
@@ -549,7 +549,7 @@ export default function Timeline() {
               "
             >
               The story is still
-              <span className="text-[#E52B2B]"> moving.</span>
+              <span className="text-signal-red"> moving.</span>
             </h3>
           </div>
 
@@ -558,7 +558,7 @@ export default function Timeline() {
               max-w-sm
               text-sm
               leading-6
-              text-black/75
+              text-text-dark-secondary
             "
           >
             New ideas. New technology. New businesses to help grow.

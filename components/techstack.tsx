@@ -59,9 +59,9 @@ export default function TechStack() {
       className="
         relative
         overflow-hidden
-        bg-[#111318]
+        bg-ink
         py-24
-        text-black
+        text-text-dark-primary
         sm:py-28
         lg:py-36
         xl:py-44
@@ -77,7 +77,7 @@ export default function TechStack() {
           h-72
           w-72
           rounded-full
-          bg-[#F5C518]/10
+          bg-muted-gold/10
           blur-3xl
         "
       />
@@ -91,7 +91,7 @@ export default function TechStack() {
           h-80
           w-80
           rounded-full
-          bg-[#E52B2B]/5
+          bg-signal-red/5
           blur-3xl
         "
       />
@@ -130,7 +130,7 @@ export default function TechStack() {
               font-semibold
               uppercase
               tracking-[0.28em]
-              text-[#E52B2B]
+              text-signal-red
               sm:text-sm
             "
           >
@@ -149,7 +149,7 @@ export default function TechStack() {
             "
           >
             Built With{" "}
-            <span className="text-black/85">Modern</span>{" "}
+            <span className="text-text-dark-primary">Modern</span>{" "}
             Technology
           </h2>
 
@@ -160,7 +160,7 @@ export default function TechStack() {
               max-w-2xl
               text-sm
               leading-6
-              text-black/75
+              text-text-dark-secondary
               sm:text-base
               sm:leading-7
               lg:text-lg
@@ -201,7 +201,7 @@ export default function TechStack() {
               sm:justify-between
             "
           >
-            <p className="text-xs text-black/65 font-semibold sm:text-sm">
+            <p className="text-xs text-text-dark-secondary font-semibold sm:text-sm">
               Technology should serve the product — not the other way
               around.
             </p>
@@ -212,7 +212,7 @@ export default function TechStack() {
                 font-bold
                 uppercase
                 tracking-[0.2em]
-                text-black/65 
+                text-text-dark-secondary
                 sm:text-xs
               "
             >

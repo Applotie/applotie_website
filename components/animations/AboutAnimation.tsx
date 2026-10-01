@@ -152,7 +152,7 @@ export default function AboutAnimation() {
         const enter = () => {
           gsap.to(number, {
             x: 5,
-            color: "#E52B2B",
+            color: "var(--signal-red)",
             duration: 0.2,
             ease: "power2.out",
           });
@@ -161,7 +161,7 @@ export default function AboutAnimation() {
         const leave = () => {
           gsap.to(number, {
             x: 0,
-            color: "#F0B900",
+            color: "var(--muted-gold)",
             duration: 0.2,
             ease: "power2.out",
           });

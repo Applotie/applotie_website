@@ -54,7 +54,7 @@ export default function Services() {
                 services-section
                 relative
                 overflow-hidden
-                bg-[#F5F3EE]
+                bg-text-dark-primary
                 px-4
                 py-16
                 sm:px-6
@@ -82,7 +82,7 @@ export default function Services() {
                     h-56
                     w-56
                     rounded-full
-                    bg-[#E52B2B]/[0.055]
+                    bg-signal-red/[0.055]
                     blur-3xl
                     sm:h-72
                     sm:w-72
@@ -102,7 +102,7 @@ export default function Services() {
                     h-56
                     w-56
                     rounded-full
-                    bg-[#F5C518]/[0.07]
+                    bg-muted-gold/[0.07]
                     blur-3xl
                     sm:h-72
                     sm:w-72
@@ -157,7 +157,7 @@ export default function Services() {
                                 font-bold
                                 uppercase
                                 tracking-[0.25em]
-                                text-[#E52B2B]
+                                text-signal-red
                                 sm:mb-6
                                 sm:text-[11px]
                             "
@@ -169,7 +169,7 @@ export default function Services() {
                                     w-1.5
                                     shrink-0
                                     rounded-full
-                                    bg-[#E52B2B]
+                                    bg-signal-red
                                 "
                             />
 
@@ -186,14 +186,14 @@ export default function Services() {
                                 font-semibold
                                 leading-[0.9]
                                 tracking-[-0.06em]
-                                text-[#111318]
+                                text-ink
                             "
                         >
                             See how Applotie
                             <br className="hidden sm:block" />
                             <span className="sm:hidden"> </span>
                             can help
-                            <span className="text-[#E52B2B]">.</span>
+                            <span className="text-signal-red">.</span>
                         </h2>
 
                         {/* Description */}
@@ -205,7 +205,7 @@ export default function Services() {
                                 max-w-2xl
                                 text-sm
                                 leading-6
-                                text-[#111318]/65
+                                text-ink/65
                                 sm:mt-6
                                 sm:text-base
                                 sm:leading-7
@@ -216,15 +216,15 @@ export default function Services() {
                             Digital marketing and technology solutions for
                             businesses in Patna designed to help ambitious
                             businesses{" "}
-                            <span className="font-semibold text-[#111318]">
+                            <span className="font-semibold text-ink">
                                 build
                             </span>
                             ,{" "}
-                            <span className="font-semibold text-[#B48A00]">
+                            <span className="font-semibold text-burgundy">
                                 grow
                             </span>{" "}
                             and{" "}
-                            <span className="font-semibold text-[#E52B2B]">
+                            <span className="font-semibold text-signal-red">
                                 scale
                             </span>
                             .
@@ -238,7 +238,7 @@ export default function Services() {
                             services-side-note
                             hidden
                             border-l
-                            border-[#111318]/10
+                            border-ink/10
                             pl-6
                             lg:block
                             xl:pl-8
@@ -250,7 +250,7 @@ export default function Services() {
                                 font-bold
                                 uppercase
                                 tracking-[0.18em]
-                                text-[#111318]/35
+                                text-ink/35
                             "
                         >
                             Strategy
@@ -261,7 +261,7 @@ export default function Services() {
                                 mt-2
                                 text-sm
                                 leading-6
-                                text-[#111318]/65
+                                text-ink/65
                             "
                         >
                             Technology and marketing working together to
@@ -269,9 +269,9 @@ export default function Services() {
                         </p>
 
                         <div className="mt-5 flex gap-2">
-                            <span className="h-1 w-8 bg-[#E52B2B]" />
-                            <span className="h-1 w-8 bg-[#F5C518]" />
-                            <span className="h-1 w-8 bg-[#111318]/15" />
+                            <span className="h-1 w-8 bg-signal-red" />
+                            <span className="h-1 w-8 bg-muted-gold" />
+                            <span className="h-1 w-8 bg-ink/15" />
                         </div>
                     </div>
                 </div>
@@ -314,10 +314,10 @@ export default function Services() {
                                     overflow-hidden
                                     rounded-[1.25rem]
                                     border
-                                    border-[#111318]/[0.08]
+                                    border-ink/[0.08]
                                     bg-white
                                     p-5
-                                    shadow-[0_10px_40px_rgba(17,19,24,0.035)]
+                                    shadow-[0_10px_40px_rgba(17,18,20,0.035)]
                                     transition-shadow
                                     duration-500
 
@@ -344,7 +344,7 @@ export default function Services() {
                                             : ""
                                     }
 
-                                    hover:shadow-[0_25px_70px_rgba(17,19,24,0.10)]
+                                    hover:shadow-[0_25px_70px_rgba(17,18,20,0.10)]
                                 `}
                             >
                                 {/* Card glow */}
@@ -368,8 +368,8 @@ export default function Services() {
 
                                         ${
                                             isRed
-                                                ? "bg-[#E52B2B]/10"
-                                                : "bg-[#F5C518]/15"
+                                                ? "bg-signal-red/10"
+                                                : "bg-muted-gold/15"
                                         }
                                     `}
                                 />
@@ -389,7 +389,7 @@ export default function Services() {
                                         font-bold
                                         leading-none
                                         tracking-[-0.08em]
-                                        text-[#111318]/[0.025]
+                                        text-ink/[0.025]
                                         transition-transform
                                         duration-700
                                         group-hover:-translate-y-2
@@ -437,8 +437,8 @@ export default function Services() {
 
                                                 ${
                                                     isRed
-                                                        ? "border-[#E52B2B]/20 bg-[#E52B2B]/[0.07] text-[#E52B2B]"
-                                                        : "border-[#F5C518]/30 bg-[#F5C518]/[0.12] text-[#B48A00]"
+                                                        ? "border-signal-red/20 bg-signal-red/[0.07] text-signal-red"
+                                                        : "border-muted-gold/30 bg-muted-gold/[0.12] text-burgundy"
                                                 }
                                             `}
                                         >
@@ -456,7 +456,7 @@ export default function Services() {
                                                 font-semibold
                                                 leading-[1.05]
                                                 tracking-[-0.045em]
-                                                text-[#111318]
+                                                text-ink
 
                                                 sm:text-3xl
 
@@ -477,7 +477,7 @@ export default function Services() {
                                                 max-w-xl
                                                 text-[13px]
                                                 leading-6
-                                                text-[#111318]/60
+                                                text-ink/60
 
                                                 sm:mt-4
                                                 sm:text-sm
@@ -510,10 +510,10 @@ export default function Services() {
                                                 font-bold
                                                 uppercase
                                                 tracking-[0.16em]
-                                                text-[#111318]/70
+                                                text-ink/70
 
                                                 sm:text-[10px]
-                                                sm:text-[#111318]/85
+                                                sm:text-ink/85
                                             "
                                         >
                                             Explore service
@@ -530,9 +530,9 @@ export default function Services() {
                                                 justify-center
                                                 rounded-full
                                                 border
-                                                border-[#111318]/10
-                                                bg-[#F8F7F3]
-                                                text-[#111318]
+                                                border-ink/10
+                                                bg-ivory
+                                                text-ink
                                                 transition-all
                                                 duration-300
 
@@ -541,8 +541,8 @@ export default function Services() {
 
                                                 ${
                                                     isRed
-                                                        ? "group-hover:border-[#E52B2B] group-hover:bg-[#E52B2B] group-hover:text-white"
-                                                        : "group-hover:border-[#F5C518] group-hover:bg-[#F5C518] group-hover:text-[#111318]"
+                                                        ? "group-hover:border-signal-red group-hover:bg-signal-red group-hover:text-white"
+                                                        : "group-hover:border-muted-gold group-hover:bg-muted-gold group-hover:text-ink"
                                                 }
                                             `}
                                         >
@@ -580,8 +580,8 @@ export default function Services() {
 
                                         ${
                                             isRed
-                                                ? "bg-[#E52B2B]"
-                                                : "bg-[#F5C518]"
+                                                ? "bg-signal-red"
+                                                : "bg-muted-gold"
                                         }
                                     `}
                                 />
@@ -603,7 +603,7 @@ export default function Services() {
                         w-full
                         bg-gradient-to-r
                         from-transparent
-                        via-[#111318]/10
+                        via-ink/10
                         to-transparent
 
                         sm:mt-14

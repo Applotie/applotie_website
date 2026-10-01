@@ -82,9 +82,9 @@ export default function TestimonialsAnimation({
             overflow-hidden
             rounded-[1.75rem]
             border border-white/10
-            bg-[#1a1c22]
+            bg-graphite
             p-6
-            text-black
+            text-text-dark-primary
             transition-all duration-500
             hover:-translate-y-2
             hover:shadow-2xl
@@ -98,7 +98,7 @@ export default function TestimonialsAnimation({
             className="
               absolute left-0 top-0
               h-1 w-0
-              bg-[#F5C518]
+              bg-muted-gold
               transition-all duration-500
               group-hover:w-full
             "
@@ -110,7 +110,7 @@ export default function TestimonialsAnimation({
               absolute -right-10 -top-10
               h-24 w-24
               rounded-full
-              bg-[#E52B2B]/8
+              bg-signal-red/8
               transition-transform duration-500
               group-hover:scale-[1.8]
             "
@@ -123,7 +123,7 @@ export default function TestimonialsAnimation({
                 className="
                   font-serif text-5xl
                   leading-none
-                  text-[#E52B2B]
+                  text-signal-red
                 "
               >
                 “
@@ -135,10 +135,10 @@ export default function TestimonialsAnimation({
                   items-center justify-center
                   rounded-full
                   border border-white/10
-                  bg-[#202124]
+                  bg-charcoal
                   text-[10px]
                   font-semibold
-                  text-black/75
+                  text-text-dark-secondary
                 "
               >
                 0{index + 1}
@@ -149,7 +149,7 @@ export default function TestimonialsAnimation({
               className="
                 text-[15px]
                 leading-7
-                text-black/65
+                text-text-dark-secondary
                 sm:text-base
               "
             >
@@ -159,7 +159,7 @@ export default function TestimonialsAnimation({
 
           {/* Client */}
           <div className="relative mt-10">
-            <div className="mb-5 h-px w-full bg-black/10" />
+            <div className="mb-5 h-px w-full bg-white/10" />
 
             <div className="flex items-center gap-4">
               {/* Avatar */}
@@ -170,9 +170,9 @@ export default function TestimonialsAnimation({
                   items-center justify-center
                   overflow-hidden
                   rounded-full
-                  bg-[#111318]
+                  bg-ink
                   text-xs font-semibold
-                  text-black
+                  text-text-dark-primary
                   transition-transform duration-300
                   group-hover:scale-110
                 "
@@ -185,21 +185,21 @@ export default function TestimonialsAnimation({
                     h-2.5 w-2.5
                     rounded-full
                     border-2 border-white
-                    bg-[#F5C518]
+                    bg-muted-gold
                   "
                 />
               </div>
 
               <div className="min-w-0">
-                <p className="truncate text-sm font-semibold text-black">
+                <p className="truncate text-sm font-semibold text-text-dark-primary">
                   {testimonial.client}
                 </p>
 
-                <p className="mt-1 text-xs text-black/60">
+                <p className="mt-1 text-xs text-text-dark-secondary">
                   {testimonial.role}
                 </p>
 
-                <p className="mt-0.5 text-xs font-medium text-[#E52B2B]">
+                <p className="mt-0.5 text-xs font-medium text-signal-red">
                   {testimonial.company}
                 </p>
               </div>

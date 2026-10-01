@@ -26,7 +26,7 @@ const services = [
     ],
     outcome:
       "A faster, clearer and more credible digital presence designed to turn visitors into enquiries and customers.",
-    accent: "#E52B2B",
+    accent: "var(--signal-red)",
   },
   {
     number: "02",
@@ -52,7 +52,7 @@ const services = [
     ],
     outcome:
       "A dependable mobile product that gives users a simple experience while providing your business with a foundation for future growth.",
-    accent: "#F0B900",
+    accent: "var(--muted-gold)",
   },
   {
     number: "03",
@@ -78,7 +78,7 @@ const services = [
     ],
     outcome:
       "Greater organic visibility, stronger search relevance and a sustainable source of qualified potential customers.",
-    accent: "#E52B2B",
+    accent: "var(--signal-red)",
   },
   {
     number: "04",
@@ -104,19 +104,19 @@ const services = [
     ],
     outcome:
       "A measurable customer acquisition system designed to make advertising spend more accountable and performance more visible.",
-    accent: "#202124",
+    accent: "var(--ink)",
   },
 ];
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-white text-[#202124]">
+    <main className="min-h-screen bg-white text-text-primary">
       <ServicesAnimation />
 
       {/* HERO */}
-      <section className="services-hero border-b border-[#202124]/10 px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 md:pb-24 lg:px-12 lg:pb-32 lg:pt-44">
+      <section className="services-hero border-b border-ink/10 px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 md:pb-24 lg:px-12 lg:pb-32 lg:pt-44">
         <div className="mx-auto max-w-7xl">
-          <p className="services-reveal mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E52B2B] sm:text-xs">
+          <p className="services-reveal mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-signal-red sm:text-xs">
             Digital services · Patna · India
           </p>
 
@@ -125,18 +125,18 @@ export default function ServicesPage() {
             <br />
             built to move your
             <br />
-            <span className="text-[#E52B2B]">business forward.</span>
+            <span className="text-signal-red">business forward.</span>
           </h1>
 
           <div className="mt-8 flex flex-col gap-6 md:mt-10 md:flex-row md:items-start md:justify-between">
-            <p className="services-reveal max-w-2xl text-base leading-7 text-[#202124]/70 sm:text-lg sm:leading-8">
+            <p className="services-reveal max-w-2xl text-base leading-7 text-text-primary/70 sm:text-lg sm:leading-8">
               Applotie Technologies is a digital solutions and technology
               company in Patna helping businesses build, launch and grow
               through web development, mobile app development, SEO and
               performance marketing.
             </p>
 
-            <span className="hidden text-right text-xs font-bold uppercase tracking-[0.2em] text-[#202124]/65 md:block">
+            <span className="hidden text-right text-xs font-bold uppercase tracking-[0.2em] text-text-primary/65 md:block">
               Build
               <br />
               Grow
@@ -149,26 +149,21 @@ export default function ServicesPage() {
 
       {/* SERVICES */}
       <section className="relative overflow-hidden px-5 py-16 sm:px-8 sm:py-20 md:py-24 lg:px-12 lg:py-28">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-60 [background-image:linear-gradient(to_right,rgba(32,33,36,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(32,33,36,0.07)_1px,transparent_1px)] [background-size:48px_48px] sm:[background-size:56px_56px]"
-        />
-
         <div className="relative mx-auto max-w-7xl">
           <div className="services-intro mb-12 max-w-3xl sm:mb-16">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#202124]/40">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-text-primary/40">
               Our capabilities
             </p>
 
             <h2 className="text-3xl font-semibold leading-tight tracking-[-0.05em] sm:text-4xl md:text-5xl">
               Strategy, technology and growth —
-              <span className="text-[#E52B2B]">
+              <span className="text-signal-red">
                 {" "}
                 connected under one team.
               </span>
             </h2>
 
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-[#202124]/65 sm:text-base sm:leading-7">
+            <p className="mt-5 max-w-2xl text-sm leading-7 text-text-primary/65 sm:text-base sm:leading-7">
               Whether you need a new website, a custom application, stronger
               search visibility or a performance marketing system, our
               services are designed to work independently or together as one
@@ -176,7 +171,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="divide-y divide-[#202124]/10 border-y border-[#202124]/10">
+          <div className="divide-y divide-ink/10 border-y border-ink/10">
             {services.map((service) => (
               <article
                 key={service.number}
@@ -192,7 +187,7 @@ export default function ServicesPage() {
                       {service.number}
                     </span>
 
-                    <span className="text-xl text-[#202124]/30 transition-transform duration-300 group-hover:translate-x-1 md:hidden">
+                    <span className="text-xl text-text-primary/30 transition-transform duration-300 group-hover:translate-x-1 md:hidden">
                       ↗
                     </span>
                   </div>
@@ -209,12 +204,12 @@ export default function ServicesPage() {
                       {service.title}
                     </h3>
 
-                    <p className="mt-4 max-w-2xl text-base font-medium leading-7 text-[#202124]/70 sm:text-lg sm:leading-8">
+                    <p className="mt-4 max-w-2xl text-base font-medium leading-7 text-text-primary/70 sm:text-lg sm:leading-8">
                       {service.short}
                     </p>
                   </div>
 
-                  <div className="hidden border-l border-[#202124]/60 pl-6 lg:block">
+                  <div className="hidden border-l border-ink/60 pl-6 lg:block">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-black">
                       Business outcome
                     </p>
@@ -228,7 +223,7 @@ export default function ServicesPage() {
                 {/* SERVICE DETAILS */}
                 <div className="mt-8 grid gap-8 md:ml-[80px] md:grid-cols-[1.2fr_0.8fr] md:gap-12 lg:ml-[100px] lg:mt-10 lg:grid-cols-[1fr_1fr] lg:gap-16">
                   <div className="service-content">
-                    <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#E52B2B]">
+                    <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-signal-red">
                       What the problem usually looks like
                     </p>
 
@@ -236,7 +231,7 @@ export default function ServicesPage() {
                       {service.problem}
                     </p>
 
-                    <p className="mb-4 mt-8 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#F0B900]">
+                    <p className="mb-4 mt-8 text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-gold">
                       How we approach it
                     </p>
 
@@ -246,7 +241,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="service-content">
-                    <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#202124]/35">
+                    <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-text-primary/35">
                       What we handle
                     </p>
 
@@ -265,12 +260,12 @@ export default function ServicesPage() {
                       ))}
                     </ul>
 
-                    <div className="mt-8 border-t border-[#202124]/10 pt-6">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#202124]/35">
+                    <div className="mt-8 border-t border-ink/10 pt-6">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-text-primary/35">
                         Result
                       </p>
 
-                      <p className="mt-3 text-sm font-medium leading-6 text-[#202124]/80">
+                      <p className="mt-3 text-sm font-medium leading-6 text-text-primary/80">
                         {service.outcome}
                       </p>
                     </div>
@@ -278,12 +273,12 @@ export default function ServicesPage() {
                 </div>
 
                 {/* MOBILE / TABLET OUTCOME */}
-                <div className="mt-8 border-t border-[#202124]/10 pt-6 lg:hidden">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#202124]/35">
+                <div className="mt-8 border-t border-ink/10 pt-6 lg:hidden">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-text-primary/35">
                     Business outcome
                   </p>
 
-                  <p className="mt-2 max-w-xl text-sm leading-6 text-[#202124]/60">
+                  <p className="mt-2 max-w-xl text-sm leading-6 text-text-primary/60">
                     {service.outcome}
                   </p>
                 </div>
@@ -294,10 +289,10 @@ export default function ServicesPage() {
       </section>
 
       {/* PROCESS STRIP */}
-      <section className="border-t border-[#202124]/10 bg-[#F5F4EF] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+      <section className="border-t border-ink/10 bg-ivory px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="services-process-intro max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#E52B2B]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-signal-red">
               How we work
             </p>
 
@@ -305,7 +300,7 @@ export default function ServicesPage() {
               The service is only the beginning.
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-[#202124]/65 sm:text-base">
+            <p className="mt-4 text-sm leading-7 text-text-primary/65 sm:text-base">
               Good digital work comes from understanding the problem before
               choosing the technology or marketing channel.
             </p>
@@ -313,7 +308,7 @@ export default function ServicesPage() {
 
           <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8 lg:mt-16 lg:gap-16">
             <div className="services-process-item">
-              <span className="text-xs font-semibold text-[#E52B2B]">
+              <span className="text-xs font-semibold text-signal-red">
                 01
               </span>
 
@@ -321,7 +316,7 @@ export default function ServicesPage() {
                 Understand
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-[#202124]/75">
+              <p className="mt-3 text-sm leading-6 text-text-primary/75">
                 We understand your business model, customers, competition,
                 current digital presence and objectives before deciding what
                 needs to be built or changed.
@@ -329,7 +324,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="services-process-item">
-              <span className="text-xs font-semibold text-[#F0B900]">
+              <span className="text-xs font-semibold text-muted-gold">
                 02
               </span>
 
@@ -337,7 +332,7 @@ export default function ServicesPage() {
                 Build
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-[#202124]/75">
+              <p className="mt-3 text-sm leading-6 text-text-primary/75">
                 Strategy becomes design, development, campaigns and systems
                 built around the actual requirements of your business rather
                 than generic templates.
@@ -345,7 +340,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="services-process-item">
-              <span className="text-xs font-semibold text-[#E52B2B]">
+              <span className="text-xs font-semibold text-signal-red">
                 03
               </span>
 
@@ -353,7 +348,7 @@ export default function ServicesPage() {
                 Improve
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-[#202124]/75">
+              <p className="mt-3 text-sm leading-6 text-text-primary/75">
                 We measure what matters, identify opportunities and keep
                 improving the experience, visibility and performance over
                 time.

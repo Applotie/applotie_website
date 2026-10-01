@@ -21,9 +21,9 @@ export default function FooterTransition() {
               x2="1"
               y2="0"
             >
-              <stop offset="0%" stopColor="#B51F26" />
-              <stop offset="45%" stopColor="#E52B2B" />
-              <stop offset="100%" stopColor="#C82027" />
+              <stop offset="0%" stopColor="var(--burgundy)" />
+              <stop offset="45%" stopColor="var(--signal-red)" />
+              <stop offset="100%" stopColor="var(--signal-red)" />
             </linearGradient>
           </defs>
 

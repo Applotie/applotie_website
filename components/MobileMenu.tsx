@@ -37,7 +37,7 @@ export default function MobileMenu() {
           rounded-2xl
           border
           border-white/10
-          bg-[#111318]/90
+          bg-ink/90
           px-4
           shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)]
           backdrop-blur-xl
@@ -60,7 +60,7 @@ export default function MobileMenu() {
             flex
             items-center
             gap-2.5
-            text-black
+            text-text-dark-primary
           "
         >
           <span
@@ -71,8 +71,8 @@ export default function MobileMenu() {
               items-center
               justify-center
               rounded-lg
-              bg-[#E52B2B]
-              shadow-[0_0_18px_rgba(229,43,43,0.25)]
+              bg-signal-red
+              shadow-[0_0_18px_rgba(230,57,53,0.25)]
             "
           >
             <svg
@@ -120,8 +120,8 @@ export default function MobileMenu() {
             shadow-[0_4px_20px_rgba(0,0,0,0.2)]
             transition-all
             duration-300
-            hover:border-[#E52B2B]/50
-            hover:bg-[#E52B2B]/10
+            hover:border-signal-red/50
+            hover:bg-signal-red/10
             active:scale-95
           "
         >
@@ -134,7 +134,7 @@ export default function MobileMenu() {
                 h-[1.5px]
                 w-5
                 rounded-full
-                bg-black
+                bg-text-dark-primary
                 transition-all
                 duration-300
                 ${
@@ -155,7 +155,7 @@ export default function MobileMenu() {
                 w-5
                 -translate-y-1/2
                 rounded-full
-                bg-black
+                bg-text-dark-primary
                 transition-all
                 duration-300
                 ${
@@ -174,7 +174,7 @@ export default function MobileMenu() {
                 h-[1.5px]
                 w-5
                 rounded-full
-                bg-black
+                bg-text-dark-primary
                 transition-all
                 duration-300
                 ${
@@ -212,7 +212,7 @@ export default function MobileMenu() {
               rounded-2xl
               border
               border-white/10
-              bg-[#111318]/95
+              bg-ink/95
               p-2
               shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)]
               backdrop-blur-xl
@@ -237,11 +237,11 @@ export default function MobileMenu() {
                     py-3.5
                     text-sm
                     font-semibold
-                    text-black/90
+                    text-text-dark-secondary
                     transition-all
                     duration-200
                     hover:bg-white/[0.05]
-                    hover:text-[#E52B2B]
+                    hover:text-signal-red
                   "
                 >
                   <span>{item.label}</span>
@@ -267,7 +267,7 @@ export default function MobileMenu() {
                     justify-center
                     gap-2
                     rounded-xl
-                    bg-[#E52B2B]
+                    bg-signal-red
                     px-4
                     py-3.5
                     text-sm
@@ -275,7 +275,7 @@ export default function MobileMenu() {
                     text-white
                     transition-all
                     duration-300
-                    hover:bg-[#F5C518]
+                    hover:bg-muted-gold
                     hover:text-black
                   "
                 >

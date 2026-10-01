@@ -50,8 +50,8 @@ export default function FAQ() {
       id="faq"
       className="
         relative overflow-hidden
-        bg-[#111318]
-        py-20 text-black
+        bg-white
+        py-20 text-black/80
         sm:py-24
         lg:py-32
         xl:py-40
@@ -65,7 +65,7 @@ export default function FAQ() {
           -right-32 top-10
           h-72 w-72
           rounded-full
-          bg-[#E52B2B]/5
+          bg-signal-red/5
           blur-3xl
         "
       />
@@ -77,7 +77,7 @@ export default function FAQ() {
           -left-32 bottom-10
           h-72 w-72
           rounded-full
-          bg-[#F5C518]/8
+          bg-muted-gold/8
           blur-3xl
         "
       />
@@ -98,19 +98,20 @@ export default function FAQ() {
           className="
             mx-auto mb-14
             max-w-3xl
+            text-black/80
             text-center
             sm:mb-16
             lg:mb-20
           "
         >
           <div className="mb-5 flex items-center justify-center gap-3">
-            <span className="h-px w-8 bg-[#E52B2B]" />
+            <span className="h-px w-8 bg-signal-red" />
 
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E52B2B] sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal-red sm:text-sm">
               FAQ
             </p>
 
-            <span className="h-px w-8 bg-[#E52B2B]" />
+            <span className="h-px w-8 bg-signal-red" />
           </div>
 
           <h2
@@ -125,7 +126,7 @@ export default function FAQ() {
             Questions?
             <br />
 
-            <span className="text-black/70">
+            <span className="text-black/60">
               We have answers.
             </span>
           </h2>
@@ -135,7 +136,7 @@ export default function FAQ() {
               mx-auto mt-6
               max-w-2xl
               text-sm leading-6
-              text-black/65
+              text-text-dark-secondary
               sm:text-base sm:leading-7
               lg:text-lg
             "
@@ -156,9 +157,9 @@ export default function FAQ() {
             flex flex-col gap-6
             rounded-[1.5rem]
             border border-white/10
-            bg-[#1a1c22]
+            bg-white
             p-6
-            shadow-[0_10px_40px_rgba(17,19,24,0.04)]
+            shadow-[0_10px_40px_rgba(17,18,20,0.04)]
             sm:mt-12
             sm:flex-row
             sm:items-center
@@ -169,14 +170,14 @@ export default function FAQ() {
         >
           <div>
             <div className="flex items-center gap-3">
-              <span className="h-2 w-2 rounded-full bg-[#F5C518]" />
+              <span className="h-2 w-2 rounded-full bg-muted-gold" />
 
-              <p className="font-semibold text-black/85">
+              <p className="font-semibold text-black/80">
                 Still have questions?
               </p>
             </div>
 
-            <p className="mt-2 text-sm text-black/75">
+            <p className="mt-2 text-sm text-black/90">
               Let&apos;s discuss your project and find the right approach.
             </p>
           </div>
@@ -187,13 +188,14 @@ export default function FAQ() {
               inline-flex w-fit
               items-center gap-2
               rounded-full
-              bg-[#111318]
+              bg-signal-red
               px-5 py-3
               text-sm font-medium
-              text-red-600
+              text-white
               transition-all duration-300
-              hover:bg-[#E52B2B]
+              hover:bg-signal-red
               hover:shadow-lg
+              hover:text-yellow-300
             "
           >
             Talk to us

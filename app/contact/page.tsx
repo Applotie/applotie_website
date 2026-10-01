@@ -3,11 +3,11 @@
 import { FormEvent } from "react";
 
 const inputClass =
-  "w-full border border-[#202124]/25 bg-white px-4 py-4 text-sm font-normal text-[#202124] outline-none transition-all placeholder:text-[#202124]/35 focus:border-[#E52B2B] focus:ring-1 focus:ring-[#E52B2B]/10";
+  "w-full border border-ink/25 bg-white px-4 py-4 text-sm font-normal text-text-primary outline-none transition-all placeholder:text-text-primary/35 focus:border-signal-red focus:ring-1 focus:ring-signal-red/10";
 
-const labelClass = "grid gap-2 text-sm font-semibold text-[#202124]";
+const labelClass = "grid gap-2 text-sm font-semibold text-text-primary";
 
-const WHATSAPP_NUMBER = process.env.Number;
+const WHATSAPP_NUMBER = 917250204488;
 
 export default function ContactPage() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -141,11 +141,11 @@ Submitted through the Applotie website
   };
 
   return (
-    <main className="min-h-screen bg-white text-[#202124]">
+    <main className="min-h-screen bg-white text-text-primary">
       {/* HERO */}
       <section className="px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:px-12 lg:pb-24 lg:pt-44">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E52B2B] sm:text-xs">
+          <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-signal-red sm:text-xs">
             Contact Applotie
           </p>
 
@@ -153,7 +153,7 @@ Submitted through the Applotie website
             Tell us what you&apos;re building.
           </h1>
 
-          <p className="mt-7 max-w-2xl text-base leading-7 text-[#202124]/60 sm:text-lg sm:leading-8">
+          <p className="mt-7 max-w-2xl text-base leading-7 text-text-primary/60 sm:text-lg sm:leading-8">
             Whether you&apos;re starting something new, improving an existing
             product or looking for a better way to grow, give us a little
             context. We&apos;ll take it from there.
@@ -164,18 +164,12 @@ Submitted through the Applotie website
       {/* CONTACT / FORM */}
       <section
         id="contact-form"
-        className="relative overflow-hidden border-y border-[#202124]/15 px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
+        className="relative overflow-hidden border-y border-ink/15 px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
       >
-        {/* Background grid */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-60 [background-image:linear-gradient(to_right,rgba(32,33,36,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(32,33,36,0.07)_1px,transparent_1px)] [background-size:48px_48px] sm:[background-size:56px_56px]"
-        />
-
         <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
           {/* LEFT INFORMATION */}
           <div className="lg:sticky lg:top-24 lg:self-start">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#202124]/40">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-text-primary/40">
               Start a conversation
             </p>
 
@@ -183,42 +177,42 @@ Submitted through the Applotie website
               A good project starts with a good conversation.
             </h2>
 
-            <p className="mt-5 max-w-md text-sm leading-7 text-[#202124]/60 sm:text-base">
+            <p className="mt-5 max-w-md text-sm leading-7 text-text-primary/60 sm:text-base">
               Share what you&apos;re trying to achieve, where you&apos;re stuck
               and what you need help with. You don&apos;t need to have
               everything figured out before reaching out.
             </p>
 
             {/* Contact details */}
-            <div className="mt-10 space-y-6 border-t border-[#202124]/15 pt-7">
+            <div className="mt-10 space-y-6 border-t border-ink/15 pt-7">
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#202124]/35">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-primary/35">
                   Email
                 </p>
 
                 <a
                   href="mailto:hello@applotie.com"
-                  className="mt-1 inline-block text-sm font-medium transition-colors hover:text-[#E52B2B]"
+                  className="mt-1 inline-block text-sm font-medium transition-colors hover:text-signal-red"
                 >
                   hello@applotie.com
                 </a>
               </div>
 
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#202124]/35">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-primary/35">
                   Phone
                 </p>
 
                 <a
                   href="tel:+919999999999"
-                  className="mt-1 inline-block text-sm font-medium transition-colors hover:text-[#E52B2B]"
+                  className="mt-1 inline-block text-sm font-medium transition-colors hover:text-signal-red"
                 >
                   +91 99999 99999
                 </a>
               </div>
 
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#202124]/35">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-primary/35">
                   Based in
                 </p>
 
@@ -229,10 +223,10 @@ Submitted through the Applotie website
             </div>
 
             {/* Small note */}
-            <div className="mt-10 rounded-2xl bg-[#FFF8E2] p-5">
+            <div className="mt-10 rounded-2xl bg-stone p-5">
               <p className="text-sm font-semibold">What happens next?</p>
 
-              <p className="mt-2 text-sm leading-6 text-[#202124]/60">
+              <p className="mt-2 text-sm leading-6 text-text-primary/60">
                 We&apos;ll review your requirements and get back to you with
                 the next steps, questions or a suitable approach.
               </p>
@@ -242,11 +236,11 @@ Submitted through the Applotie website
           {/* FORM */}
           <form
             onSubmit={handleSubmit}
-            className="border border-[#202124]/20 bg-white p-6 shadow-[0_18px_50px_rgba(32,33,36,0.07)] sm:p-9 lg:p-12"
+            className="border border-ink/20 bg-white p-6 shadow-[0_18px_50px_rgba(22,23,25,0.07)] sm:p-9 lg:p-12"
           >
             {/* FORM HEADER */}
-            <div className="mb-9 border-b border-[#202124]/20 pb-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#E52B2B]">
+            <div className="mb-9 border-b border-ink/20 pb-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-signal-red">
                 Project enquiry
               </p>
 
@@ -254,7 +248,7 @@ Submitted through the Applotie website
                 Tell us about your project
               </h2>
 
-              <p className="mt-2 text-sm leading-6 text-[#202124]/50">
+              <p className="mt-2 text-sm leading-6 text-text-primary/50">
                 The more context you provide, the better we can understand
                 what you need.
               </p>
@@ -488,15 +482,15 @@ Submitted through the Applotie website
             </div>
 
             {/* SUBMIT */}
-            <div className="mt-9 flex flex-col gap-4 border-t border-[#202124]/20 pt-8 sm:flex-row sm:items-center sm:justify-between">
-              <p className="max-w-md text-xs leading-5 text-[#202124]/40">
+            <div className="mt-9 flex flex-col gap-4 border-t border-ink/20 pt-8 sm:flex-row sm:items-center sm:justify-between">
+              <p className="max-w-md text-xs leading-5 text-text-primary/40">
                 By submitting this form, you&apos;re simply starting a
                 conversation. We&apos;ll never spam you.
               </p>
 
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#E52B2B] px-7 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#F5C518] hover:text-[#202124] sm:w-auto"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-signal-red px-7 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-muted-gold hover:text-text-primary sm:w-auto"
               >
                 Send enquiry
                 <span>↗</span>
@@ -507,9 +501,9 @@ Submitted through the Applotie website
       </section>
 
       {/* BOTTOM CTA */}
-      <section className="bg-[#202124] px-5 py-16 text-white sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+      <section className="bg-charcoal px-5 py-16 text-white sm:px-8 sm:py-20 lg:px-12 lg:py-24">
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#F5C518]">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-gold">
             Prefer a direct conversation?
           </p>
 
@@ -523,7 +517,7 @@ Submitted through the Applotie website
 
           <a
             href="mailto:hello@applotie.com"
-            className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#F5C518] px-6 py-3.5 text-sm font-semibold text-[#202124] transition-all duration-300 hover:bg-[#E52B2B] hover:text-white"
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-muted-gold px-6 py-3.5 text-sm font-semibold text-text-primary transition-all duration-300 hover:bg-signal-red hover:text-white"
           >
             Email us
             <span>↗</span>

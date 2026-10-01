@@ -35,7 +35,7 @@ export default function HeroAnimation() {
       });
 
       gsap.set(".hero-title-accent", {
-        color: "#111318",
+        color: "var(--ink)",
       });
 
       gsap.set(".hero-title-scan", {
@@ -210,7 +210,7 @@ export default function HeroAnimation() {
       tl.to(
         ".hero-title-accent",
         {
-          color: "#E52B2B",
+          color: "var(--signal-red)",
           duration: 0.25,
           ease: "none",
         },

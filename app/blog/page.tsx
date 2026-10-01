@@ -19,33 +19,23 @@ export default async function BlogPage() {
   const latestPosts = posts.slice(1);
 
   return (
-    <main className="min-h-screen bg-white text-[#111318]">
+    <main className="min-h-screen bg-white text-ink">
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-[#111318]/10">
-        {/* Grid */}
-        <div
-          className="absolute inset-0 opacity-60"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #1113180d 1px, transparent 1px), linear-gradient(to bottom, #1113180d 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
-        />
-
+      <section className="relative overflow-hidden border-b border-ink/10">
         {/* Decorative red route */}
-        <div className="absolute right-[8%] top-[18%] hidden h-48 w-48 rounded-full border border-[#E52B2B]/20 lg:block" />
+        <div className="absolute right-[8%] top-[18%] hidden h-48 w-48 rounded-full border border-signal-red/20 lg:block" />
 
-        <div className="absolute right-[14%] top-[32%] hidden h-3 w-3 rounded-full bg-[#F5C518] lg:block" />
+        <div className="absolute right-[14%] top-[32%] hidden h-3 w-3 rounded-full bg-muted-gold lg:block" />
 
-        <div className="absolute right-[9%] top-[46%] hidden h-2 w-2 rounded-full bg-[#E52B2B] lg:block" />
+        <div className="absolute right-[9%] top-[46%] hidden h-2 w-2 rounded-full bg-signal-red lg:block" />
 
         <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
           <div className="max-w-4xl">
             <div className="mb-7 flex items-center gap-3">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#E52B2B]" />
+              <span className="h-2.5 w-2.5 rounded-full bg-signal-red" />
 
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#5F6368]">
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-text-secondary">
                 Applotie Insights
               </span>
             </div>
@@ -54,12 +44,12 @@ export default async function BlogPage() {
               Ideas that
               <span className="relative mx-3 inline-block">
                 move
-                <span className="absolute -bottom-1 left-0 h-2 w-full bg-[#F5C518] sm:h-3" />
+                <span className="absolute -bottom-1 left-0 h-2 w-full bg-muted-gold sm:h-3" />
               </span>
               businesses forward.
             </h1>
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-[#5F6368] sm:text-xl">
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-text-secondary sm:text-xl">
               Practical insights on technology, web development,
               SEO, digital marketing and building better digital
               experiences.
@@ -67,19 +57,19 @@ export default async function BlogPage() {
           </div>
 
           <div className="mt-12 flex flex-wrap gap-3">
-            <span className="rounded-full border border-[#111318]/15 bg-white px-4 py-2 text-sm font-medium">
+            <span className="rounded-full border border-ink/15 bg-white px-4 py-2 text-sm font-medium">
               Development
             </span>
 
-            <span className="rounded-full border border-[#111318]/15 bg-white px-4 py-2 text-sm font-medium">
+            <span className="rounded-full border border-ink/15 bg-white px-4 py-2 text-sm font-medium">
               SEO
             </span>
 
-            <span className="rounded-full border border-[#111318]/15 bg-white px-4 py-2 text-sm font-medium">
+            <span className="rounded-full border border-ink/15 bg-white px-4 py-2 text-sm font-medium">
               Marketing
             </span>
 
-            <span className="rounded-full border border-[#111318]/15 bg-white px-4 py-2 text-sm font-medium">
+            <span className="rounded-full border border-ink/15 bg-white px-4 py-2 text-sm font-medium">
               Technology
             </span>
           </div>
@@ -89,8 +79,8 @@ export default async function BlogPage() {
       {/* CONTENT */}
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         {posts.length === 0 ? (
-          <div className="rounded-3xl border border-[#111318]/10 bg-[#F7F7F5] px-6 py-20 text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#E52B2B]">
+          <div className="rounded-3xl border border-ink/10 bg-ivory px-6 py-20 text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-signal-red">
               Coming soon
             </p>
 
@@ -98,7 +88,7 @@ export default async function BlogPage() {
               No published articles yet.
             </h2>
 
-            <p className="mx-auto mt-4 max-w-lg text-[#5F6368]">
+            <p className="mx-auto mt-4 max-w-lg text-text-secondary">
               We're working on useful insights around technology,
               development, SEO and digital growth.
             </p>
@@ -110,7 +100,7 @@ export default async function BlogPage() {
               <div>
                 <div className="mb-8 flex items-end justify-between">
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E52B2B]">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-signal-red">
                       Featured
                     </p>
 
@@ -120,12 +110,12 @@ export default async function BlogPage() {
                   </div>
                 </div>
 
-                <article className="group overflow-hidden rounded-[2rem] border border-[#111318]/10 bg-[#F7F7F5]">
+                <article className="group overflow-hidden rounded-[2rem] border border-ink/10 bg-ivory">
                   <div className="grid lg:grid-cols-2">
                     {/* IMAGE */}
                     <Link
                       href={`/blog/${featuredPost.slug}`}
-                      className="relative block min-h-[320px] overflow-hidden bg-[#111318] lg:min-h-[520px]"
+                      className="relative block min-h-[320px] overflow-hidden bg-ink lg:min-h-[520px]"
                     >
                       {featuredPost.featuredImage ? (
                         <img
@@ -134,22 +124,13 @@ export default async function BlogPage() {
                           className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                         />
                       ) : (
-                        <div className="relative flex h-full min-h-[320px] items-center justify-center bg-[#111318]">
-                          <div
-                            className="absolute inset-0 opacity-30"
-                            style={{
-                              backgroundImage:
-                                "linear-gradient(to right, #ffffff12 1px, transparent 1px), linear-gradient(to bottom, #ffffff12 1px, transparent 1px)",
-                              backgroundSize: "40px 40px",
-                            }}
-                          />
-
+                        <div className="relative flex h-full min-h-[320px] items-center justify-center bg-ink">
                           <span className="relative text-8xl font-black text-white/10">
                             A
                           </span>
 
-                          <span className="absolute bottom-8 right-8 h-4 w-4 rounded-full bg-[#F5C518]" />
-                          <span className="absolute left-8 top-8 h-3 w-3 rounded-full bg-[#E52B2B]" />
+                          <span className="absolute bottom-8 right-8 h-4 w-4 rounded-full bg-muted-gold" />
+                          <span className="absolute left-8 top-8 h-3 w-3 rounded-full bg-signal-red" />
                         </div>
                       )}
 
@@ -163,7 +144,7 @@ export default async function BlogPage() {
                     {/* CONTENT */}
                     <div className="flex flex-col justify-between p-8 sm:p-10 lg:p-14">
                       <div>
-                        <p className="text-sm font-medium text-[#5F6368]">
+                        <p className="text-sm font-medium text-text-secondary">
                           {featuredPost.publishedAt
                             ? new Date(
                                 featuredPost.publishedAt
@@ -179,12 +160,12 @@ export default async function BlogPage() {
                           {featuredPost.title}
                         </h3>
 
-                        <p className="mt-6 text-base leading-7 text-[#5F6368] sm:text-lg">
+                        <p className="mt-6 text-base leading-7 text-text-secondary sm:text-lg">
                           {featuredPost.excerpt}
                         </p>
                       </div>
 
-                      <div className="mt-10 flex items-center justify-between border-t border-[#111318]/10 pt-6">
+                      <div className="mt-10 flex items-center justify-between border-t border-ink/10 pt-6">
                         <span className="text-sm font-semibold">
                           By {featuredPost.author}
                         </span>
@@ -195,7 +176,7 @@ export default async function BlogPage() {
                         >
                           Read article
 
-                          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E52B2B] text-white transition group-hover/link:translate-x-1">
+                          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-signal-red text-white transition group-hover/link:translate-x-1">
                             →
                           </span>
                         </Link>
@@ -209,9 +190,9 @@ export default async function BlogPage() {
             {/* LATEST */}
             {latestPosts.length > 0 && (
               <div className="mt-28">
-                <div className="mb-10 flex items-end justify-between border-b border-[#111318]/10 pb-6">
+                <div className="mb-10 flex items-end justify-between border-b border-ink/10 pb-6">
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E52B2B]">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-signal-red">
                       The latest
                     </p>
 
@@ -220,7 +201,7 @@ export default async function BlogPage() {
                     </h2>
                   </div>
 
-                  <span className="hidden text-sm text-[#5F6368] sm:block">
+                  <span className="hidden text-sm text-text-secondary sm:block">
                     {latestPosts.length}{" "}
                     {latestPosts.length === 1
                       ? "article"
@@ -232,11 +213,11 @@ export default async function BlogPage() {
                   {latestPosts.map((post) => (
                     <article
                       key={post._id.toString()}
-                      className="group flex flex-col overflow-hidden rounded-[1.5rem] border border-[#111318]/10 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                      className="group flex flex-col overflow-hidden rounded-[1.5rem] border border-ink/10 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                     >
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="relative block aspect-[16/10] overflow-hidden bg-[#111318]"
+                        className="relative block aspect-[16/10] overflow-hidden bg-ink"
                       >
                         {post.featuredImage ? (
                           <img
@@ -246,12 +227,7 @@ export default async function BlogPage() {
                           />
                         ) : (
                           <div
-                            className="flex h-full items-center justify-center"
-                            style={{
-                              backgroundImage:
-                                "linear-gradient(to right, #ffffff12 1px, transparent 1px), linear-gradient(to bottom, #ffffff12 1px, transparent 1px)",
-                              backgroundSize: "32px 32px",
-                            }}
+                            className="flex h-full items-center justify-center bg-graphite"
                           >
                             <span className="text-6xl font-black text-white/10">
                               A
@@ -265,7 +241,7 @@ export default async function BlogPage() {
                       </Link>
 
                       <div className="flex flex-1 flex-col p-6">
-                        <p className="text-xs font-medium text-[#5F6368]">
+                        <p className="text-xs font-medium text-text-secondary">
                           {post.publishedAt
                             ? new Date(
                                 post.publishedAt
@@ -280,13 +256,13 @@ export default async function BlogPage() {
                         <h3 className="mt-3 text-2xl font-black leading-tight tracking-[-0.03em]">
                           <Link
                             href={`/blog/${post.slug}`}
-                            className="transition group-hover:text-[#E52B2B]"
+                            className="transition group-hover:text-signal-red"
                           >
                             {post.title}
                           </Link>
                         </h3>
 
-                        <p className="mt-4 line-clamp-3 text-sm leading-6 text-[#5F6368]">
+                        <p className="mt-4 line-clamp-3 text-sm leading-6 text-text-secondary">
                           {post.excerpt}
                         </p>
 

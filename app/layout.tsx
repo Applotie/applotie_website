@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ConditionalLayout from "@/components/ConditionalLayout";
+import GlobalGrid from "@/components/grid/GlobalGrid";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,11 +35,11 @@ export default function RootLayout({
           relative
           min-h-screen
           overflow-x-hidden
-          bg-[#111318]
+          bg-ink
           text-white
         "
       >
-        <ConditionalLayout>
+        <ConditionalLayout globalGrid={<GlobalGrid />}>
           {children}
         </ConditionalLayout>
       </body>

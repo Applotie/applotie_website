@@ -3,8 +3,8 @@ import HeroAnimation from "./animations/HeroAnimation";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100svh] w-full overflow-hidden bg-[#F7F7F5]">
-      <div className="relative flex min-h-[100svh] w-full items-center overflow-hidden bg-[#F7F7F5] text-[#111318]">
+    <section className="relative min-h-[100svh] w-full overflow-hidden bg-ivory">
+      <div className="relative flex min-h-[100svh] w-full items-center overflow-hidden bg-ivory text-ink">
 
         {/* Horizontal scan */}
         <div
@@ -18,7 +18,7 @@ export default function Hero() {
             h-px
             w-full
             origin-left
-            bg-[#E52B2B]
+            bg-signal-red
             opacity-0
           "
         />
@@ -37,7 +37,7 @@ export default function Hero() {
             -translate-x-1/2
             -translate-y-1/2
             rounded-full
-            bg-[#E52B2B]
+            bg-signal-red
             opacity-0
             blur-[80px]
           "
@@ -95,9 +95,9 @@ export default function Hero() {
               lg:text-xs
             "
           >
-            <span className="hero-eyebrow-dot h-1.5 w-1.5 rounded-full bg-[#E52B2B]" />
+            <span className="hero-eyebrow-dot h-1.5 w-1.5 rounded-full bg-signal-red" />
 
-            <span className="text-[#111318]">
+            <span className="text-ink">
               Digital Marketing & Development Agency
             </span>
 
@@ -124,7 +124,7 @@ export default function Hero() {
                 font-semibold
                 leading-[1]
                 tracking-[-0.06em]
-                text-[#111318]
+                text-ink
                 sm:text-5xl
                 md:text-6xl
                 lg:text-[4.8rem]
@@ -136,7 +136,7 @@ export default function Hero() {
                 Building
               </span>
 
-              <span className="hero-title-line hero-title-accent relative block text-[#E52B2B]">
+              <span className="hero-title-line hero-title-accent relative block text-signal-red">
                 Digital Engines
 
                 {/* Red scanning highlight */}
@@ -152,7 +152,7 @@ export default function Hero() {
                     origin-left
                     -translate-y-1/2
                     scale-x-0
-                    bg-[#E52B2B]
+                    bg-signal-red
                     opacity-80
                   "
                 />
@@ -299,7 +299,7 @@ export default function Hero() {
                     items-center
                     justify-center
                     gap-2.5
-                    bg-[#E52B2B]
+                    bg-signal-red
                     px-6
                     py-3.5
                     text-xs
@@ -308,7 +308,7 @@ export default function Hero() {
                     transition-all
                     duration-300
                     hover:-translate-y-1
-                    hover:bg-[#c91f1f]
+                    hover:bg-burgundy
                     hover:shadow-xl
                     sm:px-7
                     sm:py-3.5
@@ -336,12 +336,12 @@ export default function Hero() {
                     py-3.5
                     text-xs
                     font-semibold
-                    text-[#111318]
+                    text-ink
                     transition-all
                     duration-300
                     hover:-translate-y-1
-                    hover:border-[#E52B2B]
-                    hover:text-[#E52B2B]
+                    hover:border-signal-red
+                    hover:text-signal-red
                     sm:px-7
                     sm:py-3.5
                     sm:text-sm
@@ -376,14 +376,14 @@ export default function Hero() {
             <div
               className="
                 rounded-md
-                bg-[#111318]
+                bg-ink
                 px-3
                 py-1.5
                 text-[8px]
                 font-semibold
                 uppercase
                 tracking-[0.12em]
-                text-black
+                text-white
                 shadow-md
                 sm:text-[9px]
               "
@@ -412,7 +412,7 @@ export default function Hero() {
             <div
               className="
                 rounded-md
-                bg-[#E52B2B]
+                bg-signal-red
                 px-3
                 py-1.5
                 text-[8px]
@@ -458,15 +458,15 @@ export default function Hero() {
           >
             <span>Digital Strategy</span>
 
-            <span className="h-1 w-1 rounded-full bg-[#E52B2B]" />
+            <span className="h-1 w-1 rounded-full bg-signal-red" />
 
             <span>Website</span>
 
-            <span className="h-1 w-1 rounded-full bg-[#E52B2B]" />
+            <span className="h-1 w-1 rounded-full bg-signal-red" />
 
             <span>SEO</span>
 
-            <span className="h-1 w-1 rounded-full bg-[#E52B2B]" />
+            <span className="h-1 w-1 rounded-full bg-signal-red" />
 
             <span>Performance Marketing</span>
           </div>
@@ -493,7 +493,7 @@ export default function Hero() {
               lg:flex
             "
           >
-            <span className="hero-status-dot h-1.5 w-1.5 rounded-full bg-[#E52B2B]" />
+            <span className="hero-status-dot h-1.5 w-1.5 rounded-full bg-signal-red" />
             SYSTEM ACTIVE
           </div>
         </div>

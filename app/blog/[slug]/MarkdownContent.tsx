@@ -16,7 +16,7 @@ export default function MarkdownContent({
         max-w-none
         text-[17px]
         leading-8
-        text-[#3F4248]
+        text-text-secondary
 
         [&>p]:mb-7
 
@@ -26,7 +26,7 @@ export default function MarkdownContent({
         [&>h1]:font-black
         [&>h1]:leading-tight
         [&>h1]:tracking-[-0.04em]
-        [&>h1]:text-[#111318]
+        [&>h1]:text-ink
 
         [&>h2]:mb-5
         [&>h2]:mt-14
@@ -34,7 +34,7 @@ export default function MarkdownContent({
         [&>h2]:font-black
         [&>h2]:leading-tight
         [&>h2]:tracking-[-0.035em]
-        [&>h2]:text-[#111318]
+        [&>h2]:text-ink
 
         [&>h3]:mb-4
         [&>h3]:mt-10
@@ -42,27 +42,27 @@ export default function MarkdownContent({
         [&>h3]:font-bold
         [&>h3]:leading-tight
         [&>h3]:tracking-[-0.025em]
-        [&>h3]:text-[#111318]
+        [&>h3]:text-ink
 
         [&>h4]:mb-3
         [&>h4]:mt-8
         [&>h4]:text-xl
         [&>h4]:font-bold
-        [&>h4]:text-[#111318]
+        [&>h4]:text-ink
 
         [&>a]:font-semibold
-        [&>a]:text-[#E52B2B]
+        [&>a]:text-signal-red
         [&>a]:underline
         [&>a]:underline-offset-4
         [&>a]:transition
-        [&>a]:hover:text-[#111318]
+        [&>a]:hover:text-ink
 
         [&_a]:font-semibold
-        [&_a]:text-[#E52B2B]
+        [&_a]:text-signal-red
         [&_a]:underline
         [&_a]:underline-offset-4
         [&_a]:transition
-        [&_a]:hover:text-[#111318]
+        [&_a]:hover:text-ink
 
         [&>ul]:mb-7
         [&>ul]:ml-6
@@ -78,18 +78,18 @@ export default function MarkdownContent({
 
         [&>blockquote]:my-10
         [&>blockquote]:border-l-4
-        [&>blockquote]:border-[#E52B2B]
-        [&>blockquote]:bg-[#F7F7F5]
+        [&>blockquote]:border-signal-red
+        [&>blockquote]:bg-ivory
         [&>blockquote]:px-6
         [&>blockquote]:py-5
         [&>blockquote]:text-lg
         [&>blockquote]:font-medium
         [&>blockquote]:italic
         [&>blockquote]:leading-8
-        [&>blockquote]:text-[#111318]
+        [&>blockquote]:text-ink
 
         [&>hr]:my-12
-        [&>hr]:border-[#111318]/10
+        [&>hr]:border-ink/10
 
         [&>img]:my-10
         [&>img]:w-full
@@ -98,7 +98,7 @@ export default function MarkdownContent({
         [&>pre]:my-10
         [&>pre]:overflow-x-auto
         [&>pre]:rounded-2xl
-        [&>pre]:bg-[#111318]
+        [&>pre]:bg-ink
         [&>pre]:p-6
         [&>pre]:text-sm
         [&>pre]:leading-6
@@ -108,10 +108,10 @@ export default function MarkdownContent({
         [&_code]:text-[0.9em]
 
         [&>p_code]:rounded
-        [&>p_code]:bg-[#F1F1EF]
+        [&>p_code]:bg-stone
         [&>p_code]:px-1.5
         [&>p_code]:py-0.5
-        [&>p_code]:text-[#111318]
+        [&>p_code]:text-ink
 
         [&>table]:my-10
         [&>table]:w-full
@@ -120,17 +120,17 @@ export default function MarkdownContent({
         [&>table]:rounded-xl
 
         [&_th]:border
-        [&_th]:border-[#111318]/10
-        [&_th]:bg-[#F7F7F5]
+        [&_th]:border-ink/10
+        [&_th]:bg-ivory
         [&_th]:px-4
         [&_th]:py-3
         [&_th]:text-left
         [&_th]:text-sm
         [&_th]:font-bold
-        [&_th]:text-[#111318]
+        [&_th]:text-ink
 
         [&_td]:border
-        [&_td]:border-[#111318]/10
+        [&_td]:border-ink/10
         [&_td]:px-4
         [&_td]:py-3
         [&_td]:text-sm

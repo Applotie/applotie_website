@@ -41,8 +41,8 @@ export default function Testimonials() {
       id="testimonials"
       className="
         relative overflow-hidden
-        bg-[#111318]
-        py-20 text-black
+        bg-ink
+        py-20 text-text-dark-primary
         sm:py-24
         lg:py-32
         xl:py-40
@@ -56,7 +56,7 @@ export default function Testimonials() {
           -right-32 top-0
           h-80 w-80
           rounded-full
-          bg-[#E52B2B]/5
+          bg-signal-red/5
           blur-3xl
         "
       />
@@ -68,7 +68,7 @@ export default function Testimonials() {
           -left-32 bottom-0
           h-72 w-72
           rounded-full
-          bg-[#F5C518]/7
+          bg-muted-gold/7
           blur-3xl
         "
       />
@@ -77,20 +77,20 @@ export default function Testimonials() {
         {/* Heading */}
         <div className="mx-auto mb-14 max-w-4xl text-center sm:mb-16 lg:mb-20">
           <div className="mb-5 flex items-center justify-center gap-3">
-            <span className="h-px w-8 bg-[#E52B2B]" />
+            <span className="h-px w-8 bg-signal-red" />
 
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E52B2B] sm:text-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-signal-red sm:text-sm">
               Testimonials
             </p>
 
-            <span className="h-px w-8 bg-[#E52B2B]" />
+            <span className="h-px w-8 bg-signal-red" />
           </div>
 
           <h2
             className="
               text-4xl font-semibold
               tracking-[-0.045em]
-              text-black/85
+              text-text-dark-primary
               sm:text-5xl
               md:text-6xl
               lg:text-7xl
@@ -100,7 +100,7 @@ export default function Testimonials() {
             Trusted by businesses.
             <br />
 
-            <span className="text-red-600">
+            <span className="text-signal-red">
               Proven by results.
             </span>
           </h2>
@@ -109,7 +109,7 @@ export default function Testimonials() {
             className="
               mx-auto mt-6 max-w-2xl
               text-sm leading-6
-              text-black/65
+              text-text-dark-secondary
               sm:text-base sm:leading-7
               lg:text-lg
             "
@@ -136,15 +136,15 @@ export default function Testimonials() {
             lg:pt-8
           "
         >
-          <p className="max-w-xl text-sm leading-6 text-black/65">
+          <p className="max-w-xl text-sm leading-6 text-text-dark-secondary">
             We measure success by the impact our work creates for the
             businesses we partner with.
           </p>
 
           <div className="flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-[#F5C518]" />
+            <span className="h-2 w-2 rounded-full bg-muted-gold" />
 
-            <span className="text-xs font-medium uppercase tracking-[0.2em] text-black/95">
+            <span className="text-xs font-medium uppercase tracking-[0.2em] text-text-dark-primary">
               Real work. Real results.
             </span>
           </div>

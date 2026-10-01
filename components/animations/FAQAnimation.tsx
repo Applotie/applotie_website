@@ -55,9 +55,9 @@ export default function FAQAnimation({ faqs }: FAQAnimationProps) {
       className="
         overflow-hidden
         rounded-[1.5rem]
-        border border-white/10
-        bg-[#1a1c22]
-        shadow-[0_10px_40px_rgba(17,19,24,0.04)]
+        border border-black/40
+        bg-#f7f5f0
+        shadow-[0_10px_40px_rgba(17,18,20,0.04)]
       "
     >
       {faqs.map((faq, index) => (
@@ -70,7 +70,7 @@ export default function FAQAnimation({ faqs }: FAQAnimationProps) {
           }}
           className="
             group
-            border-b border-white/10
+            border-b border-black/40
             last:border-b-0
           "
         >
@@ -95,7 +95,7 @@ export default function FAQAnimation({ faqs }: FAQAnimationProps) {
                 h-full w-1
                 origin-top
                 scale-y-0
-                bg-[#F5C518]
+                bg-muted-gold
                 transition-transform duration-300
                 group-open:scale-y-100
               "
@@ -110,7 +110,7 @@ export default function FAQAnimation({ faqs }: FAQAnimationProps) {
                   text-[10px]
                   font-semibold
                   tracking-wider
-                  text-[#E52B2B]
+                  text-signal-red
                   sm:text-xs
                 "
               >
@@ -123,9 +123,9 @@ export default function FAQAnimation({ faqs }: FAQAnimationProps) {
                   text-sm
                   font-semibold
                   leading-6
-                  text-black/85
+                  text-black/80
                   transition-colors duration-300
-                  group-hover:text-[#E52B2B]
+                  group-hover:text-signal-red
                   sm:text-base
                   lg:text-lg
                 "
@@ -143,14 +143,14 @@ export default function FAQAnimation({ faqs }: FAQAnimationProps) {
                 items-center justify-center
                 rounded-full
                 border border-white/10
-                bg-[#202124]
-                text-black/80
+                bg-white
+                text-black/70
                 transition-all duration-300
-                group-hover:border-[#E52B2B]/30
-                group-hover:text-[#E52B2B]
-                group-open:border-[#E52B2B]
-                group-open:bg-[#E52B2B]
-                group-open:text-black
+                group-hover:border-signal-red/30
+                group-hover:text-signal-red
+                group-open:border-signal-red
+                group-open:bg-signal-red
+                group-open:text-text-dark-primary
               "
             >
               {/* Horizontal */}

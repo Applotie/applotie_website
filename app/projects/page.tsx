@@ -14,8 +14,8 @@ const projects = [
     impact: "42%",
     impactLabel: "more enquiries",
     stack: "Next.js · Tailwind · CMS",
-    accent: "#E52B2B",
-    background: "#FFF5F3",
+    accent: "var(--signal-red)",
+    background: "var(--ivory)",
   },
   {
     number: "02",
@@ -28,8 +28,8 @@ const projects = [
     impact: "60%",
     impactLabel: "less manual work",
     stack: "React · Node.js · MongoDB",
-    accent: "#F0B900",
-    background: "#FFF9E8",
+    accent: "var(--muted-gold)",
+    background: "var(--stone)",
   },
   {
     number: "03",
@@ -42,8 +42,8 @@ const projects = [
     impact: "3.4×",
     impactLabel: "organic traffic",
     stack: "Technical SEO · Content · Analytics",
-    accent: "#E52B2B",
-    background: "#F7F7F5",
+    accent: "var(--signal-red)",
+    background: "var(--white)",
   },
   {
     number: "04",
@@ -56,14 +56,14 @@ const projects = [
     impact: "2.8×",
     impactLabel: "return on ad spend",
     stack: "Meta Ads · Google Ads · CRO",
-    accent: "#202124",
-    background: "#F1F1EF",
+    accent: "var(--ink)",
+    background: "var(--ivory)",
   },
 ];
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-white text-[#202124]">
+    <main className="min-h-screen overflow-hidden bg-white text-text-primary">
       <ProjectsAnimation />
 
       {/* =====================================================
@@ -72,7 +72,7 @@ export default function ProjectsPage() {
 
       <section className="projects-hero px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:px-12 lg:pb-28 lg:pt-44">
         <div className="mx-auto max-w-7xl">
-          <p className="projects-reveal mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[#E52B2B]">
+          <p className="projects-reveal mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-signal-red">
             Selected work
           </p>
 
@@ -91,7 +91,7 @@ export default function ProjectsPage() {
           >
             Work that moves
             <br className="hidden sm:block" />{" "}
-            <span className="text-[#E52B2B]">business forward.</span>
+            <span className="text-signal-red">business forward.</span>
           </h1>
 
           <div className="mt-7 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
@@ -101,7 +101,7 @@ export default function ProjectsPage() {
                 max-w-2xl
                 text-sm
                 leading-6
-                text-[#202124]/80
+                text-text-primary/80
                 sm:text-base
                 sm:leading-7
                 lg:text-lg
@@ -113,7 +113,7 @@ export default function ProjectsPage() {
               whether the work creates a meaningful business outcome.
             </p>
 
-            <p className="projects-reveal text-xs font-semibold uppercase tracking-[0.18em] text-[#202124]/40">
+            <p className="projects-reveal text-xs font-semibold uppercase tracking-[0.18em] text-text-primary/40">
               Strategy · Build · Growth
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function ProjectsPage() {
           relative
           overflow-hidden
           border-y
-          border-[#202124]/10
+          border-ink/10
           px-5
           py-14
           sm:px-8
@@ -138,37 +138,25 @@ export default function ProjectsPage() {
           lg:py-28
         "
       >
-        <div
-          aria-hidden="true"
-          className="
-            pointer-events-none
-            absolute
-            inset-0
-            opacity-60
-            [background-image:linear-gradient(to_right,rgba(32,33,36,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(32,33,36,0.07)_1px,transparent_1px)]
-            [background-size:48px_48px]
-          "
-        />
-
         <div className="relative mx-auto max-w-7xl">
           {/* Section intro */}
 
           <div className="projects-section-intro mb-12 flex flex-col gap-5 sm:mb-16 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#F0B900]">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-gold">
                 Case studies
               </p>
 
               <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-[-0.04em] sm:text-4xl lg:text-5xl">
                 The problem comes first.
                 <br />
-                <span className="text-[#E52B2B]">
+                <span className="text-signal-red">
                   Then the work. Then the impact.
                 </span>
               </h2>
             </div>
 
-            <p className="max-w-sm text-sm font-semibold leading-6 text-[#202124]/70">
+            <p className="max-w-sm text-sm font-semibold leading-6 text-text-primary/70">
               A closer look at how strategy, technology and growth come
               together across different business challenges.
             </p>
@@ -186,8 +174,8 @@ export default function ProjectsPage() {
                   relative
                   overflow-hidden
                   border
-                  border-[#202124]/10
-                  shadow-[0_15px_50px_rgba(32,33,36,0.05)]
+                  border-ink/10
+                  shadow-[0_15px_50px_rgba(22,23,25,0.05)]
                 "
                 style={{
                   backgroundColor: project.background,
@@ -205,7 +193,7 @@ export default function ProjectsPage() {
                 <div className="relative p-6 sm:p-8 lg:p-10">
                   {/* Top metadata */}
 
-                  <div className="flex items-start justify-between gap-6 border-b border-[#202124]/10 pb-5">
+                  <div className="flex items-start justify-between gap-6 border-b border-ink/10 pb-5">
                     <div>
                       <span
                         className="text-[10px] font-semibold uppercase tracking-[0.22em] sm:text-xs"
@@ -216,12 +204,12 @@ export default function ProjectsPage() {
                         {project.category}
                       </span>
 
-                      <p className="mt-1 text-xs text-[#202124]/45">
+                      <p className="mt-1 text-xs text-text-primary/45">
                         {project.client}
                       </p>
                     </div>
 
-                    <span className="text-3xl font-semibold leading-none tracking-[-0.05em] text-[#202124]/15 sm:text-4xl">
+                    <span className="text-3xl font-semibold leading-none tracking-[-0.05em] text-text-primary/15 sm:text-4xl">
                       {project.number}
                     </span>
                   </div>
@@ -229,7 +217,7 @@ export default function ProjectsPage() {
                   {/* Main title */}
 
                   <div className="project-title-block mt-8 max-w-4xl sm:mt-10">
-                    <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#202124]/35">
+                    <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-text-primary/35">
                       Case study
                     </p>
 
@@ -249,27 +237,27 @@ export default function ProjectsPage() {
 
                   {/* Problem / Work / Impact */}
 
-                  <div className="mt-10 grid border-t border-[#202124]/10 lg:grid-cols-[0.85fr_1fr_0.65fr]">
+                  <div className="mt-10 grid border-t border-ink/10 lg:grid-cols-[0.85fr_1fr_0.65fr]">
                     {/* Problem */}
 
-                    <div className="project-column border-b border-[#202124]/10 py-7 lg:border-b-0 lg:border-r lg:pr-8">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E52B2B]">
+                    <div className="project-column border-b border-ink/10 py-7 lg:border-b-0 lg:border-r lg:pr-8">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-signal-red">
                         The problem
                       </p>
 
-                      <p className="mt-4 max-w-md text-sm leading-6 text-[#202124]/65 sm:text-base sm:leading-7">
+                      <p className="mt-4 max-w-md text-sm leading-6 text-text-primary/65 sm:text-base sm:leading-7">
                         {project.problem}
                       </p>
                     </div>
 
                     {/* Work */}
 
-                    <div className="project-column border-b border-[#202124]/10 py-7 lg:border-b-0 lg:px-8 lg:border-r">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#F0B900]">
+                    <div className="project-column border-b border-ink/10 py-7 lg:border-b-0 lg:px-8 lg:border-r">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-gold">
                         What we did
                       </p>
 
-                      <p className="mt-4 max-w-lg text-sm leading-6 text-[#202124]/65 sm:text-base sm:leading-7">
+                      <p className="mt-4 max-w-lg text-sm leading-6 text-text-primary/65 sm:text-base sm:leading-7">
                         {project.work}
                       </p>
                     </div>
@@ -277,7 +265,7 @@ export default function ProjectsPage() {
                     {/* Impact */}
 
                     <div className="project-impact py-7 lg:pl-8">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#202124]/35">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-primary/35">
                         Impact
                       </p>
 
@@ -297,7 +285,7 @@ export default function ProjectsPage() {
                         {project.impact}
                       </p>
 
-                      <p className="mt-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#202124]/45">
+                      <p className="mt-2 text-xs font-semibold uppercase tracking-[0.12em] text-text-primary/45">
                         {project.impactLabel}
                       </p>
                     </div>
@@ -305,13 +293,13 @@ export default function ProjectsPage() {
 
                   {/* Bottom system information */}
 
-                  <div className="mt-2 flex flex-col gap-4 border-t border-[#202124]/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="mt-2 flex flex-col gap-4 border-t border-ink/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-                      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#202124]/30">
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-text-primary/30">
                         Built with
                       </span>
 
-                      <span className="text-xs text-[#202124]/55">
+                      <span className="text-xs text-text-primary/55">
                         {project.stack}
                       </span>
                     </div>
@@ -322,7 +310,7 @@ export default function ProjectsPage() {
                         color: project.accent,
                       }}
                     >
-                      View case study ↗
+                      Applotie Impact
                     </span>
                   </div>
                 </div>
@@ -339,7 +327,7 @@ export default function ProjectsPage() {
       <section className="projects-animate-section px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="projects-reveal text-xs font-semibold uppercase tracking-[0.24em] text-[#E52B2B]">
+            <p className="projects-reveal text-xs font-semibold uppercase tracking-[0.24em] text-signal-red">
               Our approach
             </p>
 
@@ -350,7 +338,7 @@ export default function ProjectsPage() {
 
           <div className="grid gap-8 sm:grid-cols-3">
             <div className="projects-approach-item">
-              <span className="text-sm font-semibold text-[#F0B900]">
+              <span className="text-sm font-semibold text-muted-gold">
                 01
               </span>
 
@@ -358,14 +346,14 @@ export default function ProjectsPage() {
                 Understand
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-[#202124]/55">
+              <p className="mt-3 text-sm leading-6 text-text-primary/55">
                 We understand the business, audience and problem before
                 deciding what to build.
               </p>
             </div>
 
             <div className="projects-approach-item">
-              <span className="text-sm font-semibold text-[#E52B2B]">
+              <span className="text-sm font-semibold text-signal-red">
                 02
               </span>
 
@@ -373,14 +361,14 @@ export default function ProjectsPage() {
                 Build
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-[#202124]/55">
+              <p className="mt-3 text-sm leading-6 text-text-primary/55">
                 Strategy becomes a focused digital experience built for
                 performance and growth.
               </p>
             </div>
 
             <div className="projects-approach-item">
-              <span className="text-sm font-semibold text-[#202124]">
+              <span className="text-sm font-semibold text-text-primary">
                 03
               </span>
 
@@ -388,7 +376,7 @@ export default function ProjectsPage() {
                 Improve
               </h3>
 
-              <p className="mt-3 text-sm leading-6 text-[#202124]/55">
+              <p className="mt-3 text-sm leading-6 text-text-primary/55">
                 We measure what happens, learn from it and continuously
                 improve the experience.
               </p>

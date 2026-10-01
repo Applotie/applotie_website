@@ -182,8 +182,8 @@ export default function TechStackAnimation({
                   sm:text-sm
                   ${
                     isActive
-                      ? "text-black"
-                      : "text-black/65 hover:text-black/85"
+                      ? "text-text-dark-primary"
+                      : "text-text-dark-secondary hover:text-text-dark-primary"
                   }
                 `}
               >
@@ -197,7 +197,7 @@ export default function TechStackAnimation({
                     left-1/2
                     h-[2px]
                     -translate-x-1/2
-                    bg-[#E52B2B]
+                    bg-signal-red
                     transition-all
                     duration-300
                     ${
@@ -227,8 +227,8 @@ export default function TechStackAnimation({
           rounded-2xl
           border
           border-white/10
-          bg-[#1a1c22]
-          shadow-[0_20px_70px_rgba(17,19,24,0.06)]
+          bg-graphite
+          shadow-[0_20px_70px_rgba(17,18,20,0.06)]
           sm:rounded-3xl
         "
       >
@@ -258,7 +258,7 @@ export default function TechStackAnimation({
                 font-semibold
                 uppercase
                 tracking-[0.25em]
-                text-[#E52B2B]
+                text-signal-red
                 sm:text-xs
               "
             >
@@ -271,7 +271,7 @@ export default function TechStackAnimation({
                 text-2xl
                 font-semibold
                 tracking-[-0.03em]
-                text-
+                text-text-dark-primary
                 sm:text-3xl
                 lg:text-4xl
               "
@@ -285,7 +285,7 @@ export default function TechStackAnimation({
               max-w-md
               text-sm
               leading-6
-              text-black/80
+              text-text-dark-secondary
               sm:text-base
               sm:leading-7
               lg:text-right
@@ -329,13 +329,13 @@ export default function TechStackAnimation({
                 rounded-xl
                 border
                     border-white/10
-                      bg-[#202124]
+                      bg-charcoal
                 p-4
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:border-[#E52B2B]/30
-                hover:shadow-[0_12px_30px_rgba(17,19,24,0.07)]
+                hover:border-signal-red/30
+                hover:shadow-[0_12px_30px_rgba(17,18,20,0.07)]
                 sm:rounded-2xl
                 sm:p-5
               "
@@ -351,7 +351,7 @@ export default function TechStackAnimation({
                   w-[3px]
                   origin-bottom
                   scale-y-0
-                  bg-[#F5C518]
+                  bg-muted-gold
                   transition-transform
                   duration-300
                   group-hover:scale-y-100
@@ -371,11 +371,11 @@ export default function TechStackAnimation({
                   rounded-xl
                   border
                   border-white/10
-                  bg-[#202124]
+                  bg-charcoal
                   transition-all
                   duration-300
-                  group-hover:border-[#E52B2B]/20
-                  group-hover:bg-[#E52B2B]
+                  group-hover:border-signal-red/20
+                  group-hover:bg-signal-red
                   sm:h-12
                   sm:w-12
                 "
@@ -385,7 +385,7 @@ export default function TechStackAnimation({
                     text-[10px]
                     font-bold
                     tracking-tight
-                    text-black/80
+                    text-text-dark-primary
                     transition-colors
                     duration-300
                     group-hover:text-white
@@ -403,7 +403,7 @@ export default function TechStackAnimation({
                     truncate
                     text-sm
                     font-semibold
-                    text-black
+                    text-text-dark-primary
                     sm:text-base
                   "
                 >
@@ -416,7 +416,7 @@ export default function TechStackAnimation({
                     text-[10px]
                     uppercase
                     tracking-[0.15em]
-                    text-black/80
+                    text-text-dark-secondary
                   "
                 >
                   {active.title}
@@ -430,11 +430,11 @@ export default function TechStackAnimation({
                   ml-auto
                   shrink-0
                   text-lg
-                  text-black/80
+                  text-text-dark-secondary
                   transition-all
                   duration-300
                   group-hover:translate-x-1
-                  group-hover:text-[#E52B2B]
+                  group-hover:text-signal-red
                 "
               >
                 →

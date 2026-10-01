@@ -46,25 +46,13 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white px-6 py-12 text-[#111318]">
-      {/* Background grid */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-60"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(17,19,24,0.045) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(17,19,24,0.045) 1px, transparent 1px)
-          `,
-          backgroundSize: "42px 42px",
-        }}
-      />
-
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white px-6 py-12 text-ink">
       {/* Decorative red route */}
-      <div className="pointer-events-none absolute -right-24 top-24 h-72 w-72 rounded-full border border-[#E52B2B]/20" />
+      <div className="pointer-events-none absolute -right-24 top-24 h-72 w-72 rounded-full border border-signal-red/20" />
 
-      <div className="pointer-events-none absolute -right-12 top-36 h-2 w-2 rounded-full bg-[#F5C518]" />
+      <div className="pointer-events-none absolute -right-12 top-36 h-2 w-2 rounded-full bg-muted-gold" />
 
-      <div className="pointer-events-none absolute -left-32 bottom-20 h-80 w-80 rounded-full border border-[#111318]/10" />
+      <div className="pointer-events-none absolute -left-32 bottom-20 h-80 w-80 rounded-full border border-ink/10" />
 
       {/* Login card */}
       <div className="relative z-10 w-full max-w-md">
@@ -75,19 +63,19 @@ export default function AdminLoginPage() {
             className="inline-flex items-center text-2xl font-black tracking-[-0.05em]"
           >
             Applotie
-            <span className="ml-1 text-[#E52B2B]">.</span>
+            <span className="ml-1 text-signal-red">.</span>
           </a>
 
           <div className="mx-auto mt-4 flex items-center justify-center gap-2">
-            <span className="h-1.5 w-8 rounded-full bg-[#E52B2B]" />
-            <span className="h-1.5 w-3 rounded-full bg-[#F5C518]" />
+            <span className="h-1.5 w-8 rounded-full bg-signal-red" />
+            <span className="h-1.5 w-3 rounded-full bg-muted-gold" />
           </div>
         </div>
 
         {/* Card */}
-        <div className="rounded-3xl border border-[#111318]/10 bg-white p-7 shadow-[0_20px_70px_rgba(17,19,24,0.08)] sm:p-9">
+        <div className="rounded-3xl border border-ink/10 bg-white p-7 shadow-[0_20px_70px_rgba(17,18,20,0.08)] sm:p-9">
           <div className="mb-8">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#E52B2B]">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-signal-red">
               Admin Panel
             </p>
 
@@ -95,7 +83,7 @@ export default function AdminLoginPage() {
               Welcome back.
             </h1>
 
-            <p className="mt-3 text-sm leading-6 text-[#666A72]">
+            <p className="mt-3 text-sm leading-6 text-text-secondary">
               Sign in to manage your Applotie blog.
             </p>
           </div>
@@ -105,7 +93,7 @@ export default function AdminLoginPage() {
             <div>
               <label
                 htmlFor="email"
-                className="mb-2 block text-sm font-semibold text-[#111318]"
+                className="mb-2 block text-sm font-semibold text-ink"
               >
                 Email
               </label>
@@ -118,7 +106,7 @@ export default function AdminLoginPage() {
                 placeholder="admin@example.com"
                 autoComplete="email"
                 required
-                className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3.5 text-sm outline-none transition placeholder:text-[#999CA2] focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3.5 text-sm outline-none transition placeholder:text-text-muted focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
               />
             </div>
 
@@ -126,7 +114,7 @@ export default function AdminLoginPage() {
             <div>
               <label
                 htmlFor="password"
-                className="mb-2 block text-sm font-semibold text-[#111318]"
+                className="mb-2 block text-sm font-semibold text-ink"
               >
                 Password
               </label>
@@ -139,13 +127,13 @@ export default function AdminLoginPage() {
                 placeholder="Enter your password"
                 autoComplete="current-password"
                 required
-                className="w-full rounded-xl border border-[#111318]/15 bg-[#FAFAF8] px-4 py-3.5 text-sm outline-none transition placeholder:text-[#999CA2] focus:border-[#E52B2B] focus:bg-white focus:ring-4 focus:ring-[#E52B2B]/10"
+                className="w-full rounded-xl border border-ink/15 bg-ivory px-4 py-3.5 text-sm outline-none transition placeholder:text-text-muted focus:border-signal-red focus:bg-white focus:ring-4 focus:ring-signal-red/10"
               />
             </div>
 
             {/* Error */}
             {error && (
-              <div className="rounded-xl border border-[#E52B2B]/20 bg-[#E52B2B]/5 px-4 py-3 text-sm font-medium text-[#C92121]">
+              <div className="rounded-xl border border-signal-red/20 bg-signal-red/5 px-4 py-3 text-sm font-medium text-burgundy">
                 {error}
               </div>
             )}
@@ -154,7 +142,7 @@ export default function AdminLoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="group relative flex w-full items-center justify-center overflow-hidden rounded-xl bg-[#dc670e] px-5 py-3.5 text-sm font-bold text-white transition hover:bg-[#E52B2B] disabled:cursor-not-allowed disabled:opacity-60"
+              className="group relative flex w-full items-center justify-center overflow-hidden rounded-xl bg-signal-red px-5 py-3.5 text-sm font-bold text-white transition hover:bg-signal-red disabled:cursor-not-allowed disabled:opacity-60"
             >
               <span className="relative z-10">
                 {loading ? "Logging in..." : "Login to dashboard"}
@@ -162,17 +150,17 @@ export default function AdminLoginPage() {
             </button>
           </form>
 
-          <div className="mt-7 border-t border-[#111318]/10 pt-6 text-center">
+          <div className="mt-7 border-t border-ink/10 pt-6 text-center">
             <a
               href="/blog"
-              className="text-sm font-semibold text-[#666A72] transition hover:text-[#E52B2B]"
+              className="text-sm font-semibold text-text-secondary transition hover:text-signal-red"
             >
               ← Back to blog
             </a>
           </div>
         </div>
 
-        <p className="mt-6 text-center text-xs text-[#999CA2]">
+        <p className="mt-6 text-center text-xs text-text-muted">
           Applotie Technologies · Admin access
         </p>
       </div>

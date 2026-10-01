@@ -31,15 +31,15 @@ export default function Results() {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden text-black/80">
       {/* Decorative Elements */}
-      <div className="pointer-events-none absolute -left-32 top-1/4 h-72 w-72 rounded-full bg-[#E52B2B]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 top-1/4 h-72 w-72 rounded-full bg-signal-red/10 blur-3xl" />
 
-      <div className="pointer-events-none absolute -right-32 bottom-1/4 h-72 w-72 rounded-full bg-yellow-500/5 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 bottom-1/4 h-72 w-72 rounded-full bg-muted-gold/5 blur-3xl" />
 
       <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[1600px] flex-col justify-between px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24 xl:px-16">
         
         {/* Header */}
         <div className="results-header max-w-4xl">
-          <p className="results-eyebrow mb-5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#E52B2B] sm:text-xs">
+          <p className="results-eyebrow mb-5 text-[10px] font-bold uppercase tracking-[0.3em] text-signal-red sm:text-xs">
             Results, Not Promises
           </p>
 
@@ -48,7 +48,7 @@ export default function Results() {
               The work speaks
             </span>
 
-            <span className="results-title-line results-title-accent block text-[#E52B2B]">
+            <span className="results-title-line results-title-accent block text-signal-red">
               for itself.
             </span>
           </h2>
@@ -70,7 +70,7 @@ export default function Results() {
           {results.map((result, index) => (
             <div
               key={index}
-              className="data-card group relative flex min-h-[230px] flex-col items-center justify-between overflow-hidden rounded-sm bg-[#F7F7F5] p-6 text-center sm:min-h-[260px] sm:p-8 lg:min-h-[280px]"
+              className="data-card group relative flex min-h-[230px] flex-col items-center justify-between overflow-hidden rounded-sm bg-ivory p-6 text-center sm:min-h-[260px] sm:p-8 lg:min-h-[280px]"
               data-value={result.number.replace(/[^\d]/g, "")}
             >
               {/* Icon */}
@@ -78,7 +78,7 @@ export default function Results() {
                 <span
                   className={`text-2xl ${
                     result.color === "red"
-                      ? "text-[#E52B2B]"
+                      ? "text-signal-red"
                       : "text-black/50"
                   }`}
                 >
@@ -91,7 +91,7 @@ export default function Results() {
                 <div
                   className={`data-number text-6xl font-semibold leading-none tracking-[-0.05em] sm:text-7xl lg:text-[5.5rem] xl:text-[6rem] ${
                     result.color === "red"
-                      ? "text-[#E52B2B]"
+                      ? "text-signal-red"
                       : "text-black"
                   }`}
                 >
@@ -115,7 +115,7 @@ export default function Results() {
               <div
                 className={`card-accent absolute bottom-0 left-0 h-[2px] w-full ${
                   result.color === "red"
-                    ? "bg-[#E52B2B]"
+                    ? "bg-signal-red"
                     : "bg-black/10"
                 }`}
               />

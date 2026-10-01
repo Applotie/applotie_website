@@ -7,8 +7,10 @@ import FooterTransition from "@/components/FooterTransition";
 
 export default function ConditionalLayout({
   children,
+  globalGrid,
 }: {
   children: React.ReactNode;
+  globalGrid: React.ReactNode;
 }) {
   const pathname = usePathname();
 
@@ -19,13 +21,16 @@ export default function ConditionalLayout({
   }
 
   return (
-    <div className="relative z-[1]">
-      <Navbar />
+    <>
+      {globalGrid}
+      <div className="public-site relative z-[2]">
+        <Navbar />
 
-      <main>{children}</main>
+        <main>{children}</main>
 
-      <FooterTransition />
-      <Footer />
-    </div>
+        <FooterTransition />
+        <Footer />
+      </div>
+    </>
   );
 }

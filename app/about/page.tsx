@@ -52,25 +52,25 @@ const stats = [
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-white text-[#202124]">
+    <main className="min-h-screen bg-white text-text-primary">
       <AboutAnimation />
 
       {/* HERO */}
-      <section className="about-animate-section border-b border-[#202124]/10 px-5 pb-20 pt-36 sm:px-8 lg:px-12 lg:pb-28 lg:pt-44">
+      <section className="about-animate-section border-b border-ink/10 px-5 pb-20 pt-36 sm:px-8 lg:px-12 lg:pb-28 lg:pt-44">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <div>
-            <p className="about-reveal mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[#E52B2B]">
+            <p className="about-reveal mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-signal-red">
               About Applotie
             </p>
 
             <h1 className="about-reveal max-w-4xl text-5xl font-semibold leading-[0.94] tracking-[-0.06em] sm:text-7xl lg:text-8xl">
               Digital work
               <br />
-              with a <span className="text-[#E52B2B]">point of view.</span>
+              with a <span className="text-signal-red">point of view.</span>
             </h1>
           </div>
 
-          <p className="about-reveal max-w-xl text-base leading-7 text-[#202124]/85 sm:text-lg sm:leading-8">
+          <p className="about-reveal max-w-xl text-base leading-7 text-text-primary/85 sm:text-lg sm:leading-8">
             Applotie Technologies is a{" "}
             <strong>digital marketing agency in Patna</strong> and IT company
             helping ambitious businesses turn ideas into useful, visible and
@@ -84,17 +84,10 @@ export default function About() {
 
       {/* STORY */}
       <section className="about-animate-section relative overflow-hidden px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-70
-          [background-image:linear-gradient(to_right,rgba(32,33,36,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(32,33,36,0.08)_1px,transparent_1px)]
-          [background-size:48px_48px]"
-        />
-
         <div className="relative mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div>
-              <p className="about-reveal text-sm font-semibold uppercase tracking-[0.22em] text-[#F0B900]">
+              <p className="about-reveal text-sm font-semibold uppercase tracking-[0.22em] text-muted-gold">
                 Our starting point
               </p>
 
@@ -103,7 +96,7 @@ export default function About() {
               </h2>
             </div>
 
-            <div className="about-reveal space-y-5 text-base leading-7 text-[#202124]/85 sm:text-lg sm:leading-8">
+            <div className="about-reveal space-y-5 text-base leading-7 text-text-primary/85 sm:text-lg sm:leading-8">
               <p>
                 We founded Applotie to make serious digital capability more
                 accessible to growing businesses. As a{" "}
@@ -134,7 +127,7 @@ export default function About() {
 
               <Link
                 href="/contact"
-                className="inline-flex font-semibold text-[#E52B2B] transition-colors hover:text-[#F0B900]"
+                className="inline-flex font-semibold text-signal-red transition-colors hover:text-muted-gold"
               >
                 Start a conversation <span className="ml-2">↗</span>
               </Link>
@@ -144,7 +137,7 @@ export default function About() {
       </section>
 
       {/* NUMBERS */}
-      <section className="about-animate-section bg-[#202124] px-5 py-16 text-black/75 sm:px-8 lg:px-12 lg:py-20">
+      <section className="about-animate-section bg-charcoal px-5 py-16 text-text-dark-primary sm:px-8 lg:px-12 lg:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-12 md:grid-cols-4">
           {stats.map(([number, label]) => (
             <div
@@ -155,7 +148,7 @@ export default function About() {
                 {number}
               </p>
 
-              <p className="mt-3 text-sm font-semibold text-black/65">
+              <p className="mt-3 text-sm font-semibold text-text-dark-secondary">
                 {label}
               </p>
             </div>
@@ -168,7 +161,7 @@ export default function About() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
             <div>
-              <p className="about-reveal text-sm font-semibold uppercase tracking-[0.22em] text-[#E52B2B]">
+              <p className="about-reveal text-sm font-semibold uppercase tracking-[0.22em] text-signal-red">
                 What we do
               </p>
 
@@ -176,7 +169,7 @@ export default function About() {
                 One team for the digital journey.
               </h2>
 
-              <p className="about-reveal mt-6 max-w-md text-base leading-7 text-[#202124]/80">
+              <p className="about-reveal mt-6 max-w-md text-base leading-7 text-text-primary/80">
                 From the first idea to the first customer and everything
                 between, we bring the right capabilities together. Our work
                 spans <strong>web development, software development, SEO</strong>{" "}
@@ -185,13 +178,13 @@ export default function About() {
               </p>
             </div>
 
-            <div className="grid border-t border-[#202124]/10 sm:grid-cols-2">
+            <div className="grid border-t border-ink/10 sm:grid-cols-2">
               {capabilities.map(([number, title, description]) => (
                 <div
                   key={number}
-                  className="about-capability border-b border-[#202124]/10 p-6 pl-0 sm:p-8 sm:pl-6 sm:nth-[2n]:border-l"
+                  className="about-capability border-b border-ink/10 p-6 pl-0 sm:p-8 sm:pl-6 sm:nth-[2n]:border-l"
                 >
-                  <span className="text-xs font-semibold tracking-[0.2em] text-[#F0B900]">
+                  <span className="text-xs font-semibold tracking-[0.2em] text-muted-gold">
                     {number}
                   </span>
 
@@ -199,7 +192,7 @@ export default function About() {
                     {title}
                   </h3>
 
-                  <p className="mt-3 max-w-sm text-sm leading-6 text-[#202124]/60">
+                  <p className="mt-3 max-w-sm text-sm leading-6 text-text-primary/60">
                     {description}
                   </p>
                 </div>
@@ -210,10 +203,10 @@ export default function About() {
       </section>
 
       {/* PRINCIPLES */}
-      <section className="about-animate-section bg-[#F5F4F0] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+      <section className="about-animate-section bg-ivory px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="about-reveal mb-14 max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#E52B2B]">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-signal-red">
               How we think
             </p>
 
@@ -221,19 +214,19 @@ export default function About() {
               Principles over process.
             </h2>
 
-            <p className="mt-5 text-base leading-7 text-[#202124]/60 sm:text-lg">
+            <p className="mt-5 text-base leading-7 text-text-primary/60 sm:text-lg">
               Tools change. Trends change. Algorithms change. The way we
               approach meaningful digital work doesn't.
             </p>
           </div>
 
-          <div className="grid gap-px border border-[#202124]/10 bg-[#202124]/10 md:grid-cols-3">
+          <div className="grid gap-px border border-ink/10 bg-charcoal/10 md:grid-cols-3">
             {principles.map(([number, title, description]) => (
               <div
                 key={number}
-                className="about-principle bg-[#F5F4F0] p-6 sm:p-8"
+                className="about-principle bg-ivory p-6 sm:p-8"
               >
-                <span className="text-sm font-semibold text-[#E52B2B]">
+                <span className="text-sm font-semibold text-signal-red">
                   {number}
                 </span>
 
@@ -241,7 +234,7 @@ export default function About() {
                   {title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#202124]/60">
+                <p className="mt-3 text-sm leading-6 text-text-primary/60">
                   {description}
                 </p>
               </div>
@@ -254,7 +247,7 @@ export default function About() {
       <section className="about-animate-section px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
-            <p className="about-reveal text-sm font-semibold uppercase tracking-[0.22em] text-[#F0B900]">
+            <p className="about-reveal text-sm font-semibold uppercase tracking-[0.22em] text-muted-gold">
               Why Applotie
             </p>
 
@@ -264,34 +257,34 @@ export default function About() {
           </div>
 
           <div className="about-reveal space-y-8">
-            <div className="border-l-2 border-[#E52B2B] pl-6">
+            <div className="border-l-2 border-signal-red pl-6">
               <h3 className="text-xl font-semibold">
                 Business before technology
               </h3>
 
-              <p className="mt-2 text-sm leading-6 text-[#202124]/60">
+              <p className="mt-2 text-sm leading-6 text-text-primary/60">
                 We start by understanding what needs to change for the
                 business, then choose the technology that makes it possible.
               </p>
             </div>
 
-            <div className="border-l-2 border-[#F0B900] pl-6">
+            <div className="border-l-2 border-muted-gold pl-6">
               <h3 className="text-xl font-semibold">
                 Simple where possible
               </h3>
 
-              <p className="mt-2 text-sm leading-6 text-[#202124]/60">
+              <p className="mt-2 text-sm leading-6 text-text-primary/60">
                 Complexity isn't a feature. We aim for solutions that are
                 powerful underneath and intuitive on the surface.
               </p>
             </div>
 
-            <div className="border-l-2 border-[#202124] pl-6">
+            <div className="border-l-2 border-ink pl-6">
               <h3 className="text-xl font-semibold">
                 Built for what comes next
               </h3>
 
-              <p className="mt-2 text-sm leading-6 text-[#202124]/60">
+              <p className="mt-2 text-sm leading-6 text-text-primary/60">
                 Every project should have room to evolve as the business,
                 audience and technology change.
               </p>
@@ -301,27 +294,20 @@ export default function About() {
       </section>
 
       {/* LOCATION / VISION */}
-      <section className="about-animate-section relative overflow-hidden bg-[#202124] px-5 py-24 text-black sm:px-8 lg:px-12 lg:py-32">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-20
-          [background-image:linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)]
-          [background-size:48px_48px]"
-        />
-
+      <section className="about-animate-section relative overflow-hidden bg-ink px-5 py-24 text-text-dark-primary sm:px-8 lg:px-12 lg:py-32">
         <div className="relative mx-auto max-w-7xl">
           <div className="about-reveal max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#F0B900]">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-muted-gold">
               Looking ahead
             </p>
 
             <h2 className="mt-6 text-4xl font-semibold leading-[1] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-              Building from Bihar.
+              Building from <span className="text-red-700">Bihar</span>.
               <br />
               Thinking without borders.
             </h2>
 
-            <p className="mt-8 max-w-2xl text-base leading-7 text-black/85 sm:text-lg sm:leading-8">
+            <p className="mt-8 max-w-2xl text-base leading-7 text-text-dark-secondary sm:text-lg sm:leading-8">
               Our ambition is simple: build a technology company that combines
               strong engineering, thoughtful design and measurable growth to
               help businesses compete in a digital-first world. As a{" "}

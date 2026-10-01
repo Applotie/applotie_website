@@ -8,7 +8,7 @@ const differences = [
     description:
       "We start with your business, audience and goals — then create a digital strategy around what actually needs to move the needle.",
     label: "STRATEGY FIRST",
-    accent: "#E52B2B",
+    accent: "var(--signal-red)",
   },
   {
     number: "02",
@@ -17,7 +17,7 @@ const differences = [
     description:
       "Websites, apps and campaigns are built to be fast, useful and ready to grow — not simply made to look good.",
     label: "BUILT TO PERFORM",
-    accent: "#F5C518",
+    accent: "var(--muted-gold)",
   },
   {
     number: "03",
@@ -26,7 +26,7 @@ const differences = [
     description:
       "SEO, content, conversion and performance marketing are considered from the beginning, not added after launch.",
     label: "GROWTH MINDED",
-    accent: "#E52B2B",
+    accent: "var(--signal-red)",
   },
   {
     number: "04",
@@ -35,7 +35,7 @@ const differences = [
     description:
       "One connected team means fewer handoffs, clearer decisions and a digital presence that works as one system.",
     label: "ONE DIRECTION",
-    accent: "#F5C518",
+    accent: "var(--muted-gold)",
   },
   {
     number: "05",
@@ -44,7 +44,7 @@ const differences = [
     description:
       "We look at what happens after the website or campaign goes live, learn from the numbers and keep improving.",
     label: "LONG TERM",
-    accent: "#E52B2B",
+    accent: "var(--signal-red)",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function Difference() {
         w-full
         overflow-hidden
         bg-white
-        text-[#202124]
+        text-text-primary
       "
     >
       {/* =====================================================
@@ -98,7 +98,7 @@ export default function Difference() {
           <div className="flex items-start">
             <div className="lg:sticky lg:top-32">
               <div className="flex items-center gap-3">
-                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#E52B2B]" />
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-signal-red" />
 
                 <span
                   className="
@@ -106,7 +106,7 @@ export default function Difference() {
                     font-bold
                     uppercase
                     tracking-[0.24em]
-                    text-[#202124]/55
+                    text-text-primary/55
                     sm:text-[11px]
                   "
                 >
@@ -119,7 +119,7 @@ export default function Difference() {
                   mt-8
                   hidden
                   border-l
-                  border-[#202124]/10
+                  border-ink/10
                   pl-5
                   lg:block
                 "
@@ -130,7 +130,7 @@ export default function Difference() {
                     font-bold
                     uppercase
                     tracking-[0.2em]
-                    text-[#202124]/30
+                    text-text-primary/30
                   "
                 >
                   01 — 05
@@ -142,7 +142,7 @@ export default function Difference() {
                     max-w-[150px]
                     text-xs
                     leading-5
-                    text-[#202124]/45
+                    text-text-primary/45
                   "
                 >
                   A different way of approaching digital growth.
@@ -164,10 +164,10 @@ export default function Difference() {
               "
             >
               We don&apos;t just
-              <span className="text-[#E52B2B]"> deliver.</span>
+              <span className="text-signal-red"> deliver.</span>
               <br />
 
-              <span className="text-[#202124]/20">
+              <span className="text-text-primary/20">
                 We think.
               </span>
             </h2>
@@ -178,7 +178,7 @@ export default function Difference() {
                 grid
                 gap-7
                 border-t
-                border-[#202124]/10
+                border-ink/10
                 pt-6
                 sm:mt-10
                 sm:gap-8
@@ -191,7 +191,7 @@ export default function Difference() {
                   max-w-2xl
                   text-sm
                   leading-6
-                  text-[#202124]/60
+                  text-text-primary/60
                   sm:text-base
                   sm:leading-7
                   lg:text-lg
@@ -204,7 +204,7 @@ export default function Difference() {
               </p>
 
               <div className="flex items-center gap-3">
-                <span className="h-px w-8 bg-[#202124]/20" />
+                <span className="h-px w-8 bg-charcoal/20" />
 
                 <span
                   className="
@@ -213,7 +213,7 @@ export default function Difference() {
                     font-bold
                     uppercase
                     tracking-[0.2em]
-                    text-[#202124]/35
+                    text-text-primary/35
                   "
                 >
                   Strategy / Build / Grow
@@ -247,7 +247,7 @@ export default function Difference() {
           data-difference-list
           className="
             border-t
-            border-[#202124]/15
+            border-ink/15
           "
         >
           {differences.map((item) => (
@@ -258,7 +258,7 @@ export default function Difference() {
                 group
                 relative
                 border-b
-                border-[#202124]/15
+                border-ink/15
               "
             >
               {/* =================================================
@@ -298,7 +298,7 @@ export default function Difference() {
                       text-[10px]
                       font-bold
                       tracking-[0.16em]
-                      text-[#202124]/30
+                      text-text-primary/30
                       sm:text-xs
                     "
                   >
@@ -310,7 +310,7 @@ export default function Difference() {
                       hidden
                       h-px
                       w-5
-                      bg-[#202124]/15
+                      bg-charcoal/15
                       md:block
                     "
                   />
@@ -349,7 +349,7 @@ export default function Difference() {
                         font-medium
                         leading-[0.95]
                         tracking-[-0.045em]
-                        text-[#202124]/30
+                        text-text-primary/30
                       "
                     >
                       {item.title}
@@ -382,7 +382,7 @@ export default function Difference() {
                       font-bold
                       uppercase
                       tracking-[0.2em]
-                      text-[#202124]/35
+                      text-text-primary/35
                     "
                   >
                     {item.label}
@@ -393,7 +393,7 @@ export default function Difference() {
                     className="
                       ml-3
                       text-xl
-                      text-[#202124]/25
+                      text-text-primary/25
                     "
                   >
                     ↗
@@ -446,7 +446,7 @@ export default function Difference() {
                       text-base
                       leading-7
                       tracking-[-0.015em]
-                      text-[#202124]/65
+                      text-text-primary/65
                       sm:text-lg
                       sm:leading-7
                       lg:text-xl
@@ -462,7 +462,7 @@ export default function Difference() {
                     className="
                       hidden
                       border-l
-                      border-[#202124]/10
+                      border-ink/10
                       pl-5
                       md:block
                       lg:pl-6
@@ -474,7 +474,7 @@ export default function Difference() {
                         font-bold
                         uppercase
                         tracking-[0.2em]
-                        text-[#202124]/30
+                        text-text-primary/30
                       "
                     >
                       Why it matters
@@ -518,13 +518,13 @@ export default function Difference() {
                     font-bold
                     uppercase
                     tracking-[0.2em]
-                    text-[#202124]/35
+                    text-text-primary/35
                   "
                 >
                   {item.label}
                 </span>
 
-                <span className="ml-auto text-lg text-[#202124]/25">
+                <span className="ml-auto text-lg text-text-primary/25">
                   ↗
                 </span>
               </div>
@@ -559,7 +559,7 @@ export default function Difference() {
             relative
             mt-16
             overflow-hidden
-            bg-[#E52B2B]
+            bg-signal-red
             px-5
             py-9
             text-white

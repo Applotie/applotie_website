@@ -12,7 +12,7 @@ const sections = [
           is automatically collected when you use our website.
         </p>
 
-        <h3 className="pt-2 text-sm font-semibold tracking-[-0.02em] text-[#202124]">
+        <h3 className="pt-2 text-sm font-semibold tracking-[-0.02em] text-text-primary">
           Information you provide
         </h3>
 
@@ -23,7 +23,7 @@ const sections = [
           provide through our contact or enquiry forms.
         </p>
 
-        <h3 className="pt-2 text-sm font-semibold tracking-[-0.02em] text-[#202124]">
+        <h3 className="pt-2 text-sm font-semibold tracking-[-0.02em] text-text-primary">
           Information collected automatically
         </h3>
 
@@ -61,7 +61,7 @@ const sections = [
           ].map((item) => (
             <li
               key={item}
-              className="relative pl-5 before:absolute before:left-0 before:top-[0.7rem] before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#E52B2B]"
+              className="relative pl-5 before:absolute before:left-0 before:top-[0.7rem] before:h-1.5 before:w-1.5 before:rounded-full before:bg-signal-red"
             >
               {item}
             </li>
@@ -216,7 +216,7 @@ const sections = [
           ].map((item) => (
             <li
               key={item}
-              className="relative pl-5 before:absolute before:left-0 before:top-[0.7rem] before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#E52B2B]"
+              className="relative pl-5 before:absolute before:left-0 before:top-[0.7rem] before:h-1.5 before:w-1.5 before:rounded-full before:bg-signal-red"
             >
               {item}
             </li>
@@ -270,8 +270,8 @@ const sections = [
           Technologies handles personal information, you can contact us at:
         </p>
 
-        <div className="mt-6 border-l-2 border-[#E52B2B] pl-5">
-          <p className="font-semibold text-[#202124]">
+        <div className="mt-6 border-l-2 border-signal-red pl-5">
+          <p className="font-semibold text-text-primary">
             Applotie Technologies
           </p>
 
@@ -282,7 +282,7 @@ const sections = [
           <p className="mt-1">
             <a
               href="mailto:hello@applotie.com"
-              className="transition-colors hover:text-[#E52B2B]"
+              className="transition-colors hover:text-signal-red"
             >
               hello@applotie.com
             </a>
@@ -295,13 +295,13 @@ const sections = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-white text-[#202124]">
+    <main className="min-h-screen bg-white text-text-primary">
       {/* HERO */}
-      <section className="border-b border-[#202124]/10 px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:px-12 lg:pb-24 lg:pt-44">
+      <section className="border-b border-ink/10 px-5 pb-16 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:px-12 lg:pb-24 lg:pt-44">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#E52B2B] sm:text-xs">
+              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-signal-red sm:text-xs">
                 Legal
               </p>
 
@@ -309,7 +309,7 @@ export default function PrivacyPolicyPage() {
                 Privacy, explained clearly.
               </h1>
 
-              <p className="mt-7 max-w-2xl text-base leading-7 text-[#202124]/60 sm:text-lg sm:leading-8">
+              <p className="mt-7 max-w-2xl text-base leading-7 text-text-primary/60 sm:text-lg sm:leading-8">
                 We believe your information should be handled responsibly and
                 transparently. Here&apos;s how Applotie Technologies collects,
                 uses and protects information when you use our website and
@@ -318,7 +318,7 @@ export default function PrivacyPolicyPage() {
             </div>
 
             <div className="shrink-0 md:text-right">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#202124]/35">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-text-primary/35">
                 Effective date
               </p>
 
@@ -332,17 +332,11 @@ export default function PrivacyPolicyPage() {
 
       {/* POLICY CONTENT */}
       <section className="relative overflow-hidden px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
-        {/* Background grid */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-50 [background-image:linear-gradient(to_right,rgba(32,33,36,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(32,33,36,0.06)_1px,transparent_1px)] [background-size:48px_48px] sm:[background-size:56px_56px]"
-        />
-
         <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-20">
           {/* DESKTOP SIDEBAR */}
           <aside className="hidden lg:block">
             <div className="sticky top-24">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#202124]/35">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-text-primary/35">
                 On this page
               </p>
 
@@ -351,9 +345,9 @@ export default function PrivacyPolicyPage() {
                   <a
                     key={section.number}
                     href={`#section-${section.number}`}
-                    className="flex items-center gap-3 text-xs text-[#202124]/50 transition-colors hover:text-[#E52B2B]"
+                    className="flex items-center gap-3 text-xs text-text-primary/50 transition-colors hover:text-signal-red"
                   >
-                    <span className="font-semibold text-[#F0B900]">
+                    <span className="font-semibold text-muted-gold">
                       {section.number}
                     </span>
 
@@ -367,9 +361,9 @@ export default function PrivacyPolicyPage() {
           {/* MAIN CONTENT */}
           <div className="max-w-4xl">
             {/* SUMMARY */}
-            <div className="mb-12 border border-[#202124]/10 bg-[#F5F4EF] p-6 sm:p-8">
-              <p className="text-sm leading-7 text-[#202124]/65 sm:text-base">
-                <strong className="text-[#202124]">
+            <div className="mb-12 border border-ink/10 bg-ivory p-6 sm:p-8">
+              <p className="text-sm leading-7 text-text-primary/65 sm:text-base">
+                <strong className="text-text-primary">
                   In short:
                 </strong>{" "}
                 We collect information that helps us communicate with you,
@@ -379,7 +373,7 @@ export default function PrivacyPolicyPage() {
             </div>
 
             {/* SECTIONS */}
-            <div className="divide-y divide-[#202124]/10">
+            <div className="divide-y divide-ink/10">
               {sections.map((section) => (
                 <article
                   key={section.number}
@@ -387,7 +381,7 @@ export default function PrivacyPolicyPage() {
                   className="scroll-mt-24 py-10 first:pt-0 sm:py-14"
                 >
                   <div className="grid gap-5 sm:grid-cols-[60px_1fr] sm:gap-8">
-                    <span className="text-sm font-semibold text-[#F0B900]">
+                    <span className="text-sm font-semibold text-muted-gold">
                       {section.number}
                     </span>
 
@@ -396,7 +390,7 @@ export default function PrivacyPolicyPage() {
                         {section.title}
                       </h2>
 
-                      <div className="mt-6 space-y-5 text-sm leading-7 text-[#202124]/65 sm:text-base">
+                      <div className="mt-6 space-y-5 text-sm leading-7 text-text-primary/65 sm:text-base">
                         {section.content}
                       </div>
                     </div>
@@ -406,8 +400,8 @@ export default function PrivacyPolicyPage() {
             </div>
 
             {/* DISCLAIMER */}
-            <div className="mt-12 border-t border-[#202124]/10 pt-8">
-              <p className="text-xs leading-6 text-[#202124]/40">
+            <div className="mt-12 border-t border-ink/10 pt-8">
+              <p className="text-xs leading-6 text-text-primary/40">
                 This Privacy Policy is intended to describe Applotie
                 Technologies&apos; general privacy practices. It should be
                 reviewed and adapted to reflect the specific technologies,
@@ -420,18 +414,18 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* FOOTER NAVIGATION */}
-      <section className="border-t border-[#202124]/10 px-5 py-8 sm:px-8 lg:px-12">
+      <section className="border-t border-ink/10 px-5 py-8 sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <Link
             href="/"
-            className="text-sm font-medium transition-colors hover:text-[#E52B2B]"
+            className="text-sm font-medium transition-colors hover:text-signal-red"
           >
             ← Back to Applotie
           </Link>
 
           <Link
             href="/terms"
-            className="text-sm font-medium text-[#202124]/50 transition-colors hover:text-[#E52B2B]"
+            className="text-sm font-medium text-text-primary/50 transition-colors hover:text-signal-red"
           >
             Terms & Conditions ↗
           </Link>

@@ -135,36 +135,27 @@ export default async function BlogPostPage({
   };
 
   return (
-    <main className="min-h-screen bg-white text-[#111318]">
+    <main className="min-h-screen bg-white text-ink">
 
       {/* ARTICLE HEADER */}
-      <section className="relative overflow-hidden border-b border-[#111318]/10">
-        <div
-          className="absolute inset-0 opacity-50"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #1113180d 1px, transparent 1px), linear-gradient(to bottom, #1113180d 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
-        />
-
+      <section className="relative overflow-hidden border-b border-ink/10">
         <div className="relative mx-auto max-w-5xl px-6 py-20 text-center lg:px-8 lg:py-28">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#E52B2B] transition hover:text-[#111318]"
+            className="inline-flex items-center gap-2 text-sm font-bold text-signal-red transition hover:text-ink"
           >
             ← Back to insights
           </Link>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <span className="rounded-full bg-[#111318] px-4 py-2 text-xs font-bold uppercase tracking-wider text-white">
+            <span className="rounded-full bg-ink px-4 py-2 text-xs font-bold uppercase tracking-wider text-white">
               {post.category}
             </span>
 
             {post.tags?.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="rounded-full border border-[#111318]/15 bg-white px-4 py-2 text-xs font-medium text-[#5F6368]"
+                className="rounded-full border border-ink/15 bg-white px-4 py-2 text-xs font-medium text-text-secondary"
               >
                 #{tag}
               </span>
@@ -175,16 +166,16 @@ export default async function BlogPostPage({
             {post.title}
           </h1>
 
-          <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-[#5F6368] sm:text-xl">
+          <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-text-secondary sm:text-xl">
             {post.excerpt}
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-[#5F6368]">
-            <span className="font-semibold text-[#111318]">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-text-secondary">
+            <span className="font-semibold text-ink">
               By {post.author}
             </span>
 
-            <span className="h-1 w-1 rounded-full bg-[#F5C518]" />
+            <span className="h-1 w-1 rounded-full bg-muted-gold" />
 
             {post.publishedAt && (
               <time dateTime={post.publishedAt.toISOString()}>
@@ -204,7 +195,7 @@ export default async function BlogPostPage({
       {/* FEATURED IMAGE */}
       {post.featuredImage && (
         <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
-          <div className="overflow-hidden rounded-[2rem] bg-[#111318]">
+          <div className="overflow-hidden rounded-[2rem] bg-ink">
             <img
               src={post.featuredImage}
               alt={post.title}
@@ -219,8 +210,8 @@ export default async function BlogPostPage({
         <div className="grid lg:grid-cols-[180px_minmax(0,760px)_1fr] lg:gap-12">
           {/* LEFT META */}
           <aside className="hidden lg:block">
-            <div className="sticky top-10 border-t border-[#111318]/10 pt-5">
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#5F6368]">
+            <div className="sticky top-10 border-t border-ink/10 pt-5">
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-text-secondary">
                 Written by
               </p>
 
@@ -228,9 +219,9 @@ export default async function BlogPostPage({
                 {post.author}
               </p>
 
-              <div className="mt-8 h-px bg-[#111318]/10" />
+              <div className="mt-8 h-px bg-ink/10" />
 
-              <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.18em] text-[#5F6368]">
+              <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.18em] text-text-secondary">
                 Category
               </p>
 
@@ -240,9 +231,9 @@ export default async function BlogPostPage({
 
               {post.tags?.length > 0 && (
                 <>
-                  <div className="mt-8 h-px bg-[#111318]/10" />
+                  <div className="mt-8 h-px bg-ink/10" />
 
-                  <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.18em] text-[#5F6368]">
+                  <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.18em] text-text-secondary">
                     Topics
                   </p>
 
@@ -250,7 +241,7 @@ export default async function BlogPostPage({
                     {post.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-sm text-[#5F6368]"
+                        className="text-sm text-text-secondary"
                       >
                         #{tag}
                       </span>
@@ -270,8 +261,8 @@ export default async function BlogPostPage({
               }}
             />
 
-            <div className="rounded-2xl border border-[#111318]/10 bg-[#F7F7F5] p-6 sm:p-8">
-              <p className="text-sm font-semibold leading-6 text-[#5F6368]">
+            <div className="rounded-2xl border border-ink/10 bg-ivory p-6 sm:p-8">
+              <p className="text-sm font-semibold leading-6 text-text-secondary">
                 {post.excerpt}
               </p>
             </div>
@@ -285,13 +276,13 @@ export default async function BlogPostPage({
           <aside className="hidden lg:block">
             <div className="sticky top-10">
               <div className="relative ml-auto h-40 w-40">
-                <div className="absolute inset-0 rounded-full border border-[#111318]/10" />
+                <div className="absolute inset-0 rounded-full border border-ink/10" />
 
-                <div className="absolute inset-6 rounded-full border border-[#E52B2B]/20" />
+                <div className="absolute inset-6 rounded-full border border-signal-red/20" />
 
-                <span className="absolute right-1 top-10 h-3 w-3 rounded-full bg-[#E52B2B]" />
+                <span className="absolute right-1 top-10 h-3 w-3 rounded-full bg-signal-red" />
 
-                <span className="absolute bottom-5 left-5 h-4 w-4 rounded-full bg-[#F5C518]" />
+                <span className="absolute bottom-5 left-5 h-4 w-4 rounded-full bg-muted-gold" />
               </div>
             </div>
           </aside>

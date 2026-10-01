@@ -27,9 +27,9 @@ export default function Navbar() {
             h-px
             w-[45%]
             -translate-x-1/2
-            bg-[#E52B2B]
+            bg-signal-red
             opacity-80
-            shadow-[0_0_12px_rgba(229,43,43,0.7)]
+            shadow-[0_0_12px_rgba(230,57,53,0.7)]
           "
         />
 
@@ -45,7 +45,7 @@ export default function Navbar() {
             rounded-2xl
             border
             border-white/10
-            bg-[#111318]/90
+            bg-ink/90
             px-5
             shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)]
             backdrop-blur-xl
@@ -65,7 +65,7 @@ export default function Navbar() {
               shrink-0
               items-center
               gap-2.5
-              text-black
+              text-text-dark-primary
             "
           >
             <span
@@ -76,8 +76,8 @@ export default function Navbar() {
                 items-center
                 justify-center
                 rounded-lg
-                bg-[#E52B2B]
-                shadow-[0_0_18px_rgba(229,43,43,0.25)]
+                bg-signal-red
+                shadow-[0_0_18px_rgba(230,57,53,0.25)]
               "
             >
               <svg
@@ -125,10 +125,10 @@ export default function Navbar() {
                     py-2
                     text-[13px]
                     font-semibold
-                    text-black/90
+                    text-text-dark-secondary
                     transition-colors
                     duration-200
-                    hover:text-black
+                    hover:text-text-dark-primary
                   "
                 >
                   {item.label}
@@ -148,18 +148,18 @@ export default function Navbar() {
                 gap-2
                 rounded-full
                 border
-                border-[#F5C518]/30
-                bg-[#E52B2B]
+                border-muted-gold/30
+                bg-signal-red
                 px-4
                 py-2
                 text-[13px]
                 font-semibold
-                text-[#f0f0f7]
+                text-text-dark-primary
                 transition-all
                 duration-300
-                hover:border-[#E52B2B]
-                hover:bg-[#F5C518]
-                hover:text-black
+                hover:border-signal-red
+                hover:bg-muted-gold
+                hover:text-ink
               "
             >
               <span>Start a project</span>
@@ -199,9 +199,9 @@ export default function Navbar() {
             h-px
             w-[70%]
             -translate-x-1/2
-            bg-[#E52B2B]
+            bg-signal-red
             opacity-80
-            shadow-[0_0_12px_rgba(229,43,43,0.7)]
+            shadow-[0_0_12px_rgba(230,57,53,0.7)]
           "
         />
 
