@@ -1,0 +1,34 @@
+{
+  "name": "applotie-website",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "admin:set-password": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/admin-credentials.mjs set-password",
+    "admin:rotate-secret": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/admin-credentials.mjs rotate-secret",
+    "admin:migrate": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/admin-credentials.mjs migrate",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test \"tests/unit/*.test.mjs\"",
+    "test:e2e": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test --test-concurrency=1 \"tests/e2e/*.test.mjs\""
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.0",
+    "mongoose": "^9.10.2",
+    "next": "16.4.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "zod": "^4.6.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4"
+  }
+}
